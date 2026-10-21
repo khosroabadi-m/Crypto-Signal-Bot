@@ -1,0 +1,10 @@
+# GitHub repo secrets & state
+.env
+.env.local
+*.db
+*.log
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
