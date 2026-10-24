@@ -94,5 +94,21 @@
     "score": 65.92,
     "risk": "HIGH",
     "rr": 2.0
+  },
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "entry": 2340.99,
+    "stopLoss": 2361.868607,
+    "takeProfit": 2299.232787,
+    "status": "SL_HIT",
+    "hitPrice": 2361.93,
+    "hitTime": "2026-10-24T23:33:21",
+    "pnlUsd": -1.1449,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -11.45,
+    "score": 58.92,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
