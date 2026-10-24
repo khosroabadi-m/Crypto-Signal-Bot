@@ -182,7 +182,7 @@
     "score": 65.78,
     "ruleScore": 74.17,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "TP2_HIT",
     "issuedAt": "2026-10-24T14:09:08.863903+00:00",
     "issuedAtEpoch": 1792850948,
     "version": "13.0.0",
@@ -223,7 +223,9 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_BNBUSDT_1792850948"
+    "id": "sig_BNBUSDT_1792850948",
+    "hitPrice": 723.29,
+    "hitTime": "2026-10-24T15:09:07"
   },
   "XRPUSDT": {
     "direction": "SHORT",
