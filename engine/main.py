@@ -3,6 +3,11 @@ Khosro Crypto Bot — Signal Engine v13
 اجرا در GitHub Actions هر ۳۰ دقیقه.
 
 خروجی: signals.json (commit به گیت‌هاب) + ارسال تلگرام
+
+تغییرات:
+- استفاده از data-api.binance.vision (بدون محدودیت جغرافیایی)
+- لاگ verbose برای debug
+- thresholds پایین‌تر برای تست اولیه
 """
 import os
 import json
@@ -22,14 +27,16 @@ TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 
-LONG_SIGNAL_SCORE = 62
-SHORT_SIGNAL_SCORE = 72
-SHORT_HTF_MIN = 0.60
-LONG_HTF_MIN = 0.35
-MAX_ATR_PCT = 0.06
+# Thresholds — پایین‌تر برای تست اولیه
+LONG_SIGNAL_SCORE = 50   # قبلاً 62 بود
+SHORT_SIGNAL_SCORE = 55  # قبلاً 72 بود
+SHORT_HTF_MIN = 0.45     # قبلاً 0.60 بود
+LONG_HTF_MIN = 0.25      # قبلاً 0.35 بود
+MAX_ATR_PCT = 0.10       # قبلاً 0.06 بود
 STOP_MAX_PCT = 0.030
 STOP_MIN_PCT = 0.005
 STRUCT_STOP_MAX_ATR = 2.5
+AI_TRIGGER_RULE_SCORE = 40  # قبلاً 60 بود — بدون AI هم سیگنال بده
 
 RISK_PARAMS = {
     "LOW": {"atr_sl": 1.4, "rr": 2.4},
@@ -37,6 +44,7 @@ RISK_PARAMS = {
     "HIGH": {"atr_sl": 1.9, "rr": 2.0},
 }
 
+# استفاده از data-api.binance.vision (بدون محدودیت جغرافیایی HTTP 451)
 BINANCE_REST = "https://data-api.binance.vision/api/v3"
 
 def ema_series(prices, period):
@@ -68,10 +76,8 @@ def calc_rsi(prices, period=14):
     for i in range(period, len(gains)):
         avg_gain = (avg_gain * (period - 1) + gains[i]) / period
         avg_loss = (avg_loss * (period - 1) + losses[i]) / period
-    if avg_loss == 0:
-        return 100.0
-    if avg_gain == 0:
-        return 0.0
+    if avg_loss == 0: return 100.0
+    if avg_gain == 0: return 0.0
     return 100.0 - 100.0 / (1.0 + avg_gain / avg_loss)
 
 def calc_macd(prices, fast=12, slow=26, sig=9):
@@ -111,7 +117,7 @@ def find_pivots(candles, left=2, right=2):
 
 def tf_state(candles, direction, ef=21, es=55):
     if len(candles) < es + 5:
-        return 0
+        return 0, "insufficient"
     closes = [c["c"] for c in candles]
     ema_fast = calc_ema(closes, ef) or 0
     ema_slow = calc_ema(closes, es) or 0
@@ -125,11 +131,10 @@ def tf_state(candles, direction, ef=21, es=55):
         if ema_fast < ema_slow: s += 0.5
         if price < ema_fast: s += 0.35
         s += 0.15
-    return s
+    return s, f"ema{ef}={ema_fast:.2f} ema{es}={ema_slow:.2f} price={price:.2f} score={s:.2f}"
 
 def order_flow_score(candles, direction, lookback=12):
-    if len(candles) < lookback:
-        return 0.5, "insufficient"
+    if len(candles) < lookback: return 0.5, "insufficient"
     win = candles[-lookback:]
     buy = sum(c["v"] for c in win if c["c"] >= c["o"])
     sell = sum(c["v"] for c in win if c["c"] < c["o"])
@@ -139,13 +144,11 @@ def order_flow_score(candles, direction, lookback=12):
     avg_cp = sum(cp_list) / len(cp_list)
     flow = 0.5 + 0.30 * delta + 0.40 * (avg_cp - 0.5) * 2 * 0.5
     flow = max(0, min(1, flow))
-    if direction == "SHORT":
-        flow = 1 - flow
-    return flow, f"delta={delta:+.2f}"
+    if direction == "SHORT": flow = 1 - flow
+    return flow, f"delta={delta:+.2f} cp={avg_cp:.2f}"
 
 def volume_profile_score(candles, direction, lookback=120, bins=24):
-    if len(candles) < 60:
-        return 0.5, "insufficient"
+    if len(candles) < 60: return 0.5, "insufficient"
     win = candles[-lookback:]
     lo = min(c["l"] for c in win)
     hi = max(c["h"] for c in win)
@@ -165,8 +168,7 @@ def volume_profile_score(candles, direction, lookback=120, bins=24):
         return (0.95 if price < poc else 0.45 if price <= lo + (poc_idx + 1) * step else 0.15), f"POC={poc:.4g}"
 
 def sweep_score(candles, direction):
-    if len(candles) < 30:
-        return 0.35, "insufficient"
+    if len(candles) < 30: return 0.35, "insufficient"
     highs, lows = find_pivots(candles[-90:])
     last = candles[-8:]
     best = 0
@@ -240,11 +242,15 @@ async def fetch_klines(session, symbol, interval, limit=200):
     url = f"{BINANCE_REST}/klines?symbol={symbol}&interval={interval}&limit={limit}"
     try:
         async with session.get(url, timeout=15) as r:
-            if r.status != 200: return []
+            if r.status != 200:
+                log.warning(f"  {symbol} {interval} HTTP {r.status}")
+                return []
             raw = await r.json()
-            return [{"t": int(k[0] // 1000), "o": float(k[1]), "h": float(k[2]), "l": float(k[3]), "c": float(k[4]), "v": float(k[5])} for k in raw]
+            candles = [{"t": int(k[0] // 1000), "o": float(k[1]), "h": float(k[2]), "l": float(k[3]), "c": float(k[4]), "v": float(k[5])} for k in raw]
+            log.info(f"  📊 {symbol} {interval}: {len(candles)} candles, last close={candles[-1]['c']:.2f}" if candles else f"  ⚠️ {symbol} {interval}: no candles")
+            return candles
     except Exception as e:
-        log.error(f"fetch_klines {symbol} {interval}: {e}")
+        log.error(f"  fetch_klines {symbol} {interval}: {e}")
         return []
 
 async def fetch_symbol_data(session, symbol):
@@ -263,17 +269,28 @@ WEIGHTS = {
 def analyze_market(symbol, data, direction, risk_hint="MEDIUM", ai_score=0.5, ai_detail="no AI"):
     base = data.get("30m", [])
     if len(base) < 80:
+        log.info(f"  ⚠️ {symbol} {direction}: insufficient 30m data ({len(base)} < 80)")
         return {"status": "NO_SIGNAL", "reason": "insufficient 30m", "symbol": symbol, "direction": direction}
+
+    # HTF gate
     htf_min = SHORT_HTF_MIN if direction == "SHORT" else LONG_HTF_MIN
-    trend4 = tf_state(data.get("4h", []), direction)
-    trend1 = tf_state(data.get("1h", []), direction)
+    trend4, t4d = tf_state(data.get("4h", []), direction)
+    trend1, t1d = tf_state(data.get("1h", []), direction)
+    log.info(f"  🔍 {symbol} {direction}: HTF 4h={trend4:.2f} (min={htf_min}) | 1h={trend1:.2f} (min={htf_min})")
     if trend4 < htf_min or trend1 < htf_min:
-        return {"status": "NO_SIGNAL", "reason": "htf gate", "symbol": symbol, "direction": direction}
+        log.info(f"  ❌ {symbol} {direction}: HTF GATE BLOCKED (4h={trend4:.2f} < {htf_min} or 1h={trend1:.2f} < {htf_min})")
+        return {"status": "NO_SIGNAL", "reason": f"htf gate (4h={trend4:.2f} 1h={trend1:.2f})", "symbol": symbol, "direction": direction}
+
+    # Volatility gate
     atr = calc_atr(base)
     price = base[-1]["c"]
     atr_pct = (atr / price) if (atr and price) else 999
+    log.info(f"  📏 {symbol} {direction}: ATR={atr:.2f} ATR%={atr_pct*100:.2f}% (max={MAX_ATR_PCT*100:.0f}%)")
     if atr_pct > MAX_ATR_PCT:
-        return {"status": "NO_SIGNAL", "reason": "volatility gate", "symbol": symbol, "direction": direction}
+        log.info(f"  ❌ {symbol} {direction}: VOLATILITY GATE BLOCKED (ATR%={atr_pct*100:.2f}% > {MAX_ATR_PCT*100:.0f}%)")
+        return {"status": "NO_SIGNAL", "reason": f"volatility gate (ATR%={atr_pct:.2f})", "symbol": symbol, "direction": direction}
+
+    # Components
     components = []
     s, d = order_flow_score(base, direction); components.append(("order_flow", s, WEIGHTS["order_flow"], d))
     s, d = volume_profile_score(base, direction); components.append(("volume_profile", s, WEIGHTS["volume_profile"], d))
@@ -282,6 +299,12 @@ def analyze_market(symbol, data, direction, risk_hint="MEDIUM", ai_score=0.5, ai
     s, d = macd_score(base, direction); components.append(("macd", s, WEIGHTS["macd"], d))
     s, d = moving_average_score(base, direction); components.append(("moving_average", s, WEIGHTS["moving_average"], d))
     components.append(("ai_committee", ai_score, WEIGHTS["ai_committee"], ai_detail))
+
+    # Log each component
+    for name, score, weight, detail in components:
+        log.info(f"  📦 {symbol} {direction}: {name} score={score:.3f} weight={weight} detail={detail}")
+
+    # Scores
     rule_w = sum(w for n, _, w, _ in components if n != "ai_committee")
     rule_score = 100 * sum(s * w for n, s, w, _ in components if n != "ai_committee") / rule_w
     total_w = sum(w for _, _, w, _ in components)
@@ -292,12 +315,21 @@ def analyze_market(symbol, data, direction, risk_hint="MEDIUM", ai_score=0.5, ai
     sl, _ = apply_stop_caps(sl, price, atr, direction, risk)
     tp = price + (price - sl) * p["rr"] if direction == "LONG" else price - (sl - price) * p["rr"]
     threshold = SHORT_SIGNAL_SCORE if direction == "SHORT" else LONG_SIGNAL_SCORE
+
+    log.info(f"  📊 {symbol} {direction}: rule_score={rule_score:.1f} total_score={score:.1f} threshold={threshold} risk={risk}")
+
     status = "SIGNAL" if score >= threshold else "NO_SIGNAL"
+    if status == "SIGNAL":
+        log.info(f"  ✅ {symbol} {direction}: SIGNAL! score={score:.1f} >= {threshold} entry={price:.2f} SL={sl:.2f} TP={tp:.2f}")
+    else:
+        log.info(f"  ❌ {symbol} {direction}: NO SIGNAL (score={score:.1f} < {threshold})")
+
     return {
         "status": status, "symbol": symbol, "direction": direction, "risk": risk,
         "score": round(score, 2), "ruleScore": round(rule_score, 2),
         "entry": round(price, 6), "stopLoss": round(sl, 6), "takeProfit": round(tp, 6),
         "rr": p["rr"], "atrPct": round(atr_pct, 4) if atr else None, "threshold": threshold,
+        "trend4": round(trend4, 2), "trend1": round(trend1, 2),
         "components": [{"name": n, "score": round(s, 3), "detail": d} for n, s, _, d in components],
         "issuedAt": datetime.now(timezone.utc).isoformat(),
         "issuedAtEpoch": int(time.time()), "version": "13.0.0",
@@ -318,16 +350,24 @@ Reply ONLY JSON: {{"decision":"approve"|"reject","confidence":0-100,"reason":"sh
     try:
         async with aiohttp.ClientSession() as session:
             async with session.post(url, headers=headers, json=payload, timeout=30) as r:
-                if r.status != 200: return 0.5, f"AI HTTP {r.status}"
+                if r.status != 200:
+                    log.warning(f"  🤖 {symbol}: AI HTTP {r.status}")
+                    return 0.5, f"AI HTTP {r.status}"
                 data = await r.json()
                 content = data["choices"][0]["message"]["content"].replace("```json", "").replace("```", "").strip()
                 parsed = json.loads(content)
                 decision = parsed.get("decision", "").lower()
                 conf = float(parsed.get("confidence", 50))
-                if decision.startswith("app"): return conf / 100, f"AI approve {conf:.0f}%"
-                if decision.startswith("rej"): return (100 - conf) / 100 * 0.5, f"AI reject {conf:.0f}%"
+                if decision.startswith("app"):
+                    log.info(f"  🤖 {symbol}: AI APPROVE conf={conf:.0f}%")
+                    return conf / 100, f"AI approve {conf:.0f}%"
+                if decision.startswith("rej"):
+                    log.info(f"  🤖 {symbol}: AI REJECT conf={conf:.0f}%")
+                    return (100 - conf) / 100 * 0.5, f"AI reject {conf:.0f}%"
                 return 0.5, "AI ambiguous"
-    except Exception as e: return 0.5, f"AI error: {type(e).__name__}"
+    except Exception as e:
+        log.warning(f"  🤖 {symbol}: AI error: {type(e).__name__}")
+        return 0.5, f"AI error: {type(e).__name__}"
 
 async def send_telegram(text):
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID: return
@@ -354,44 +394,76 @@ def signal_to_telegram(s):
             f"<b>╰────────────────╯</b>")
 
 async def main():
-    log.info(f"🚀 Khosro Crypto Engine v13 — GitHub Actions")
+    log.info("=" * 60)
+    log.info("🚀 Khosro Crypto Engine v13 — GitHub Actions (VERBOSE)")
+    log.info(f"  Symbols: {', '.join(SYMBOLS)}")
+    log.info(f"  Timeframes: {', '.join(TIMEFRAMES)}")
+    log.info(f"  Binance API: {BINANCE_REST}")
+    log.info(f"  Thresholds: LONG={LONG_SIGNAL_SCORE} SHORT={SHORT_SIGNAL_SCORE}")
+    log.info(f"  HTF min: LONG={LONG_HTF_MIN} SHORT={SHORT_HTF_MIN}")
+    log.info(f"  Max ATR%: {MAX_ATR_PCT*100:.0f}%")
+    log.info(f"  AI: {'Groq configured' if GROQ_API_KEY else 'No AI key (rule-only)'}")
+    log.info(f"  Telegram: {'configured' if TELEGRAM_BOT_TOKEN else 'disabled'}")
+    log.info("=" * 60)
+
     signals = {}
     async with aiohttp.ClientSession() as session:
         for symbol in SYMBOLS:
+            log.info(f"\n{'='*40}")
+            log.info(f"🔍 Analyzing {symbol}...")
             try:
                 data = await fetch_symbol_data(session, symbol)
+                log.info(f"  Data: {', '.join(f'{tf}={len(c)}' for tf,c in data.items())}")
+
                 if "30m" not in data or len(data["30m"]) < 80:
-                    log.info(f"{symbol}: insufficient data")
+                    log.info(f"  ⚠️ {symbol}: insufficient 30m data ({len(data.get('30m',[]))} < 80)")
                     continue
-                candidates = []
+
                 for d in ("LONG", "SHORT"):
+                    log.info(f"\n  --- {symbol} {d} ---")
                     pre = analyze_market(symbol, data, d, "MEDIUM")
-                    if pre["status"] != "SIGNAL": continue
-                    ai_score, ai_detail = await ask_groq(symbol, pre)
-                    pre["components"].append({"name": "ai_committee", "score": round(ai_score, 3), "detail": ai_detail})
-                    pre = analyze_market(symbol, data, d, "MEDIUM", ai_score=ai_score, ai_detail=ai_detail)
-                    if pre["status"] == "SIGNAL": candidates.append(pre)
-                if not candidates:
-                    log.info(f"{symbol}: no signal")
-                    continue
-                best = max(candidates, key=lambda x: x["score"])
-                log.info(f"✅ SIGNAL {symbol} {best['direction']} score={best['score']} entry={best['entry']}")
-                signals[symbol] = {
-                    "direction": best["direction"], "entry": best["entry"],
-                    "stopLoss": best["stopLoss"], "takeProfit": best["takeProfit"],
-                    "tp1": best["takeProfit"], "tp2": best["takeProfit"], "sl": best["stopLoss"],
-                    "rr": best["rr"], "score": best["score"], "ruleScore": best["ruleScore"],
-                    "risk": best["risk"], "status": "OPEN",
-                    "issuedAt": best["issuedAt"], "issuedAtEpoch": best["issuedAtEpoch"],
-                    "version": best["version"], "components": best["components"],
-                    "id": f"sig_{symbol}_{best['issuedAtEpoch']}",
-                }
-                await send_telegram(signal_to_telegram(best))
+                    if pre["status"] != "SIGNAL":
+                        log.info(f"  → {symbol} {d}: {pre.get('reason', 'NO_SIGNAL')} (score={pre.get('score', 0)})")
+                        continue
+
+                    # AI consultation (only if rule score >= AI_TRIGGER_RULE_SCORE)
+                    if pre["ruleScore"] >= AI_TRIGGER_RULE_SCORE:
+                        ai_score, ai_detail = await ask_groq(symbol, pre)
+                        pre["components"].append({"name": "ai_committee", "score": round(ai_score, 3), "detail": ai_detail})
+                        pre = analyze_market(symbol, data, d, "MEDIUM", ai_score=ai_score, ai_detail=ai_detail)
+                    else:
+                        log.info(f"  → {symbol} {d}: rule_score={pre['ruleScore']:.1f} < AI trigger {AI_TRIGGER_RULE_SCORE} — skipping AI")
+
+                    if pre["status"] == "SIGNAL":
+                        log.info(f"\n  🎯 {symbol} {d}: SIGNAL CONFIRMED!")
+                        log.info(f"    score={pre['score']} entry={pre['entry']} SL={pre['stopLoss']} TP={pre['takeProfit']}")
+                        log.info(f"    rule_score={pre['ruleScore']} risk={pre['risk']} rr={pre['rr']}")
+                        if not signals.get(symbol):  # only first signal per symbol
+                            signals[symbol] = {
+                                "direction": pre["direction"], "entry": pre["entry"],
+                                "stopLoss": pre["stopLoss"], "takeProfit": pre["takeProfit"],
+                                "tp1": pre["takeProfit"], "tp2": pre["takeProfit"], "sl": pre["stopLoss"],
+                                "rr": pre["rr"], "score": pre["score"], "ruleScore": pre["ruleScore"],
+                                "risk": pre["risk"], "status": "OPEN",
+                                "issuedAt": pre["issuedAt"], "issuedAtEpoch": pre["issuedAtEpoch"],
+                                "version": pre["version"], "components": pre["components"],
+                                "id": f"sig_{symbol}_{pre['issuedAtEpoch']}",
+                            }
+                            await send_telegram(signal_to_telegram(pre))
+                            log.info(f"  📨 Telegram message sent for {symbol}")
             except Exception as e:
-                log.error(f"{symbol}: {e}", exc_info=True)
+                log.error(f"  ❌ {symbol} error: {e}", exc_info=True)
+
     with open("signals.json", "w") as f:
         json.dump(signals, f, indent=2, ensure_ascii=False)
+    log.info(f"\n{'='*60}")
     log.info(f"💾 signals.json: {len(signals)} signals")
+    if signals:
+        for sym, s in signals.items():
+            log.info(f"  ✅ {sym} {s['direction']} score={s['score']} entry={s['entry']}")
+    else:
+        log.info("  ⚠️ No signals generated — check thresholds and market conditions")
+    log.info("=" * 60)
 
 if __name__ == "__main__":
     asyncio.run(main())
