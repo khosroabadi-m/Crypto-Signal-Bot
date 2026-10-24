@@ -1,17 +1,17 @@
 [
   {
-    "symbol": "SOLUSDT",
+    "symbol": "ETHUSDT",
     "direction": "SHORT",
-    "entry": 101.37,
-    "stopLoss": 102.074695,
-    "takeProfit": 99.96061,
+    "entry": 2367.72,
+    "stopLoss": 2380.667652,
+    "takeProfit": 2341.824697,
     "status": "TP2_HIT",
-    "hitPrice": 99.9,
-    "hitTime": "2026-10-24T14:16:54",
-    "pnlUsd": 1.2009,
+    "hitPrice": 2338.88,
+    "hitTime": "2026-10-24T14:17:51",
+    "pnlUsd": 0.9687,
     "brokerFeeUsd": 0.2,
-    "returnPct": 12.01,
-    "score": 59.67,
+    "returnPct": 9.69,
+    "score": 58.44,
     "risk": "HIGH",
     "rr": 2.0
   }
