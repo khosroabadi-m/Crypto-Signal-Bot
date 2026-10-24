@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "entry": 2367.72,
+    "stopLoss": 2380.667652,
+    "takeProfit": 2341.824697,
+    "status": "TP2_HIT",
+    "hitPrice": 2341.5,
+    "hitTime": "2026-10-24T14:16:43",
+    "pnlUsd": 0.8579,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 8.58,
+    "score": 58.44,
+    "risk": "HIGH",
+    "rr": 2.0
+  }
+]
