@@ -176,7 +176,7 @@
     "score": 63.53,
     "ruleScore": 70.73,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-10-24T17:30:12.675741+00:00",
     "issuedAtEpoch": 1792863012,
     "version": "13.0.0",
@@ -217,7 +217,9 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_BNBUSDT_1792863012"
+    "id": "sig_BNBUSDT_1792863012",
+    "hitPrice": 729.96,
+    "hitTime": "2026-10-24T18:58:36"
   },
   "XRPUSDT": {
     "direction": "SHORT",
