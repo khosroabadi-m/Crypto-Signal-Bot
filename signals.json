@@ -11,7 +11,7 @@
     "score": 58.92,
     "ruleScore": 63.67,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-10-24T22:00:42.330870+00:00",
     "issuedAtEpoch": 1792879242,
     "version": "13.0.0",
@@ -52,6 +52,8 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_ETHUSDT_1792879242"
+    "id": "sig_ETHUSDT_1792879242",
+    "hitPrice": 2361.93,
+    "hitTime": "2026-10-24T23:33:21"
   }
 }
