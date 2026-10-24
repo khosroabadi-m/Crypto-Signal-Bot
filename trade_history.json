@@ -1,17 +1,17 @@
 [
   {
-    "symbol": "XRPUSDT",
+    "symbol": "ETHUSDT",
     "direction": "SHORT",
-    "entry": 1.2857,
-    "stopLoss": 1.294796,
-    "takeProfit": 1.267508,
+    "entry": 2367.72,
+    "stopLoss": 2380.667652,
+    "takeProfit": 2341.824697,
     "status": "TP2_HIT",
-    "hitPrice": 1.2671,
-    "hitTime": "2026-10-24T14:18:06",
-    "pnlUsd": 1.1974,
+    "hitPrice": 2341.11,
+    "hitTime": "2026-10-24T14:18:52",
+    "pnlUsd": 0.8744,
     "brokerFeeUsd": 0.2,
-    "returnPct": 11.97,
-    "score": 56.01,
+    "returnPct": 8.74,
+    "score": 58.44,
     "risk": "HIGH",
     "rr": 2.0
   }
