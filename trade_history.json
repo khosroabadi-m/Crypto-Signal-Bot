@@ -32,18 +32,18 @@
     "rr": 2.0
   },
   {
-    "symbol": "BNBUSDT",
+    "symbol": "SOLUSDT",
     "direction": "SHORT",
-    "entry": 731.17,
-    "stopLoss": 734.82585,
-    "takeProfit": 723.8583,
+    "entry": 101.37,
+    "stopLoss": 102.074695,
+    "takeProfit": 99.96061,
     "status": "TP2_HIT",
-    "hitPrice": 723.77,
-    "hitTime": "2026-10-24T15:08:06",
-    "pnlUsd": 0.7626,
+    "hitPrice": 99.85,
+    "hitTime": "2026-10-24T15:08:09",
+    "pnlUsd": 1.2502,
     "brokerFeeUsd": 0.2,
-    "returnPct": 7.63,
-    "score": 65.78,
+    "returnPct": 12.5,
+    "score": 59.67,
     "risk": "HIGH",
     "rr": 2.0
   }
