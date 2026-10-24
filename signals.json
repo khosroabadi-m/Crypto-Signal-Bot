@@ -11,7 +11,7 @@
     "score": 63.39,
     "ruleScore": 70.52,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "TP2_HIT",
     "issuedAt": "2026-10-24T14:09:08.431396+00:00",
     "issuedAtEpoch": 1792850948,
     "version": "13.0.0",
@@ -52,7 +52,9 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_BTCUSDT_1792850948"
+    "id": "sig_BTCUSDT_1792850948",
+    "hitPrice": 79905.63,
+    "hitTime": "2026-10-24T14:27:17"
   },
   "ETHUSDT": {
     "direction": "SHORT",
@@ -123,7 +125,7 @@
     "score": 59.67,
     "ruleScore": 64.82,
     "risk": "HIGH",
-    "status": "TP2_HIT",
+    "status": "OPEN",
     "issuedAt": "2026-10-24T14:09:08.719757+00:00",
     "issuedAtEpoch": 1792850948,
     "version": "13.0.0",
@@ -164,9 +166,7 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_SOLUSDT_1792850948",
-    "hitPrice": 99.96,
-    "hitTime": "2026-10-24T14:27:06"
+    "id": "sig_SOLUSDT_1792850948"
   },
   "BNBUSDT": {
     "direction": "SHORT",
