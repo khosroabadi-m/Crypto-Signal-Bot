@@ -14,5 +14,21 @@
     "score": 58.44,
     "risk": "HIGH",
     "rr": 2.0
+  },
+  {
+    "symbol": "SOLUSDT",
+    "direction": "SHORT",
+    "entry": 101.37,
+    "stopLoss": 102.074695,
+    "takeProfit": 99.96061,
+    "status": "TP2_HIT",
+    "hitPrice": 99.96,
+    "hitTime": "2026-10-24T14:27:06",
+    "pnlUsd": 1.1416,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 11.42,
+    "score": 59.67,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
