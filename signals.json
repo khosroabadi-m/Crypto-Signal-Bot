@@ -125,7 +125,7 @@
     "score": 59.67,
     "ruleScore": 64.82,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "TP2_HIT",
     "issuedAt": "2026-10-24T14:09:08.719757+00:00",
     "issuedAtEpoch": 1792850948,
     "version": "13.0.0",
@@ -166,7 +166,9 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_SOLUSDT_1792850948"
+    "id": "sig_SOLUSDT_1792850948",
+    "hitPrice": 99.87,
+    "hitTime": "2026-10-24T15:07:09"
   },
   "BNBUSDT": {
     "direction": "SHORT",
@@ -180,7 +182,7 @@
     "score": 65.78,
     "ruleScore": 74.17,
     "risk": "HIGH",
-    "status": "TP2_HIT",
+    "status": "OPEN",
     "issuedAt": "2026-10-24T14:09:08.863903+00:00",
     "issuedAtEpoch": 1792850948,
     "version": "13.0.0",
@@ -221,9 +223,7 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_BNBUSDT_1792850948",
-    "hitPrice": 723.71,
-    "hitTime": "2026-10-24T15:07:06"
+    "id": "sig_BNBUSDT_1792850948"
   },
   "XRPUSDT": {
     "direction": "SHORT",
