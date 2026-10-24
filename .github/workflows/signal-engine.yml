@@ -1,0 +1,124 @@
+name: Khosro Signal Engine
+
+# Triggers:
+# - schedule:      every 30 minutes (backup in case Wispbyte auto-trigger fails)
+# - workflow_dispatch: triggered by Wispbyte server (main auto-trigger path)
+# - push to engine/: regenerate immediately after engine code changes
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Trigger reason (for log traceability)"
+        required: false
+        default: "auto"
+  push:
+    branches:
+      - main
+    paths:
+      - "engine/**"
+      - ".github/workflows/signal-engine.yml"
+
+permissions:
+  contents: write   # needed for git push in the auto-commit step
+
+concurrency:
+  group: signal-engine
+  cancel-in-progress: false   # queue runs, don't cancel — avoids two runs racing the push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # ── 1. Checkout with FULL history (fetch-depth: 0) ─────────────────────
+      # Required so the rebase step below has enough commits to replay on top of
+      # the latest remote tip.
+      - name: Checkout repo (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true   # leave credentials so we can push later
+
+      # ── 2. Set git identity for the auto-commit ─────────────────────────────
+      - name: Configure git identity
+        run: |
+          git config --global user.name  "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      # ── 3. Python runtime ──────────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r engine/requirements.txt
+
+      # ── 4. Run the signal engine ───────────────────────────────────────────
+      - name: Run signal engine
+        env:
+          BINANCE_BASE: "https://data-api.binance.vision"
+          KHOSRO_VERBOSE: "1"
+        run: |
+          python engine/main.py
+
+      # ── 5. Show the diff so we can debug when nothing changes ────────────────
+      - name: Show signals.json diff
+        if: always()
+        run: |
+          if git diff --quiet signals.json; then
+            echo "✅ signals.json unchanged"
+          else
+            echo "📝 signals.json changed:"
+            git --no-pager diff --stat signals.json
+          fi
+
+      # ── 6. Commit + push WITH REBASE FIRST (this fixes the rejected push) ──
+      - name: Commit & push (rebase-safe)
+        run: |
+          if git diff --quiet signals.json; then
+            echo "No changes to commit. Skipping push."
+            exit 0
+          fi
+
+          # Stage and commit locally
+          git add signals.json
+          git commit -m "Auto-update signals.json [skip ci]"
+
+          # PULL-REBASE BEFORE PUSH — the critical fix.
+          # If the remote main moved forward while this run was computing,
+          # this replays our auto-commit on top of the new tip.
+          # --autostash would stash/pull/pop if we had local untracked changes.
+          echo "⬇️  Rebasing onto latest origin/main..."
+          git fetch origin main
+          git rebase origin/main
+
+          # If rebase fails (real conflict — extremely rare for auto-generated JSON),
+          # abort and exit 1 so the run is visible in the Actions log.
+          rebase_rc=$?
+          if [ $rebase_rc -ne 0 ]; then
+            echo "❌ Rebase failed. Aborting to avoid dirty push."
+            git rebase --abort
+            exit 1
+          fi
+
+          # Push with retry (in case of a race with another just-pushed commit).
+          # 3 attempts with 5s backoff — last resort against the rejected-push flake.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "✅ Push succeeded on attempt $attempt."
+              exit 0
+            fi
+            echo "⚠️ Push attempt $attempt failed. Re-fetching and retrying..."
+            git fetch origin main
+            git rebase origin/main
+            sleep 5
+          done
+
+          echo "❌ Push failed after 3 attempts."
+          exit 1
