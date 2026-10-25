@@ -1,25 +1,25 @@
 {
   "BTCUSDT": {
     "direction": "SHORT",
-    "entry": 80602.92,
-    "stopLoss": 81005.9346,
-    "takeProfit": 79796.8908,
-    "tp1": 79796.8908,
-    "tp2": 79796.8908,
-    "sl": 81005.9346,
+    "entry": 80612.12,
+    "stopLoss": 81015.1806,
+    "takeProfit": 79805.9988,
+    "tp1": 79805.9988,
+    "tp2": 79805.9988,
+    "sl": 81015.1806,
     "rr": 2.0,
-    "score": 65.5,
-    "ruleScore": 73.74,
+    "score": 65.35,
+    "ruleScore": 73.52,
     "risk": "HIGH",
     "status": "OPEN",
-    "issuedAt": "2026-10-25T06:07:50.702088+00:00",
-    "issuedAtEpoch": 1792908470,
+    "issuedAt": "2026-10-25T06:12:47.154789+00:00",
+    "issuedAtEpoch": 1792908767,
     "version": "13.0.0",
     "components": [
       {
         "name": "order_flow",
-        "score": 0.547,
-        "detail": "delta=-0.08 cp=0.44"
+        "score": 0.54,
+        "detail": "delta=-0.03 cp=0.42"
       },
       {
         "name": "volume_profile",
@@ -34,17 +34,17 @@
       {
         "name": "rsi",
         "score": 0.55,
-        "detail": "RSI=45.5"
+        "detail": "RSI=45.9"
       },
       {
         "name": "macd",
         "score": 0.7,
-        "detail": "hist=-24.68"
+        "detail": "hist=-24.1"
       },
       {
         "name": "moving_average",
         "score": 0.75,
-        "detail": "EMA21=8.072e+04"
+        "detail": "EMA21=8.073e+04"
       },
       {
         "name": "ai_committee",
@@ -52,29 +52,29 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_BTCUSDT_1792908470"
+    "id": "sig_BTCUSDT_1792908767"
   },
   "ETHUSDT": {
     "direction": "SHORT",
-    "entry": 2351.21,
-    "stopLoss": 2367.017711,
-    "takeProfit": 2319.594578,
-    "tp1": 2319.594578,
-    "tp2": 2319.594578,
-    "sl": 2367.017711,
+    "entry": 2349.69,
+    "stopLoss": 2365.497711,
+    "takeProfit": 2318.074578,
+    "tp1": 2318.074578,
+    "tp2": 2318.074578,
+    "sl": 2365.497711,
     "rr": 2.0,
-    "score": 57.59,
-    "ruleScore": 61.62,
+    "score": 64.34,
+    "ruleScore": 71.97,
     "risk": "HIGH",
     "status": "OPEN",
-    "issuedAt": "2026-10-25T06:07:50.871696+00:00",
-    "issuedAtEpoch": 1792908470,
+    "issuedAt": "2026-10-25T06:12:47.273008+00:00",
+    "issuedAtEpoch": 1792908767,
     "version": "13.0.0",
     "components": [
       {
         "name": "order_flow",
-        "score": 0.487,
-        "detail": "delta=+0.04 cp=0.50"
+        "score": 0.498,
+        "detail": "delta=+0.03 cp=0.48"
       },
       {
         "name": "volume_profile",
@@ -83,18 +83,18 @@
       },
       {
         "name": "sweep",
-        "score": 0.35,
-        "detail": "none"
+        "score": 0.82,
+        "detail": "swept high 2350"
       },
       {
         "name": "rsi",
         "score": 0.55,
-        "detail": "RSI=46.1"
+        "detail": "RSI=45.0"
       },
       {
         "name": "macd",
         "score": 0.7,
-        "detail": "hist=-0.3071"
+        "detail": "hist=-0.4041"
       },
       {
         "name": "moving_average",
@@ -107,29 +107,29 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_ETHUSDT_1792908470"
+    "id": "sig_ETHUSDT_1792908767"
   },
   "SOLUSDT": {
     "direction": "SHORT",
-    "entry": 101.85,
-    "stopLoss": 102.57873,
-    "takeProfit": 100.39254,
-    "tp1": 100.39254,
-    "tp2": 100.39254,
-    "sl": 102.57873,
+    "entry": 101.76,
+    "stopLoss": 102.48873,
+    "takeProfit": 100.30254,
+    "tp1": 100.30254,
+    "tp2": 100.30254,
+    "sl": 102.48873,
     "rr": 2.0,
-    "score": 61.38,
-    "ruleScore": 67.44,
+    "score": 62.05,
+    "ruleScore": 68.45,
     "risk": "HIGH",
     "status": "OPEN",
-    "issuedAt": "2026-10-25T06:07:51.036711+00:00",
-    "issuedAtEpoch": 1792908471,
+    "issuedAt": "2026-10-25T06:12:47.390944+00:00",
+    "issuedAtEpoch": 1792908767,
     "version": "13.0.0",
     "components": [
       {
         "name": "order_flow",
-        "score": 0.518,
-        "detail": "delta=+0.07 cp=0.41"
+        "score": 0.532,
+        "detail": "delta=+0.05 cp=0.38"
       },
       {
         "name": "volume_profile",
@@ -138,23 +138,23 @@
       },
       {
         "name": "sweep",
-        "score": 0.805,
-        "detail": "swept high 101.9"
+        "score": 0.833,
+        "detail": "swept high 101.8"
       },
       {
         "name": "rsi",
         "score": 0.55,
-        "detail": "RSI=47.2"
+        "detail": "RSI=45.7"
       },
       {
         "name": "macd",
         "score": 0.7,
-        "detail": "hist=-0.04783"
+        "detail": "hist=-0.05358"
       },
       {
         "name": "moving_average",
         "score": 0.3,
-        "detail": "EMA21=102.1"
+        "detail": "EMA21=102"
       },
       {
         "name": "ai_committee",
@@ -162,29 +162,29 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_SOLUSDT_1792908471"
+    "id": "sig_SOLUSDT_1792908767"
   },
   "BNBUSDT": {
     "direction": "LONG",
-    "entry": 744.0,
-    "stopLoss": 739.575249,
-    "takeProfit": 752.849502,
-    "tp1": 752.849502,
-    "tp2": 752.849502,
-    "sl": 739.575249,
+    "entry": 743.84,
+    "stopLoss": 739.301249,
+    "takeProfit": 752.917502,
+    "tp1": 752.917502,
+    "tp2": 752.917502,
+    "sl": 739.301249,
     "rr": 2.0,
-    "score": 60.59,
-    "ruleScore": 66.22,
+    "score": 60.39,
+    "ruleScore": 65.92,
     "risk": "HIGH",
     "status": "OPEN",
-    "issuedAt": "2026-10-25T06:07:51.201128+00:00",
-    "issuedAtEpoch": 1792908471,
+    "issuedAt": "2026-10-25T06:12:47.508314+00:00",
+    "issuedAtEpoch": 1792908767,
     "version": "13.0.0",
     "components": [
       {
         "name": "order_flow",
-        "score": 0.642,
-        "detail": "delta=+0.37 cp=0.58"
+        "score": 0.632,
+        "detail": "delta=+0.38 cp=0.55"
       },
       {
         "name": "volume_profile",
@@ -199,12 +199,12 @@
       {
         "name": "rsi",
         "score": 0.55,
-        "detail": "RSI=62.5"
+        "detail": "RSI=62.2"
       },
       {
         "name": "macd",
         "score": 0.7,
-        "detail": "hist=0.1191"
+        "detail": "hist=0.1089"
       },
       {
         "name": "moving_average",
@@ -217,29 +217,29 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_BNBUSDT_1792908471"
+    "id": "sig_BNBUSDT_1792908767"
   },
   "XRPUSDT": {
     "direction": "SHORT",
     "entry": 1.2998,
-    "stopLoss": 1.310623,
-    "takeProfit": 1.278153,
-    "tp1": 1.278153,
-    "tp2": 1.278153,
-    "sl": 1.310623,
+    "stopLoss": 1.310691,
+    "takeProfit": 1.278017,
+    "tp1": 1.278017,
+    "tp2": 1.278017,
+    "sl": 1.310691,
     "rr": 2.0,
-    "score": 61.28,
-    "ruleScore": 67.27,
+    "score": 61.41,
+    "ruleScore": 67.48,
     "risk": "HIGH",
     "status": "OPEN",
-    "issuedAt": "2026-10-25T06:07:51.366356+00:00",
-    "issuedAtEpoch": 1792908471,
+    "issuedAt": "2026-10-25T06:12:47.625551+00:00",
+    "issuedAtEpoch": 1792908767,
     "version": "13.0.0",
     "components": [
       {
         "name": "order_flow",
-        "score": 0.547,
-        "detail": "delta=-0.19 cp=0.52"
+        "score": 0.554,
+        "detail": "delta=-0.20 cp=0.52"
       },
       {
         "name": "volume_profile",
@@ -272,6 +272,6 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_XRPUSDT_1792908471"
+    "id": "sig_XRPUSDT_1792908767"
   }
 }
