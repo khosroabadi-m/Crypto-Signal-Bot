@@ -1,105 +1,50 @@
 {
-  "BTCUSDT": {
-    "direction": "SHORT",
-    "entry": 80806.7,
-    "stopLoss": 81213.347294,
-    "takeProfit": 79993.405413,
-    "tp1": 79993.405413,
-    "tp2": 79993.405413,
-    "sl": 81213.347294,
-    "rr": 2.0,
-    "score": 55.62,
-    "ruleScore": 58.61,
-    "risk": "HIGH",
+  "BNBUSDT": {
+    "direction": "LONG",
+    "entry": 748.32,
+    "stopLoss": 744.5784,
+    "takeProfit": 756.17736,
+    "tp1": 756.17736,
+    "tp2": 756.17736,
+    "sl": 744.5784,
+    "rr": 2.1,
+    "score": 68.81,
+    "ruleScore": 78.82,
+    "risk": "MEDIUM",
     "status": "OPEN",
-    "issuedAt": "2026-10-25T00:23:38.416429+00:00",
-    "issuedAtEpoch": 1792887818,
+    "issuedAt": "2026-10-25T04:58:43.049962+00:00",
+    "issuedAtEpoch": 1792904323,
     "version": "13.0.0",
     "components": [
       {
         "name": "order_flow",
-        "score": 0.421,
-        "detail": "delta=+0.21 cp=0.54"
+        "score": 0.752,
+        "detail": "delta=+0.56 cp=0.71"
       },
       {
         "name": "volume_profile",
         "score": 0.95,
-        "detail": "POC=8.167e+04"
-      },
-      {
-        "name": "sweep",
-        "score": 0.771,
-        "detail": "swept high 8.085e+04"
-      },
-      {
-        "name": "rsi",
-        "score": 0.15,
-        "detail": "RSI=58.5"
-      },
-      {
-        "name": "macd",
-        "score": 0.2,
-        "detail": "hist=73.51"
-      },
-      {
-        "name": "moving_average",
-        "score": 0.45,
-        "detail": "EMA21=8.054e+04"
-      },
-      {
-        "name": "ai_committee",
-        "score": 0.5,
-        "detail": "no AI key"
-      }
-    ],
-    "id": "sig_BTCUSDT_1792887818"
-  },
-  "BNBUSDT": {
-    "direction": "LONG",
-    "entry": 739.16,
-    "stopLoss": 734.776797,
-    "takeProfit": 747.926406,
-    "tp1": 747.926406,
-    "tp2": 747.926406,
-    "sl": 734.776797,
-    "rr": 2.0,
-    "score": 57.27,
-    "ruleScore": 61.14,
-    "risk": "HIGH",
-    "status": "TP2_HIT",
-    "issuedAt": "2026-10-25T00:23:38.922714+00:00",
-    "issuedAtEpoch": 1792887818,
-    "version": "13.0.0",
-    "components": [
-      {
-        "name": "order_flow",
-        "score": 0.785,
-        "detail": "delta=+0.64 cp=0.73"
-      },
-      {
-        "name": "volume_profile",
-        "score": 0.15,
         "detail": "POC=745.8"
       },
       {
         "name": "sweep",
-        "score": 0.89,
-        "detail": "swept low 739.5"
+        "score": 0.782,
+        "detail": "swept low 743.2"
       },
       {
         "name": "rsi",
-        "score": 0.55,
-        "detail": "RSI=67.9"
+        "score": 0.15,
+        "detail": "RSI=81.6"
       },
       {
         "name": "macd",
         "score": 0.7,
-        "detail": "hist=1.525"
+        "detail": "hist=0.9628"
       },
       {
         "name": "moving_average",
-        "score": 0.55,
-        "detail": "EMA21=733"
+        "score": 1.0,
+        "detail": "EMA21=740"
       },
       {
         "name": "ai_committee",
@@ -107,8 +52,61 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_BNBUSDT_1792887818",
-    "hitPrice": 747.97,
-    "hitTime": "2026-10-25T04:41:45"
+    "id": "sig_BNBUSDT_1792904323"
+  },
+  "XRPUSDT": {
+    "direction": "LONG",
+    "entry": 1.314,
+    "stopLoss": 1.303501,
+    "takeProfit": 1.334997,
+    "tp1": 1.334997,
+    "tp2": 1.334997,
+    "sl": 1.303501,
+    "rr": 2.0,
+    "score": 65.98,
+    "ruleScore": 74.48,
+    "risk": "HIGH",
+    "status": "OPEN",
+    "issuedAt": "2026-10-25T04:58:43.202815+00:00",
+    "issuedAtEpoch": 1792904323,
+    "version": "13.0.0",
+    "components": [
+      {
+        "name": "order_flow",
+        "score": 0.601,
+        "detail": "delta=+0.16 cp=0.63"
+      },
+      {
+        "name": "volume_profile",
+        "score": 0.95,
+        "detail": "POC=1.307"
+      },
+      {
+        "name": "sweep",
+        "score": 0.788,
+        "detail": "swept low 1.305"
+      },
+      {
+        "name": "rsi",
+        "score": 0.15,
+        "detail": "RSI=72.2"
+      },
+      {
+        "name": "macd",
+        "score": 0.7,
+        "detail": "hist=0.001225"
+      },
+      {
+        "name": "moving_average",
+        "score": 1.0,
+        "detail": "EMA21=1.301"
+      },
+      {
+        "name": "ai_committee",
+        "score": 0.5,
+        "detail": "no AI key"
+      }
+    ],
+    "id": "sig_XRPUSDT_1792904323"
   }
 }
