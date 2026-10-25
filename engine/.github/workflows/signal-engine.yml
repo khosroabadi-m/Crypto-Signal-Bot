@@ -62,7 +62,6 @@ jobs:
       # ── 4. Run the signal engine ───────────────────────────────────────────
       - name: Run signal engine
         env:
-          BINANCE_BASE: "https://data-api.binance.vision"
           KHOSRO_VERBOSE: "1"
         run: |
           python engine/main.py

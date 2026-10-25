@@ -48,8 +48,11 @@ SYMBOLS_DASH = ["BTC-USDT", "ETH-USDT", "SOL-USDT", "BNB-USDT", "XRP-USDT"]
 BINANCE_TO_DASH = dict(zip(SYMBOLS, SYMBOLS_DASH))
 DASH_TO_BINANCE = dict(zip(SYMBOLS_DASH, SYMBOLS))
 
-# Binance data API base — hardcoded (env var may strip /api/v3)
-BINANCE_REST = "https://data-api.binance.vision/api/v3"
+# Binance data API base — always ensure /api/v3 is included
+_base = os.getenv("BINANCE_BASE", "https://data-api.binance.vision")
+if "/api/v3" not in _base:
+    _base = _base.rstrip("/") + "/api/v3"
+BINANCE_REST = _base
 
 # Tehran timezone (UTC+3:30)
 TEHRAN_TZ = timezone(timedelta(hours=3, minutes=30))
@@ -61,8 +64,8 @@ TEHRAN_TZ = timezone(timedelta(hours=3, minutes=30))
 async def fetch_klines(symbol: str, interval: str, limit: int = 200) -> list:
     """Fetch klines from Binance data-api (geo-unblocked).
 
-    Returns list of candle dicts with BOTH shorthand (o,h,l,c,v) and
-    full (open,high,low,close,volume) keys — so all engines can use them.
+    Hardcoded URL (same as khosro_runner.py) — env var BINANCE_BASE
+    may strip /api/v3, so we don't rely on it.
     """
     url = f"https://data-api.binance.vision/api/v3/klines?symbol={symbol}&interval={interval}&limit={limit}"
     try:
@@ -72,17 +75,19 @@ async def fetch_klines(symbol: str, interval: str, limit: int = 200) -> list:
                     log.warning(f"  HTTP {r.status} for {symbol} {interval}")
                     return []
                 raw = await r.json()
-                # Format: [openTime, open, high, low, close, volume, closeTime, ...]
+                # Format: [openTime(ms), open, high, low, close, volume, closeTime(ms), ...]
                 candles = []
                 for k in raw:
                     c = {
                         # shorthand keys (for Penta + Khosro)
-                        "t": int(k[0]), "o": float(k[1]), "h": float(k[2]),
+                        # t در ثانیه (مثل KuCoin) — PentaSignal با ثانیه کار می‌کند
+                        "t": int(k[0]) // 1000,
+                        "o": float(k[1]), "h": float(k[2]),
                         "l": float(k[3]), "c": float(k[4]), "v": float(k[5]),
                         # full keys (for Titan)
                         "openTime": int(k[0]), "open": float(k[1]), "high": float(k[2]),
                         "low": float(k[3]), "close": float(k[4]), "volume": float(k[5]),
-                        "closeTime": int(k[6]),
+                        "closeTime": int(k[6]) // 1000,  # ثانیه
                     }
                     candles.append(c)
                 return candles
