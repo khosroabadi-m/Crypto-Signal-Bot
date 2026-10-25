@@ -66,7 +66,7 @@
     "score": 65.98,
     "ruleScore": 74.48,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-10-25T04:58:43.202815+00:00",
     "issuedAtEpoch": 1792904323,
     "version": "13.0.0",
@@ -107,6 +107,8 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_XRPUSDT_1792904323"
+    "id": "sig_XRPUSDT_1792904323",
+    "hitPrice": 1.3034,
+    "hitTime": "2026-10-25T05:39:19"
   }
 }
