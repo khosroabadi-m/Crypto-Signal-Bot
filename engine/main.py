@@ -1,469 +1,433 @@
+"""engine/main.py — Master Orchestrator (v25)
+
+اجرا از GitHub Actions هر ۳۰ دقیقه.
+
+این فایل یک **orchestrator** است، نه یک موتور تکی. برای هر
+ACTIVE_PROFILES موتور مربوطه را (بدون تغییر در قوانین) صدا می‌زند و
+خروجی را با profile_id در signals.json می‌نویسد.
+
+═══════════════════════════════════════════════════════════════════════════
+  قانون طلایی: فایل‌های زیر هرگز تغییر نمی‌کنند:
+    pentasignal/scenarios.py, pentasignal/engine.py, pentasignal/settings.py
+    titansignal/rules.py, titansignal/config.py
+    khosro_analyzer/smc.py, khosro_analyzer/config.py
+    khosro_runner.py (منطق Khosro)
+  این فایل فقط آداپتور و فراخوانی است.
+═══════════════════════════════════════════════════════════════════════════
+
+Flow:
+  1. همه‌ی کندل‌ها را یک‌بار از Binance بگیر (30m, 1h, 4h, 15m, 5m, 1m)
+  2. برای هر (profile_id, symbol):
+     - KHOSRO_SMC → khosro_runner.run_khosro(data)
+     - PENTA_*   → pentasignal Engine.detect_new
+     - TITAN_*   → titansignal generate_signal
+  3. همه‌ی سیگنال‌ها را با profile_id در signals.json بنویسد
 """
-Khosro Crypto Bot — Signal Engine v13
-اجرا در GitHub Actions هر ۳۰ دقیقه.
+import os, sys, json, time, asyncio, logging, traceback
+from pathlib import Path
+from datetime import datetime, timezone, timedelta
 
-خروجی: signals.json (commit به گیت‌هاب) + ارسال تلگرام
+# اضافه‌کردن مسیر engine/ به sys.path
+ENGINE_DIR = Path(__file__).parent.resolve()
+sys.path.insert(0, str(ENGINE_DIR))
 
-تغییرات:
-- استفاده از data-api.binance.vision (بدون محدودیت جغرافیایی)
-- لاگ verbose برای debug
-- thresholds پایین‌تر برای تست اولیه
-"""
-import os
-import json
-import time
-import asyncio
-import logging
-from datetime import datetime, timezone
-
+import profiles
 import aiohttp
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
-log = logging.getLogger("engine")
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s",
+)
+log = logging.getLogger("orchestrator")
 
+# ─── Symbols ───────────────────────────────────────────────────────────────
+# Binance USDT format (for Khosro + data fetching)
 SYMBOLS = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT"]
-TIMEFRAMES = ["5m", "15m", "30m", "1h", "4h"]
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
+# Dash format (for Penta + Titan engines — their original format)
+SYMBOLS_DASH = ["BTC-USDT", "ETH-USDT", "SOL-USDT", "BNB-USDT", "XRP-USDT"]
+BINANCE_TO_DASH = dict(zip(SYMBOLS, SYMBOLS_DASH))
+DASH_TO_BINANCE = dict(zip(SYMBOLS_DASH, SYMBOLS))
 
-# Thresholds — پایین‌تر برای تست اولیه
-LONG_SIGNAL_SCORE = 50   # قبلاً 62 بود
-SHORT_SIGNAL_SCORE = 55  # قبلاً 72 بود
-SHORT_HTF_MIN = 0.45     # قبلاً 0.60 بود
-LONG_HTF_MIN = 0.25      # قبلاً 0.35 بود
-MAX_ATR_PCT = 0.10       # قبلاً 0.06 بود
-STOP_MAX_PCT = 0.030
-STOP_MIN_PCT = 0.005
-STRUCT_STOP_MAX_ATR = 2.5
-AI_TRIGGER_RULE_SCORE = 40  # قبلاً 60 بود — بدون AI هم سیگنال بده
+BINANCE_REST = os.getenv("BINANCE_BASE", "https://data-api.binance.vision/api/v3")
 
-RISK_PARAMS = {
-    "LOW": {"atr_sl": 1.4, "rr": 2.4},
-    "MEDIUM": {"atr_sl": 1.6, "rr": 2.1},
-    "HIGH": {"atr_sl": 1.9, "rr": 2.0},
-}
+# Tehran timezone (UTC+3:30)
+TEHRAN_TZ = timezone(timedelta(hours=3, minutes=30))
 
-# استفاده از data-api.binance.vision (بدون محدودیت جغرافیایی HTTP 451)
-BINANCE_REST = "https://data-api.binance.vision/api/v3"
 
-def ema_series(prices, period):
-    if period <= 0 or len(prices) < period:
-        return [None] * len(prices)
-    k = 2.0 / (period + 1.0)
-    out = [None] * (period - 1)
-    value = sum(prices[:period]) / period
-    out.append(value)
-    for p in prices[period:]:
-        value = p * k + value * (1 - k)
-        out.append(value)
-    return out
+# ============================================================================
+# ۱) Data fetchers — همه‌ی کندل‌ها را یک‌بار از Binance بگیر
+# ============================================================================
+async def fetch_klines(symbol: str, interval: str, limit: int = 200) -> list:
+    """Fetch klines from Binance data-api (geo-unblocked).
 
-def calc_ema(prices, period):
-    s = ema_series(prices, period)
-    return s[-1] if s else None
-
-def calc_rsi(prices, period=14):
-    if len(prices) < period + 1:
-        return None
-    gains, losses = [], []
-    for i in range(1, len(prices)):
-        d = prices[i] - prices[i - 1]
-        gains.append(max(d, 0.0))
-        losses.append(max(-d, 0.0))
-    avg_gain = sum(gains[:period]) / period
-    avg_loss = sum(losses[:period]) / period
-    for i in range(period, len(gains)):
-        avg_gain = (avg_gain * (period - 1) + gains[i]) / period
-        avg_loss = (avg_loss * (period - 1) + losses[i]) / period
-    if avg_loss == 0: return 100.0
-    if avg_gain == 0: return 0.0
-    return 100.0 - 100.0 / (1.0 + avg_gain / avg_loss)
-
-def calc_macd(prices, fast=12, slow=26, sig=9):
-    if len(prices) < slow + sig:
-        return {"macd": None, "signal": None, "histogram": None}
-    fs = ema_series(prices, fast)
-    ss = ema_series(prices, slow)
-    macd = [None if a is None or b is None else a - b for a, b in zip(fs, ss)]
-    valid = [x for x in macd if x is not None]
-    sig_v = ema_series(valid, sig)
-    signal_value = sig_v[-1] if sig_v else None
-    line_value = valid[-1] if valid else None
-    hist = line_value - signal_value if line_value is not None and signal_value is not None else None
-    return {"macd": line_value, "signal": signal_value, "histogram": hist}
-
-def calc_atr(candles, period=14):
-    if len(candles) < period + 1:
-        return None
-    tr = []
-    for i in range(1, len(candles)):
-        c, p = candles[i], candles[i - 1]
-        tr.append(max(c["h"] - c["l"], abs(c["h"] - p["c"]), abs(c["l"] - p["c"])))
-    atr = sum(tr[:period]) / period
-    for x in tr[period:]:
-        atr = (atr * (period - 1) + x) / period
-    return atr
-
-def find_pivots(candles, left=2, right=2):
-    highs, lows = [], []
-    for i in range(left, len(candles) - right):
-        h, l = candles[i]["h"], candles[i]["l"]
-        if all(candles[j]["h"] <= h for j in range(i - left, i + right + 1) if j != i):
-            highs.append((i, h))
-        if all(candles[j]["l"] >= l for j in range(i - left, i + right + 1) if j != i):
-            lows.append((i, l))
-    return highs, lows
-
-def tf_state(candles, direction, ef=21, es=55):
-    if len(candles) < es + 5:
-        return 0, "insufficient"
-    closes = [c["c"] for c in candles]
-    ema_fast = calc_ema(closes, ef) or 0
-    ema_slow = calc_ema(closes, es) or 0
-    price = closes[-1]
-    s = 0
-    if direction == "LONG":
-        if ema_fast > ema_slow: s += 0.5
-        if price > ema_fast: s += 0.35
-        s += 0.15
-    else:
-        if ema_fast < ema_slow: s += 0.5
-        if price < ema_fast: s += 0.35
-        s += 0.15
-    return s, f"ema{ef}={ema_fast:.2f} ema{es}={ema_slow:.2f} price={price:.2f} score={s:.2f}"
-
-def order_flow_score(candles, direction, lookback=12):
-    if len(candles) < lookback: return 0.5, "insufficient"
-    win = candles[-lookback:]
-    buy = sum(c["v"] for c in win if c["c"] >= c["o"])
-    sell = sum(c["v"] for c in win if c["c"] < c["o"])
-    total = buy + sell
-    delta = (buy - sell) / total if total else 0
-    cp_list = [(c["c"] - c["l"]) / max(c["h"] - c["l"], 1e-12) for c in win]
-    avg_cp = sum(cp_list) / len(cp_list)
-    flow = 0.5 + 0.30 * delta + 0.40 * (avg_cp - 0.5) * 2 * 0.5
-    flow = max(0, min(1, flow))
-    if direction == "SHORT": flow = 1 - flow
-    return flow, f"delta={delta:+.2f} cp={avg_cp:.2f}"
-
-def volume_profile_score(candles, direction, lookback=120, bins=24):
-    if len(candles) < 60: return 0.5, "insufficient"
-    win = candles[-lookback:]
-    lo = min(c["l"] for c in win)
-    hi = max(c["h"] for c in win)
-    if hi <= lo: return 0.5, "flat"
-    step = (hi - lo) / bins
-    vols = [0.0] * bins
-    for c in win:
-        tp = (c["h"] + c["l"] + c["c"]) / 3
-        idx = min(bins - 1, max(0, int((tp - lo) / step)))
-        vols[idx] += c["v"]
-    poc_idx = max(range(bins), key=lambda i: vols[i])
-    poc = lo + (poc_idx + 0.5) * step
-    price = win[-1]["c"]
-    if direction == "LONG":
-        return (0.95 if price > poc else 0.45 if price >= lo + (poc_idx - 1) * step else 0.15), f"POC={poc:.4g}"
-    else:
-        return (0.95 if price < poc else 0.45 if price <= lo + (poc_idx + 1) * step else 0.15), f"POC={poc:.4g}"
-
-def sweep_score(candles, direction):
-    if len(candles) < 30: return 0.35, "insufficient"
-    highs, lows = find_pivots(candles[-90:])
-    last = candles[-8:]
-    best = 0
-    found = "none"
-    if direction == "LONG" and lows:
-        for lvl in [l[1] for l in lows[:-1]]:
-            for j, c in enumerate(last):
-                if c["l"] < lvl and c["c"] > lvl:
-                    depth = (lvl - c["l"]) / max(lvl, 1e-12)
-                    recency = 1 - (len(last) - 1 - j) / 16
-                    s = min(1, 0.55 + min(depth * 40, 0.25) + recency * 0.20)
-                    if s > best: best, found = s, f"swept low {lvl:.4g}"
-    elif direction == "SHORT" and highs:
-        for lvl in [h[1] for h in highs[:-1]]:
-            for j, c in enumerate(last):
-                if c["h"] > lvl and c["c"] < lvl:
-                    depth = (c["h"] - lvl) / max(lvl, 1e-12)
-                    recency = 1 - (len(last) - 1 - j) / 16
-                    s = min(1, 0.55 + min(depth * 40, 0.25) + recency * 0.20)
-                    if s > best: best, found = s, f"swept high {lvl:.4g}"
-    return (best or 0.35), found
-
-def rsi_score(candles, direction):
-    closes = [c["c"] for c in candles]
-    rsi = calc_rsi(closes)
-    if rsi is None: return 0.5, "no RSI"
-    if direction == "LONG":
-        s = 0.55 if 50 <= rsi <= 68 else 0.35 if 45 <= rsi < 50 else 0.15
-    else:
-        s = 0.55 if 32 <= rsi <= 50 else 0.35 if 50 < rsi <= 55 else 0.15
-    return s, f"RSI={rsi:.1f}"
-
-def macd_score(candles, direction):
-    closes = [c["c"] for c in candles]
-    m = calc_macd(closes)
-    if m["histogram"] is None: return 0.5, "no MACD"
-    aligned = m["histogram"] > 0 if direction == "LONG" else m["histogram"] < 0
-    return (0.7 if aligned else 0.2), f"hist={m['histogram']:.4g}"
-
-def moving_average_score(candles, direction):
-    closes = [c["c"] for c in candles]
-    if len(closes) < 60: return 0.5, "insufficient"
-    e21 = calc_ema(closes, 21)
-    e50 = calc_ema(closes, 50)
-    if e21 is None or e50 is None: return 0.5, "no EMA"
-    price = closes[-1]
-    s = 0
-    if direction == "LONG":
-        if e21 > e50: s += 0.45
-        if price > e21: s += 0.30
-        if e21 > calc_ema(closes[:-7], 21) if len(closes) > 7 else False: s += 0.25
-    else:
-        if e21 < e50: s += 0.45
-        if price < e21: s += 0.30
-        if e21 < calc_ema(closes[:-7], 21) if len(closes) > 7 else False: s += 0.25
-    return s, f"EMA21={e21:.4g}"
-
-def apply_stop_caps(sl, price, atr, direction, risk):
-    dist = abs(price - sl) if sl else 0
-    if dist <= 0:
-        atr_fallback = atr if (atr and atr > 0) else price * 0.02
-        dist = atr_fallback * RISK_PARAMS[risk]["atr_sl"]
-    max_dist = price * STOP_MAX_PCT
-    if atr and atr > 0:
-        max_dist = min(max_dist, atr * STRUCT_STOP_MAX_ATR)
-    min_dist = price * STOP_MIN_PCT
-    capped_dist = max(min_dist, min(dist, max_dist))
-    return (price - capped_dist if direction == "LONG" else price + capped_dist), abs(capped_dist - dist) > 1e-12
-
-async def fetch_klines(session, symbol, interval, limit=200):
+    Returns list of candle dicts with BOTH shorthand (o,h,l,c,v) and
+    full (open,high,low,close,volume) keys — so all engines can use them.
+    """
     url = f"{BINANCE_REST}/klines?symbol={symbol}&interval={interval}&limit={limit}"
     try:
-        async with session.get(url, timeout=15) as r:
-            if r.status != 200:
-                log.warning(f"  {symbol} {interval} HTTP {r.status}")
-                return []
-            raw = await r.json()
-            candles = [{"t": int(k[0] // 1000), "o": float(k[1]), "h": float(k[2]), "l": float(k[3]), "c": float(k[4]), "v": float(k[5])} for k in raw]
-            log.info(f"  📊 {symbol} {interval}: {len(candles)} candles, last close={candles[-1]['c']:.2f}" if candles else f"  ⚠️ {symbol} {interval}: no candles")
-            return candles
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, timeout=aiohttp.ClientTimeout(total=10)) as r:
+                if r.status != 200:
+                    log.warning(f"  HTTP {r.status} for {symbol} {interval}")
+                    return []
+                raw = await r.json()
+                # Format: [openTime, open, high, low, close, volume, closeTime, ...]
+                candles = []
+                for k in raw:
+                    c = {
+                        # shorthand keys (for Penta + Khosro)
+                        "t": int(k[0]), "o": float(k[1]), "h": float(k[2]),
+                        "l": float(k[3]), "c": float(k[4]), "v": float(k[5]),
+                        # full keys (for Titan)
+                        "openTime": int(k[0]), "open": float(k[1]), "high": float(k[2]),
+                        "low": float(k[3]), "close": float(k[4]), "volume": float(k[5]),
+                        "closeTime": int(k[6]),
+                    }
+                    candles.append(c)
+                return candles
     except Exception as e:
         log.error(f"  fetch_klines {symbol} {interval}: {e}")
         return []
 
-async def fetch_symbol_data(session, symbol):
-    out = {}
-    tasks = [fetch_klines(session, symbol, tf, 200) for tf in TIMEFRAMES]
-    results = await asyncio.gather(*tasks)
-    for tf, candles in zip(TIMEFRAMES, results):
-        if candles: out[tf] = candles
-    return out
 
-WEIGHTS = {
-    "ai_committee": 25, "order_flow": 14, "volume_profile": 11, "sweep": 10,
-    "moving_average": 5, "macd": 4, "rsi": 3,
-}
+async def fetch_all_data() -> dict:
+    """Fetch ALL candle data ONCE for all symbols × all timeframes.
 
-def analyze_market(symbol, data, direction, risk_hint="MEDIUM", ai_score=0.5, ai_detail="no AI"):
-    base = data.get("30m", [])
-    if len(base) < 80:
-        log.info(f"  ⚠️ {symbol} {direction}: insufficient 30m data ({len(base)} < 80)")
-        return {"status": "NO_SIGNAL", "reason": "insufficient 30m", "symbol": symbol, "direction": direction}
+    Returns: {symbol_binance: {"30m": [...], "1h": [...], "4h": [...], "15m": [...], "5m": [...], "1m": [...]}}
+    """
+    timeframes = ["30m", "1h", "4h", "15m", "5m", "1m"]
+    data = {}
+    log.info("📡 Fetching all candle data from Binance...")
+    for sym in SYMBOLS:
+        data[sym] = {}
+        for tf in timeframes:
+            data[sym][tf] = await fetch_klines(sym, tf, 300 if tf == "1m" else 200)
+            log.info(f"  {sym} {tf}: {len(data[sym][tf])} candles")
+    log.info(f"✅ Data fetched for {len(data)} symbols × {len(timeframes)} timeframes")
+    return data
 
-    # HTF gate
-    htf_min = SHORT_HTF_MIN if direction == "SHORT" else LONG_HTF_MIN
-    trend4, t4d = tf_state(data.get("4h", []), direction)
-    trend1, t1d = tf_state(data.get("1h", []), direction)
-    log.info(f"  🔍 {symbol} {direction}: HTF 4h={trend4:.2f} (min={htf_min}) | 1h={trend1:.2f} (min={htf_min})")
-    if trend4 < htf_min or trend1 < htf_min:
-        log.info(f"  ❌ {symbol} {direction}: HTF GATE BLOCKED (4h={trend4:.2f} < {htf_min} or 1h={trend1:.2f} < {htf_min})")
-        return {"status": "NO_SIGNAL", "reason": f"htf gate (4h={trend4:.2f} 1h={trend1:.2f})", "symbol": symbol, "direction": direction}
 
-    # Volatility gate
-    atr = calc_atr(base)
-    price = base[-1]["c"]
-    atr_pct = (atr / price) if (atr and price) else 999
-    log.info(f"  📏 {symbol} {direction}: ATR={atr:.2f} ATR%={atr_pct*100:.2f}% (max={MAX_ATR_PCT*100:.0f}%)")
-    if atr_pct > MAX_ATR_PCT:
-        log.info(f"  ❌ {symbol} {direction}: VOLATILITY GATE BLOCKED (ATR%={atr_pct*100:.2f}% > {MAX_ATR_PCT*100:.0f}%)")
-        return {"status": "NO_SIGNAL", "reason": f"volatility gate (ATR%={atr_pct:.2f})", "symbol": symbol, "direction": direction}
+# ============================================================================
+# ۲) Khosro SMC adapter (via khosro_runner)
+# ============================================================================
+async def run_khosro_profile(data: dict) -> dict:
+    """KHOSRO_SMC — uses khosro_runner.run_khosro(data) without modification.
 
-    # Components
-    components = []
-    s, d = order_flow_score(base, direction); components.append(("order_flow", s, WEIGHTS["order_flow"], d))
-    s, d = volume_profile_score(base, direction); components.append(("volume_profile", s, WEIGHTS["volume_profile"], d))
-    s, d = sweep_score(base, direction); components.append(("sweep", s, WEIGHTS["sweep"], d))
-    s, d = rsi_score(base, direction); components.append(("rsi", s, WEIGHTS["rsi"], d))
-    s, d = macd_score(base, direction); components.append(("macd", s, WEIGHTS["macd"], d))
-    s, d = moving_average_score(base, direction); components.append(("moving_average", s, WEIGHTS["moving_average"], d))
-    components.append(("ai_committee", ai_score, WEIGHTS["ai_committee"], ai_detail))
-
-    # Log each component
-    for name, score, weight, detail in components:
-        log.info(f"  📦 {symbol} {direction}: {name} score={score:.3f} weight={weight} detail={detail}")
-
-    # Scores
-    rule_w = sum(w for n, _, w, _ in components if n != "ai_committee")
-    rule_score = 100 * sum(s * w for n, s, w, _ in components if n != "ai_committee") / rule_w
-    total_w = sum(w for _, _, w, _ in components)
-    score = 100 * sum(s * w for _, s, w, _ in components) / total_w
-    risk = "LOW" if score >= 78 else "MEDIUM" if score >= 68 else "HIGH"
-    p = RISK_PARAMS[risk]
-    sl = price - atr * p["atr_sl"] if direction == "LONG" else price + atr * p["atr_sl"]
-    sl, _ = apply_stop_caps(sl, price, atr, direction, risk)
-    tp = price + (price - sl) * p["rr"] if direction == "LONG" else price - (sl - price) * p["rr"]
-    threshold = SHORT_SIGNAL_SCORE if direction == "SHORT" else LONG_SIGNAL_SCORE
-
-    log.info(f"  📊 {symbol} {direction}: rule_score={rule_score:.1f} total_score={score:.1f} threshold={threshold} risk={risk}")
-
-    status = "SIGNAL" if score >= threshold else "NO_SIGNAL"
-    if status == "SIGNAL":
-        log.info(f"  ✅ {symbol} {direction}: SIGNAL! score={score:.1f} >= {threshold} entry={price:.2f} SL={sl:.2f} TP={tp:.2f}")
-    else:
-        log.info(f"  ❌ {symbol} {direction}: NO SIGNAL (score={score:.1f} < {threshold})")
-
-    return {
-        "status": status, "symbol": symbol, "direction": direction, "risk": risk,
-        "score": round(score, 2), "ruleScore": round(rule_score, 2),
-        "entry": round(price, 6), "stopLoss": round(sl, 6), "takeProfit": round(tp, 6),
-        "rr": p["rr"], "atrPct": round(atr_pct, 4) if atr else None, "threshold": threshold,
-        "trend4": round(trend4, 2), "trend1": round(trend1, 2),
-        "components": [{"name": n, "score": round(s, 3), "detail": d} for n, s, _, d in components],
-        "issuedAt": datetime.now(timezone.utc).isoformat(),
-        "issuedAtEpoch": int(time.time()), "version": "13.0.0",
-    }
-
-async def ask_groq(symbol, candidate):
-    if not GROQ_API_KEY: return 0.5, "no AI key"
-    url = "https://api.groq.com/openai/v1/chat/completions"
-    headers = {"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"}
-    prompt = f"""You are a disciplined crypto trade reviewer.
-Symbol: {symbol}
-Direction: {candidate['direction']}
-Rule score: {candidate['ruleScore']}
-Entry: {candidate['entry']} SL: {candidate['stopLoss']} TP: {candidate['takeProfit']}
-R:R: {candidate['rr']} ATR%: {candidate['atrPct']}
-Reply ONLY JSON: {{"decision":"approve"|"reject","confidence":0-100,"reason":"short"}}"""
-    payload = {"model": "openai/gpt-oss-20b", "messages": [{"role": "user", "content": prompt}], "temperature": 0.2, "max_tokens": 200}
+    The khosro_runner.py is the original engine/main.py logic, moved to a
+    separate file. Its run_khosro(data) function takes pre-fetched data
+    and returns signals with profile_id="KHOSRO_SMC".
+    """
     try:
-        async with aiohttp.ClientSession() as session:
-            async with session.post(url, headers=headers, json=payload, timeout=30) as r:
-                if r.status != 200:
-                    log.warning(f"  🤖 {symbol}: AI HTTP {r.status}")
-                    return 0.5, f"AI HTTP {r.status}"
-                data = await r.json()
-                content = data["choices"][0]["message"]["content"].replace("```json", "").replace("```", "").strip()
-                parsed = json.loads(content)
-                decision = parsed.get("decision", "").lower()
-                conf = float(parsed.get("confidence", 50))
-                if decision.startswith("app"):
-                    log.info(f"  🤖 {symbol}: AI APPROVE conf={conf:.0f}%")
-                    return conf / 100, f"AI approve {conf:.0f}%"
-                if decision.startswith("rej"):
-                    log.info(f"  🤖 {symbol}: AI REJECT conf={conf:.0f}%")
-                    return (100 - conf) / 100 * 0.5, f"AI reject {conf:.0f}%"
-                return 0.5, "AI ambiguous"
+        from khosro_runner import run_khosro
+        signals = await run_khosro(data)
+        # درج profile_id (در صورت نبود)
+        for k, s in signals.items():
+            s.setdefault("profile_id", "KHOSRO_SMC")
+        log.info(f"✅ KHOSRO_SMC: {len(signals)} signals")
+        return signals
     except Exception as e:
-        log.warning(f"  🤖 {symbol}: AI error: {type(e).__name__}")
-        return 0.5, f"AI error: {type(e).__name__}"
+        log.error(f"❌ KHOSRO_SMC failed: {e}")
+        log.error(traceback.format_exc())
+        return {}
 
-async def send_telegram(text):
-    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID: return
-    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+
+# ============================================================================
+# ۳) PentaSignal adapter — uses Engine.detect_new without modification
+# ============================================================================
+async def run_penta_all(data: dict) -> dict:
+    """PENTA_F1-F5 — Engine.detect_new را یک‌بار صدا می‌زند و نتایج را بر اساس
+    scenario_id تقسیم می‌کند (Fix 5: به‌جای ۵ بار detect_new).
+
+    Returns: dict با کلیدهای {SYMBOL}__{PENTA_F*} = {signal dict with profile_id}
+    """
+    signals_out = {}
     try:
-        async with aiohttp.ClientSession() as session:
-            await session.post(url, json={"chat_id": TELEGRAM_CHAT_ID, "text": text, "parse_mode": "HTML"}, timeout=10)
-    except Exception as e: log.error(f"Telegram: {e}")
+        from pentasignal.scenarios import SCENARIOS, MarketContext, ACTIVE_SCENARIOS
+        from pentasignal.engine import Engine
 
-def signal_to_telegram(s):
-    dir_text = "🟢 LONG · خرید" if s["direction"] == "LONG" else "🔴 SHORT · فروش"
-    sl_pct = (abs(s["entry"] - s["stopLoss"]) / s["entry"]) * 100
-    return (f"<b>╔═ KHOSRO SIGNAL ═╗</b>\n"
-            f"<b>{s['symbol']}</b>  ·  <b>{dir_text}</b>\n"
-            f"<code>v{s['version']}</code>\n"
-            f"<b>╚════════════════════╝</b>\n\n"
-            f"🎯 <b>امتیاز:</b> <code>{s['score']:.1f}%</code> (rule: {s['ruleScore']:.0f})\n\n"
-            f"<b>╭─ نقشه معامله ─╮</b>\n"
-            f"  ├─ ورود       <code>{s['entry']}</code>\n"
-            f"  ├─ حد ضرر     <code>{s['stopLoss']}</code>\n"
-            f"  ├─ فاصله SL   <code>{sl_pct:.2f}%</code>\n"
-            f"  ├─ هدف        <code>{s['takeProfit']}</code>\n"
-            f"  └─ نسبت R:R   <b>1 : {s['rr']:.2f}</b>\n"
-            f"<b>╰────────────────╯</b>")
+        # ساخت MarketContext با داده Binance
+        candles30 = {}
+        for sym_b in SYMBOLS:
+            sym_d = BINANCE_TO_DASH[sym_b]
+            candles30[sym_d] = data.get(sym_b, {}).get("30m", [])
+        btc_4h = data.get("BTCUSDT", {}).get("4h", [])
+        ctx = MarketContext(candles30=candles30, btc_4h=btc_4h)
 
-async def main():
-    log.info("=" * 60)
-    log.info("🚀 Khosro Crypto Engine v13 — GitHub Actions (VERBOSE)")
-    log.info(f"  Symbols: {', '.join(SYMBOLS)}")
-    log.info(f"  Timeframes: {', '.join(TIMEFRAMES)}")
-    log.info(f"  Binance API: {BINANCE_REST}")
-    log.info(f"  Thresholds: LONG={LONG_SIGNAL_SCORE} SHORT={SHORT_SIGNAL_SCORE}")
-    log.info(f"  HTF min: LONG={LONG_HTF_MIN} SHORT={SHORT_HTF_MIN}")
-    log.info(f"  Max ATR%: {MAX_ATR_PCT*100:.0f}%")
-    log.info(f"  AI: {'Groq configured' if GROQ_API_KEY else 'No AI key (rule-only)'}")
-    log.info(f"  Telegram: {'configured' if TELEGRAM_BOT_TOKEN else 'disabled'}")
-    log.info("=" * 60)
+        # ساخت Engine (light=True)
+        engine = Engine(light=True)
 
-    signals = {}
-    async with aiohttp.ClientSession() as session:
-        for symbol in SYMBOLS:
-            log.info(f"\n{'='*40}")
-            log.info(f"🔍 Analyzing {symbol}...")
+        # زمان فعلی Tehran
+        now_tehran = datetime.now(TEHRAN_TZ)
+
+        # Fix 5: یک‌بار detect_new صدا بزن → همه‌ی سناریوها در یک پاس
+        log.info("  Calling detect_new (single pass for all F1-F5)...")
+        all_new_sigs = engine.detect_new(now_tehran, ctx)
+        log.info(f"  detect_new returned {len(all_new_sigs)} raw signals")
+
+        # تقسیم بر اساس scenario_id و ساخت کلیدهای مرکب
+        for sig in all_new_sigs:
+            sid = sig.get("scenario_id", "")
+            # پیدا کردن profile_id متناظر
+            profile_id = None
+            for pid, p in profiles.PENTA_PROFILES.items():
+                if p.get("scenario_id") == sid:
+                    profile_id = pid
+                    break
+            if not profile_id:
+                continue
+            sym_d = sig.get("symbol", "")
+            sym_b = DASH_TO_BINANCE.get(sym_d, sym_d.replace("-", ""))
+            entry = float(sig.get("entry_hint", 0) or 0)
+            if entry <= 0:
+                continue
+            sc = SCENARIOS.get(sid, {})
+            signals_out[f"{sym_b}__{profile_id}"] = {
+                "profile_id": profile_id,
+                "symbol": sym_b,
+                "direction": sig.get("direction", sc.get("direction", "BOTH")),
+                "entry": entry,
+                "stopLoss": float(sig.get("stop_loss", 0) or 0),
+                "takeProfit": float(sig.get("tp", sig.get("take_profit", 0)) or 0),
+                "tp1": float(sig.get("tp", 0) or 0),
+                "tp2": float(sig.get("tp", 0) or 0),
+                "sl": float(sig.get("stop_loss", 0) or 0),
+                "rr": float(sc.get("rr", 2.0) or 2.0),
+                "score": float(sig.get("score", 0) or 0),
+                "risk": sig.get("risk", "MEDIUM"),
+                "status": "OPEN",
+                "components": [],
+                "issuedAt": now_tehran.strftime("%Y-%m-%d %H:%M:%S"),
+                "issuedAtEpoch": int(time.time()),
+                "timestamp": int(time.time()),
+                # Penta exit params (from UNCHANGED scenarios.py)
+                "exit_mode": sc.get("exit_mode", "FIXED"),
+            }
+
+        # تفکیک بر اساس profile_id برای لاگ
+        for pid in profiles.PENTA_PROFILES:
+            cnt = sum(1 for k in signals_out if k.endswith(pid))
+            log.info(f"  ✅ {pid} ({profiles.get_profile(pid).get('scenario_id')}): {cnt} signals")
+    except ImportError as e:
+        log.warning(f"  Penta modules not available ({e})")
+    except Exception as e:
+        log.error(f"  Penta failed: {e}")
+        log.error(traceback.format_exc())
+    return signals_out
+
+
+# ============================================================================
+# ۴) Titan Signal adapter — uses generate_signal without modification
+# ============================================================================
+async def run_titan_profile(profile_id: str, data: dict) -> dict:
+    """TITAN_S1, TITAN_S3, TITAN_B1 — uses titansignal generate_signal.
+
+    Titan's generate_signal expects:
+    - Multiple timeframes (30m, 15m, 5m, 1m, 1h, 4h)
+    - Pre-computed indicators (EMA, MACD, RSI, ATR, ADX)
+    - Symbol in -USDT format
+
+    Fix 4: avg_vol_30m now calculated from real candle data.
+    Fix 2: trailing params (trail_activate, trail_lock, max_hold_candles, sl_pct)
+           are added to the signal dict so the Wispbyte server can use them
+           for Titan-specific exit logic.
+    """
+    scenario_id = profiles.get_profile(profile_id).get("scenario_id", "S1")
+    signals_out = {}
+    try:
+        from titansignal.rules import generate_signal
+        from titansignal.config import SCENARIOS as TITAN_SCENARIOS
+        from titansignal.indicators import (
+            calculate_ema, calculate_rsi, calculate_macd, calculate_atr,
+        )
+        sc = TITAN_SCENARIOS.get(scenario_id)
+        if not sc:
+            log.warning(f"  Titan {scenario_id}: scenario not found")
+            return {}
+
+        for sym_b in SYMBOLS:
+            sym_d = BINANCE_TO_DASH[sym_b]
+            sym_data = data.get(sym_b, {})
+            candles_30m = sym_data.get("30m", [])
+            candles_15m = sym_data.get("15m", [])
+            candles_5m = sym_data.get("5m", [])
+            candles_1m = sym_data.get("1m", [])
+            candles_1h = sym_data.get("1h", [])
+            candles_4h = sym_data.get("4h", [])
+            if len(candles_30m) < 50:
+                continue
+
+            # استخراج closes
+            closes_30 = [c["c"] for c in candles_30m]
+            closes_1h = [c["c"] for c in candles_1h]
+            closes_4h = [c["c"] for c in candles_4h]
+
+            # محاسبه اندیکاتورها (بدون تغییر در منطق Titan)
+            ema21_30m = calculate_ema(closes_30, 21) if len(closes_30) >= 21 else None
+            ema50_30m = calculate_ema(closes_30, 50) if len(closes_30) >= 50 else None
+            ema8_30m = calculate_ema(closes_30, 8) if len(closes_30) >= 8 else None
+            ema21_1h = calculate_ema(closes_1h, 21) if len(closes_1h) >= 21 else None
+            ema50_1h = calculate_ema(closes_1h, 50) if len(closes_1h) >= 50 else None
+            ema21_4h = calculate_ema(closes_4h, 21) if len(closes_4h) >= 21 else None
+            ema50_4h = calculate_ema(closes_4h, 50) if len(closes_4h) >= 50 else None
+            ema200_4h = calculate_ema(closes_4h, 200) if len(closes_4h) >= 200 else None
+
+            rsi_30m = calculate_rsi(closes_30) if len(closes_30) >= 14 else None
+            macd_30m = calculate_macd(closes_30) if len(closes_30) >= 26 else None
+            atr_30m = calculate_atr(candles_30m) if len(candles_30m) >= 14 else None
+
+            # Fix 4: محاسبه avg_vol_30m واقعی از داده‌ی کندل‌ها
+            vols_30m = [c.get("v", 0) for c in candles_30m[-20:]]  # میانگین ۲۰ کندل اخیر
+            avg_vol_30m = sum(vols_30m) / len(vols_30m) if vols_30m else 0.0
+
+            # کندل‌های اخیر برای هر تایم‌فریم
+            c15 = candles_15m[-1] if candles_15m else {}
+            c5m = candles_5m[-1] if candles_5m else {}
+            c1m = candles_1m[-1] if candles_1m else {}
+
+            price = candles_30m[-1]["c"] if candles_30m else 0
+
+            # تعیین direction بر اساس scenario
+            direction = sc.get("direction_only", "LONG")
+
             try:
-                data = await fetch_symbol_data(session, symbol)
-                log.info(f"  Data: {', '.join(f'{tf}={len(c)}' for tf,c in data.items())}")
-
-                if "30m" not in data or len(data["30m"]) < 80:
-                    log.info(f"  ⚠️ {symbol}: insufficient 30m data ({len(data.get('30m',[]))} < 80)")
-                    continue
-
-                for d in ("LONG", "SHORT"):
-                    log.info(f"\n  --- {symbol} {d} ---")
-                    pre = analyze_market(symbol, data, d, "MEDIUM")
-                    if pre["status"] != "SIGNAL":
-                        log.info(f"  → {symbol} {d}: {pre.get('reason', 'NO_SIGNAL')} (score={pre.get('score', 0)})")
-                        continue
-
-                    # AI consultation (only if rule score >= AI_TRIGGER_RULE_SCORE)
-                    if pre["ruleScore"] >= AI_TRIGGER_RULE_SCORE:
-                        ai_score, ai_detail = await ask_groq(symbol, pre)
-                        pre["components"].append({"name": "ai_committee", "score": round(ai_score, 3), "detail": ai_detail})
-                        pre = analyze_market(symbol, data, d, "MEDIUM", ai_score=ai_score, ai_detail=ai_detail)
-                    else:
-                        log.info(f"  → {symbol} {d}: rule_score={pre['ruleScore']:.1f} < AI trigger {AI_TRIGGER_RULE_SCORE} — skipping AI")
-
-                    if pre["status"] == "SIGNAL":
-                        log.info(f"\n  🎯 {symbol} {d}: SIGNAL CONFIRMED!")
-                        log.info(f"    score={pre['score']} entry={pre['entry']} SL={pre['stopLoss']} TP={pre['takeProfit']}")
-                        log.info(f"    rule_score={pre['ruleScore']} risk={pre['risk']} rr={pre['rr']}")
-                        if not signals.get(symbol):  # only first signal per symbol
-                            signals[symbol] = {
-                                "direction": pre["direction"], "entry": pre["entry"],
-                                "stopLoss": pre["stopLoss"], "takeProfit": pre["takeProfit"],
-                                "tp1": pre["takeProfit"], "tp2": pre["takeProfit"], "sl": pre["stopLoss"],
-                                "rr": pre["rr"], "score": pre["score"], "ruleScore": pre["ruleScore"],
-                                "risk": pre["risk"], "status": "OPEN",
-                                "issuedAt": pre["issuedAt"], "issuedAtEpoch": pre["issuedAtEpoch"],
-                                "version": pre["version"], "components": pre["components"],
-                                "id": f"sig_{symbol}_{pre['issuedAtEpoch']}",
-                            }
-                            await send_telegram(signal_to_telegram(pre))
-                            log.info(f"  📨 Telegram message sent for {symbol}")
+                signal = await generate_signal(
+                    symbol=sym_d,
+                    direction=direction,
+                    prefer_risk="LOW",
+                    price_30m=price,
+                    open_15m=c15.get("o", 0), close_15m=c15.get("c", 0),
+                    high_15m=c15.get("h", 0), low_15m=c15.get("l", 0),
+                    open_5m=c5m.get("o", 0), close_5m=c5m.get("c", 0),
+                    high_5m=c5m.get("h", 0), low_5m=c5m.get("l", 0),
+                    open_1m=c1m.get("o", 0), close_1m=c1m.get("c", 0),
+                    high_1m=c1m.get("h", 0), low_1m=c1m.get("l", 0),
+                    ema21_30m=ema21_30m, ema50_30m=ema50_30m, ema8_30m=ema8_30m,
+                    ema21_1h=ema21_1h, ema50_1h=ema50_1h,
+                    ema21_4h=ema21_4h, ema50_4h=ema50_4h, ema200_4h=ema200_4h,
+                    macd_line_30m=macd_30m.get("macd") if macd_30m else None,
+                    hist_30m=macd_30m.get("histogram") if macd_30m else None,
+                    rsi_30m=rsi_30m,
+                    atr_val_30m=atr_30m or 0.0,
+                    curr_vol=candles_30m[-1].get("v", 0.0),
+                    avg_vol_30m=avg_vol_30m,  # Fix 4: مقدار واقعی
+                    divergence_detected=False,
+                    candles=candles_30m,
+                    prices_series_30m=closes_30[-120:],
+                    closes_by_tf={
+                        "30m": candles_30m, "1h": candles_1h, "4h": candles_4h,
+                        "15m": candles_15m, "5m": candles_5m, "1m": candles_1m,
+                    },
+                    scenario_id=scenario_id,
+                )
+                if signal and signal.get("status") == "SIGNAL":
+                    signals_out[f"{sym_b}__{profile_id}"] = {
+                        "profile_id": profile_id,
+                        "symbol": sym_b,
+                        "direction": signal.get("direction", direction),
+                        "entry": float(signal.get("price", 0) or 0),
+                        "stopLoss": float(signal.get("stop_loss", 0) or 0),
+                        "takeProfit": float(signal.get("take_profit", 0) or 0),
+                        "tp1": float(signal.get("take_profit", 0) or 0),
+                        "tp2": float(signal.get("take_profit", 0) or 0),
+                        "sl": float(signal.get("stop_loss", 0) or 0),
+                        "rr": float(sc.get("rr", 2.0) or 2.0),
+                        "score": float(signal.get("score", 0) or 0),
+                        "risk": signal.get("risk", "LOW"),
+                        "status": "OPEN",
+                        "components": [],
+                        "issuedAt": time.strftime("%Y-%m-%d %H:%M:%S"),
+                        "issuedAtEpoch": int(time.time()),
+                        "timestamp": int(time.time()),
+                        # Fix 2: Titan exit params (from UNCHANGED config.py)
+                        "sl_pct": float(sc.get("sl_pct", 0.040)),
+                        "trail_activate": float(sc.get("trail_activate", 0.003)),
+                        "trail_lock": float(sc.get("trail_lock", 0.90)),
+                        "max_hold_candles": int(sc.get("max_hold_candles", 72)),
+                        "scenario_id": scenario_id,
+                    }
+                    log.info(f"  ✅ {profile_id} {sym_b} {signal['direction']}: SIGNAL!")
             except Exception as e:
-                log.error(f"  ❌ {symbol} error: {e}", exc_info=True)
+                log.debug(f"  {profile_id} {sym_b}: {e}")
+        log.info(f"✅ {profile_id} ({scenario_id}): {len(signals_out)} signals")
+    except ImportError as e:
+        log.warning(f"  Titan {profile_id}: module not available ({e})")
+    except Exception as e:
+        log.error(f"  Titan {profile_id}: {e}")
+        log.error(traceback.format_exc())
+    return signals_out
 
-    with open("signals.json", "w") as f:
-        json.dump(signals, f, indent=2, ensure_ascii=False)
-    log.info(f"\n{'='*60}")
-    log.info(f"💾 signals.json: {len(signals)} signals")
-    if signals:
-        for sym, s in signals.items():
-            log.info(f"  ✅ {sym} {s['direction']} score={s['score']} entry={s['entry']}")
-    else:
-        log.info("  ⚠️ No signals generated — check thresholds and market conditions")
+
+# ============================================================================
+# ۵) Master Orchestrator
+# ============================================================================
+async def run_all_profiles():
+    """اجرای همه‌ی پروفایل‌های فعال.
+
+    Flow:
+    1. همه‌ی کندل‌ها را یک‌بار از Binance بگیر
+    2. هر موتور را با داده از قبل fetch شده صدا بزن
+    3. همه‌ی سیگنال‌ها را با profile_id در signals.json بنویسد
+    """
     log.info("=" * 60)
+    log.info("🚀 Khosro Multi-Profile Signal Orchestrator v25")
+    log.info(f"   Active profiles: {len(profiles.ACTIVE_PROFILES)}")
+    log.info(f"   Symbols: {len(SYMBOLS)}")
+    log.info("=" * 60)
+
+    # ─── Step 1: Fetch all data ONCE ─────────────────────────────────────
+    data = await fetch_all_data()
+
+    all_signals = {}
+    profile_counts = {}
+
+    # ─── Step 2: Run each engine group ───────────────────────────────────
+    # Group 1: Khosro SMC
+    log.info("\n" + "─" * 60)
+    log.info("📋 Running KHOSRO_SMC (Khosro Confluence Engine + AI Committee)")
+    khosro_sigs = await run_khosro_profile(data)
+    all_signals.update(khosro_sigs)
+    profile_counts["KHOSRO_SMC"] = len(khosro_sigs)
+
+    # Group 2: PentaSignal F1-F5 (Fix 5: single detect_new call)
+    log.info("\n" + "─" * 60)
+    log.info("📋 Running PentaSignal (single detect_new for F1-F5)")
+    penta_sigs = await run_penta_all(data)
+    all_signals.update(penta_sigs)
+    for pid in profiles.PENTA_PROFILES:
+        cnt = sum(1 for k in penta_sigs if k.endswith(pid))
+        profile_counts[pid] = cnt
+
+    # Group 3: Titan Signal S1, S3, B1
+    log.info("\n" + "─" * 60)
+    log.info("📋 Running Titan Signal profiles (S1, S3, B1)")
+    for pid in profiles.TITAN_PROFILES:
+        log.info(f"  → {pid} ({profiles.get_profile_name_fa(pid)})")
+        titan_sigs = await run_titan_profile(pid, data)
+        all_signals.update(titan_sigs)
+        profile_counts[pid] = len(titan_sigs)
+
+    # ─── Step 3: Write signals.json ──────────────────────────────────────
+    out_path = ENGINE_DIR / "signals.json"
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(all_signals, f, indent=2, ensure_ascii=False)
+
+    log.info("\n" + "=" * 60)
+    log.info(f"💾 signals.json: {len(all_signals)} signals")
+    for pid, cnt in profile_counts.items():
+        icon = "✅" if cnt > 0 else "⚠️"
+        log.info(f"   {icon} {pid}: {cnt} signals")
+    # تست پذیرش: آیا بیش از یک profile سیگنال تولید کرده؟
+    profiles_with_signals = sum(1 for c in profile_counts.values() if c > 0)
+    if profiles_with_signals > 1:
+        log.info(f"✅ Acceptance test PASSED: {profiles_with_signals} profiles produced signals")
+    else:
+        log.warning(f"⚠️ Acceptance test: only {profiles_with_signals} profile(s) produced signals")
+    log.info("=" * 60)
+
+
+def main():
+    asyncio.run(run_all_profiles())
+
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
