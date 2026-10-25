@@ -66,7 +66,7 @@
     "score": 57.27,
     "ruleScore": 61.14,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "TP2_HIT",
     "issuedAt": "2026-10-25T00:23:38.922714+00:00",
     "issuedAtEpoch": 1792887818,
     "version": "13.0.0",
@@ -107,6 +107,8 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_BNBUSDT_1792887818"
+    "id": "sig_BNBUSDT_1792887818",
+    "hitPrice": 747.97,
+    "hitTime": "2026-10-25T04:38:20"
   }
 }
