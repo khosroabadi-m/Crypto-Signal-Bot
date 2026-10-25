@@ -110,5 +110,21 @@
     "score": 58.92,
     "risk": "HIGH",
     "rr": 2.0
+  },
+  {
+    "symbol": "BNBUSDT",
+    "direction": "LONG",
+    "entry": 739.16,
+    "stopLoss": 734.776797,
+    "takeProfit": 747.926406,
+    "status": "TP2_HIT",
+    "hitPrice": 747.97,
+    "hitTime": "2026-10-25T04:38:20",
+    "pnlUsd": 0.9413,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 9.41,
+    "score": 57.27,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
