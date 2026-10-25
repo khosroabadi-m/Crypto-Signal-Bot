@@ -48,7 +48,8 @@ SYMBOLS_DASH = ["BTC-USDT", "ETH-USDT", "SOL-USDT", "BNB-USDT", "XRP-USDT"]
 BINANCE_TO_DASH = dict(zip(SYMBOLS, SYMBOLS_DASH))
 DASH_TO_BINANCE = dict(zip(SYMBOLS_DASH, SYMBOLS))
 
-BINANCE_REST = os.getenv("BINANCE_BASE", "https://data-api.binance.vision/api/v3")
+# Binance data API base — hardcoded (env var may strip /api/v3)
+BINANCE_REST = "https://data-api.binance.vision/api/v3"
 
 # Tehran timezone (UTC+3:30)
 TEHRAN_TZ = timezone(timedelta(hours=3, minutes=30))
@@ -63,7 +64,7 @@ async def fetch_klines(symbol: str, interval: str, limit: int = 200) -> list:
     Returns list of candle dicts with BOTH shorthand (o,h,l,c,v) and
     full (open,high,low,close,volume) keys — so all engines can use them.
     """
-    url = f"{BINANCE_REST}/klines?symbol={symbol}&interval={interval}&limit={limit}"
+    url = f"https://data-api.binance.vision/api/v3/klines?symbol={symbol}&interval={interval}&limit={limit}"
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(url, timeout=aiohttp.ClientTimeout(total=10)) as r:
