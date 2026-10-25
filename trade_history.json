@@ -126,5 +126,21 @@
     "score": 57.27,
     "risk": "HIGH",
     "rr": 2.0
+  },
+  {
+    "symbol": "XRPUSDT",
+    "direction": "LONG",
+    "entry": 1.314,
+    "stopLoss": 1.303501,
+    "takeProfit": 1.334997,
+    "status": "SL_HIT",
+    "hitPrice": 1.3034,
+    "hitTime": "2026-10-25T05:39:19",
+    "pnlUsd": -1.0563,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -10.56,
+    "score": 65.98,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
