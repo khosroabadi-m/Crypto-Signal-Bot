@@ -111,14 +111,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.3908",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-26 17:50:20",
     "issuedAtEpoch": 1793024425,
     "timestamp": 1793024425,
-    "exit_mode": "FIXED",
-    "hitPrice": 9.017,
-    "hitTime": "2026-10-26T15:33:49"
+    "exit_mode": "FIXED"
   },
   "BTCUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -269,7 +267,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-26 14:20:30",
     "issuedAtEpoch": 1793024430,
@@ -278,7 +276,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 4.612,
+    "hitTime": "2026-10-26T15:34:25"
   },
   "DOTUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
