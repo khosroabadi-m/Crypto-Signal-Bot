@@ -447,7 +447,8 @@ async def run_all_profiles():
         profile_counts[pid] = len(titan_sigs)
 
     # ─── Step 3: Write signals.json ──────────────────────────────────────
-    out_path = ENGINE_DIR / "signals.json"
+    # در ریشه‌ی ریپو بنویس (نه در engine/) — git diff روی signals.json در ریشه چک می‌کند
+    out_path = ENGINE_DIR.parent / "signals.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(all_signals, f, indent=2, ensure_ascii=False)
 
