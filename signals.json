@@ -68,7 +68,7 @@
     "rr": 2.0,
     "score": 61.82,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-10-26T09:11:42.205431+00:00",
     "issuedAtEpoch": 1793005902,
     "version": "13.0.0",
@@ -109,7 +109,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_BNBUSDT_1793005902"
+    "id": "sig_BNBUSDT_1793005902",
+    "hitPrice": 742.28,
+    "hitTime": "2026-10-26T12:10:56"
   },
   "XRPUSDT": {
     "profile_id": "KHOSRO_SMC",
