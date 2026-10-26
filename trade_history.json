@@ -1181,18 +1181,18 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
+    "profile_id": "TITAN_S3",
     "symbol": "DOGEUSDT",
     "direction": "LONG",
     "entry": 0.07745,
     "stopLoss": 0.074352,
     "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 0.07774,
-    "hitTime": "2026-10-26T17:55:53",
-    "pnlUsd": 0.1242,
+    "hitPrice": 0.0777,
+    "hitTime": "2026-10-26T17:57:10",
+    "pnlUsd": 0.0726,
     "brokerFeeUsd": 0.2,
-    "returnPct": 1.24,
+    "returnPct": 0.73,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
