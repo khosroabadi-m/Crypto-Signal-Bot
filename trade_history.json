@@ -773,20 +773,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "ADAUSDT",
-    "direction": "LONG",
-    "entry": 0.2053,
-    "stopLoss": 0.197088,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "entry": 79695.5,
+    "stopLoss": 80268.4799160353,
+    "takeProfit": 78549.5401679294,
     "status": "SL_HIT",
-    "hitPrice": 0.2061,
-    "hitTime": "2026-10-26T14:56:17",
-    "pnlUsd": 0.1395,
+    "hitPrice": 80269.72,
+    "hitTime": "2026-10-26T14:56:21",
+    "pnlUsd": -0.9709,
     "brokerFeeUsd": 0.2,
-    "returnPct": 1.39,
+    "returnPct": -9.71,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "0.7190",
     "rr": 2.0
   }
 ]
