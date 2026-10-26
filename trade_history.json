@@ -195,7 +195,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "LINKUSDT",
     "direction": "LONG",
     "entry": 11.414,
@@ -203,7 +203,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 11.455,
-    "hitTime": "2026-10-26T10:55:01",
+    "hitTime": "2026-10-26T10:55:05",
     "pnlUsd": 0.109,
     "brokerFeeUsd": 0.2,
     "returnPct": 1.09,
