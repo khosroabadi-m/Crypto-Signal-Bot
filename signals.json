@@ -265,7 +265,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-26 14:20:30",
     "issuedAtEpoch": 1793024430,
@@ -274,7 +274,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 4.619,
+    "hitTime": "2026-10-26T15:13:19"
   },
   "DOTUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
@@ -613,7 +615,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-26 14:20:42",
     "issuedAtEpoch": 1793024442,
@@ -622,9 +624,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 0.9248,
-    "hitTime": "2026-10-26T15:13:15"
+    "scenario_id": "B1"
   },
   "INJUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
