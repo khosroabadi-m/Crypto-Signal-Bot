@@ -467,20 +467,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "DOGEUSDT",
-    "direction": "LONG",
-    "entry": 0.07695,
-    "stopLoss": 0.07387200000000001,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
+    "direction": "SHORT",
+    "entry": 736.879,
+    "stopLoss": 743.3151871912,
+    "takeProfit": 724.0066256177,
     "status": "SL_HIT",
-    "hitPrice": 0.07737,
-    "hitTime": "2026-10-26T12:27:43",
-    "pnlUsd": 0.2955,
+    "hitPrice": 743.49,
+    "hitTime": "2026-10-26T12:27:47",
+    "pnlUsd": -1.1476,
     "brokerFeeUsd": 0.2,
-    "returnPct": 2.96,
+    "returnPct": -11.48,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "0.8734",
     "rr": 2.0
   }
 ]
