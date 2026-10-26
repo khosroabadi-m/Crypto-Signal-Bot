@@ -377,7 +377,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-26 18:50:52",
     "issuedAtEpoch": 1793040652,
@@ -386,6 +386,8 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1"
+    "scenario_id": "B1",
+    "hitPrice": 0.09119,
+    "hitTime": "2026-10-26T19:14:11"
   }
 }
