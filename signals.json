@@ -361,8 +361,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 96,
     "scenario_id": "B1",
-    "hitPrice": 7.93,
-    "hitTime": "2026-10-26T19:02:40"
+    "hitPrice": 7.943,
+    "hitTime": "2026-10-26T19:03:59"
   },
   "POLUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
