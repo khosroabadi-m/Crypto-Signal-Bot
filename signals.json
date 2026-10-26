@@ -69,12 +69,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.5064",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-26 17:50:20",
     "issuedAtEpoch": 1793024425,
     "timestamp": 1793024425,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 0.2073,
+    "hitTime": "2026-10-26T15:08:33"
   },
   "ATOMUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -149,14 +151,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.1378",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-26 17:50:20",
     "issuedAtEpoch": 1793024425,
     "timestamp": 1793024425,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.07793,
-    "hitTime": "2026-10-26T15:08:29"
+    "exit_mode": "FIXED"
   },
   "BNBUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
