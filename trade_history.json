@@ -244,5 +244,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "ADAUSDT",
+    "direction": "LONG",
+    "entry": 0.2035,
+    "stopLoss": 0.19535999999999998,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.2042,
+    "hitTime": "2026-10-26T11:16:01",
+    "pnlUsd": 0.0938,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.94,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
