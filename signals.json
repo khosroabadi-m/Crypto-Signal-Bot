@@ -66,7 +66,7 @@
     "rr": 2.0,
     "score": 66.88,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-10-26T13:20:17.383177+00:00",
     "issuedAtEpoch": 1793020817,
     "version": "13.0.0",
@@ -107,7 +107,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_BNBUSDT_1793020817"
+    "id": "sig_BNBUSDT_1793020817",
+    "hitPrice": 739.69,
+    "hitTime": "2026-10-26T13:31:28"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
