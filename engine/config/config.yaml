@@ -1,0 +1,133 @@
+# =====================================================================
+# KhosroAiTrader — main configuration
+# All weights are relative; they are re-normalized at runtime over the
+# components that actually have data (a failed/disabled source is skipped).
+# =====================================================================
+
+trending:
+  top_n: 12                       # how many trending coins to output
+  min_market_cap_usd: 50_000_000  # liquidity filter: minimum market cap
+  min_volume_24h_usd: 10_000_000  # liquidity filter: minimum 24h volume
+  exclude_stablecoins: true
+  exclude_symbols: []             # extra symbols to blacklist, e.g. [LEO, CRO]
+  require_binance_pair: true      # only keep coins tradeable on Binance (needed for signals later)
+  momentum_candidates: 60         # how many top-volume Binance assets enter the candidate pool
+
+# Relative weights of scoring components (0..1 each)
+weights:
+  coingecko_trending: 0.40        # presence/rank on CoinGecko "search/trending"
+  market_momentum: 0.35           # volume velocity + |24h price move| from Binance
+  liquidity: 0.25                 # market-cap depth (log-scaled)
+  reddit_mentions: 0.00           # enable reddit source and raise this (e.g. 0.15) to use it
+
+sources:
+  coingecko:
+    enabled: true
+    markets_per_page: 250         # market snapshot size used for enrichment
+    # Optional free demo key (30 req/min): set COINGECKO_API_KEY secret
+  binance:
+    enabled: true
+    quote_asset: USDT
+  coinpaprika:
+    enabled: true                 # fallback enrichment if CoinGecko markets is rate-limited
+  reddit:
+    enabled: false                # Reddit blocks many datacenter IPs (403) — enable only if reachable
+    subreddits: [CryptoCurrency, CryptoMarkets, altcoin]
+    posts_per_subreddit: 50
+  cryptopanic:
+    enabled: true                 # auto-activates ONLY if CRYPTOPANIC_API_KEY is present
+    filter: hot                   # hot | rising | trending
+
+storage:
+  latest_path: data/trending_latest.json
+  ai_path: data/ai_analysis.json
+  history_dir: data/history
+  history_days: 7                 # daily history files older than this are purged
+
+telegram:
+  enabled: true
+  top_coins_in_message: 10        # keep the message under Telegram's length limit
+  disable_notification: false     # true = silent push
+
+run:
+  user_agent: "KhosroAiTrader/2.0 (crypto trending + signal engine)"
+  request_timeout: 15
+  max_retries: 3
+
+# AI aggregation layer: an LLM receives the merged multi-source context
+# (trending board + Binance momentum + /global macro + news counts) and
+# returns trend verdicts + direction bias per coin (long/short/watch/avoid).
+# Activates ONLY when AI_API_KEY is set (see .env.example).
+# Works with any OpenAI-compatible provider — default is Z.ai GLM.
+ai:
+  enabled: true
+  base_url: https://api.z.ai/api/paas/v4   # override with AI_API_BASE secret
+  model: glm-4.6                            # override with AI_MODEL secret
+  temperature: 0.2
+  max_output_tokens: 1500
+  max_candidates: 15                        # coins fed into the prompt
+  timeout: 60
+
+# =====================================================================
+# v2.0.0 — signal engine, risk engine, paper trading, data edge,
+# backtesting and dashboard (all free-tier).
+# =====================================================================
+
+# --- Rule-based signal engine (rule book v1) -------------------------
+# A coin becomes a signal when weighted technical votes (trend structure,
+# momentum, MACD, volume) pick a direction clearly, optionally reinforced
+# by the AI layer. Replace/override by editing the weights below or by
+# wiring your own rule book into khosro_ai_trader/signals/engine.py
+signals:
+  enabled: true
+  top_candidates: 8              # top-ranked coins that get technical analysis
+  max_signals_per_run: 3         # portfolio never floods with signals
+  kline_interval: 1h
+  kline_limit: 300               # bars used per coin for indicators
+  min_confidence: 45             # 0..100 — emit only above this score
+  min_score_gap: 15              # long score must beat short score by this
+  atr_sl_multiplier: 1.5         # stop distance = ATR14 * this (volatility stop)
+  min_atr_pct: 0.3               # skip dead markets (ATR < 0.3% of price)
+  max_atr_pct: 8.0               # skip untradeable volatility (ATR > 8%)
+  trend_gate: false              # EMA-structure gate (tested: slightly negative — keep off)
+  use_ai_fusion: true            # AI long/short verdict boosts confidence
+  ai_confidence_bonus: 20
+  ai_veto: true                  # AI verdict "avoid" blocks the signal
+  cooldown_hours: 12             # no re-entry on same symbol+direction
+  max_age_hours: 72              # paper trades force-closed after this
+
+# --- Risk engine: sizing + circuit breakers --------------------------
+risk:
+  equity_usd: 1000.0             # paper account size (start small in real mode)
+  risk_per_trade_pct: 1.0        # 1R = 1% of equity — the survival rule
+  max_notional_pct: 30.0         # position value cap vs equity
+  min_rr: 1.5                    # reward:risk at TP2 must clear this
+  max_open_trades: 5
+  max_daily_loss_r: 3.0          # circuit breaker: halt after -3R in one day
+  fee_r_per_round_trip: 0.06     # ~0.1% fees+slippage expressed in R
+  tp_weights: [0.4, 0.4, 0.2]    # 1R/2R/3R ladder partial exits
+
+paper:
+  enabled: true
+  journal_path: data/paper/journal.json
+  daily_report: true             # once-per-day Telegram equity report
+
+# --- Professional data edge (all free endpoints) ---------------------
+market_data:
+  enabled: true
+  depth_limit: 100               # spot order-book levels for imbalance
+  lsr_period: 1h                 # futures global long/short account ratio
+  oi_period: 1h                  # open-interest history granularity
+  fng_enabled: true              # Fear & Greed index (alternative.me)
+  max_workers: 6                 # parallel per-coin enrichment
+
+dashboard:
+  enabled: true
+  output_path: docs/index.html   # published via GitHub Pages
+
+backtest:
+  default_pairs: [BTCUSDT, ETHUSDT, SOLUSDT]
+  days: 120                      # history depth per pair
+  interval: 1h
+  max_age_bars: 72
+  warmup_bars: 210               # bars needed before first evaluation
