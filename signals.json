@@ -121,7 +121,7 @@
     "score": 72.01,
     "ruleScore": 83.72,
     "risk": "MEDIUM",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-10-25T09:39:37.183739+00:00",
     "issuedAtEpoch": 1792921177,
     "version": "13.0.0",
@@ -162,7 +162,9 @@
         "detail": "no AI key"
       }
     ],
-    "id": "sig_SOLUSDT_1792921177"
+    "id": "sig_SOLUSDT_1792921177",
+    "hitPrice": 101.29,
+    "hitTime": "2026-10-26T07:01:21"
   },
   "BNBUSDT": {
     "direction": "SHORT",
