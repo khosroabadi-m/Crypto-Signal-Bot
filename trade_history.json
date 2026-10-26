@@ -1111,5 +1111,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "TIAUSDT",
+    "direction": "LONG",
+    "entry": 0.5474,
+    "stopLoss": 0.525504,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.5445,
+    "hitTime": "2026-10-26T17:22:05",
+    "pnlUsd": -0.7795,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -7.8,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
