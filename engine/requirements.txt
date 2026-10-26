@@ -1,2 +1,5 @@
 aiohttp==3.10.5
+requests
 pyyaml
+sqlalchemy
+urllib3
