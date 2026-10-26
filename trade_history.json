@@ -1519,5 +1519,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "FILUSDT",
+    "direction": "LONG",
+    "entry": 0.9036,
+    "stopLoss": 0.8674559999999999,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.9073,
+    "hitTime": "2026-10-26T23:28:01",
+    "pnlUsd": 0.1593,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 1.59,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
