@@ -859,19 +859,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "ATOMUSDT",
+    "symbol": "BTCUSDT",
     "direction": "SHORT",
-    "entry": 1.6393,
-    "stopLoss": 1.6644411201,
-    "takeProfit": 1.5890177599,
+    "entry": 79695.5,
+    "stopLoss": 80268.4799160353,
+    "takeProfit": 78549.5401679294,
     "status": "SL_HIT",
-    "hitPrice": 1.665,
-    "hitTime": "2026-10-26T15:21:09",
-    "pnlUsd": -1.8185,
+    "hitPrice": 80830.87,
+    "hitTime": "2026-10-26T15:21:24",
+    "pnlUsd": -1.6753,
     "brokerFeeUsd": 0.2,
-    "returnPct": -18.19,
+    "returnPct": -16.75,
     "score": 0.0,
-    "risk": "1.5336",
+    "risk": "0.7190",
     "rr": 2.0
   }
 ]
