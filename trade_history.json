@@ -1470,7 +1470,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "TIAUSDT",
     "direction": "LONG",
     "entry": 0.548,
@@ -1478,7 +1478,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 0.5448,
-    "hitTime": "2026-10-26T22:28:13",
+    "hitTime": "2026-10-26T22:28:17",
     "pnlUsd": -0.8336,
     "brokerFeeUsd": 0.2,
     "returnPct": -8.34,
