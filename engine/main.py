@@ -41,10 +41,17 @@ logging.basicConfig(
 log = logging.getLogger("orchestrator")
 
 # ─── Symbols ───────────────────────────────────────────────────────────────
-# Binance USDT format (for Khosro + data fetching)
-SYMBOLS = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT"]
+# All symbols across all engines (union of PentaSignal + Titan + Khosro)
+# Binance USDT format (for data fetching + Khosro)
+SYMBOLS = [
+    "BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT",    # POOL1
+    "XAUTUSDT", "LTCUSDT", "DOGEUSDT", "SUIUSDT", "NEARUSDT",  # POOL2
+    "DOTUSDT", "ADAUSDT", "LINKUSDT", "AVAXUSDT", "ATOMUSDT",  # POOL3A
+    "FILUSDT", "INJUSDT", "SEIUSDT", "TIAUSDT", "POLUSDT", "OPUSDT",
+    "PEPEUSDT", "SHIBUSDT",  # Titan extra
+]
 # Dash format (for Penta + Titan engines — their original format)
-SYMBOLS_DASH = ["BTC-USDT", "ETH-USDT", "SOL-USDT", "BNB-USDT", "XRP-USDT"]
+SYMBOLS_DASH = [s.replace("USDT", "-USDT") for s in SYMBOLS]
 BINANCE_TO_DASH = dict(zip(SYMBOLS, SYMBOLS_DASH))
 DASH_TO_BINANCE = dict(zip(SYMBOLS_DASH, SYMBOLS))
 
@@ -99,17 +106,35 @@ async def fetch_klines(symbol: str, interval: str, limit: int = 200) -> list:
 async def fetch_all_data() -> dict:
     """Fetch ALL candle data ONCE for all symbols × all timeframes.
 
-    Returns: {symbol_binance: {"30m": [...], "1h": [...], "4h": [...], "15m": [...], "5m": [...], "1m": [...]}}
+    Uses asyncio.gather for parallel fetching (23 symbols × 6 timeframes = 138 requests).
+    Total time ≈ 3-5 seconds (parallel) instead of 60+ seconds (sequential).
     """
     timeframes = ["30m", "1h", "4h", "15m", "5m", "1m"]
+    log.info(f"📡 Fetching all candle data from Binance ({len(SYMBOLS)} symbols × {len(timeframes)} timeframes)...")
+
+    async def fetch_one(sym, tf):
+        limit = 300 if tf == "1m" else 200
+        candles = await fetch_klines(sym, tf, limit)
+        return sym, tf, candles
+
+    # همه‌ی درخواست‌ها را موازی بفرست
+    tasks = [fetch_one(sym, tf) for sym in SYMBOLS for tf in timeframes]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
     data = {}
-    log.info("📡 Fetching all candle data from Binance...")
-    for sym in SYMBOLS:
-        data[sym] = {}
-        for tf in timeframes:
-            data[sym][tf] = await fetch_klines(sym, tf, 300 if tf == "1m" else 200)
-            log.info(f"  {sym} {tf}: {len(data[sym][tf])} candles")
-    log.info(f"✅ Data fetched for {len(data)} symbols × {len(timeframes)} timeframes")
+    for r in results:
+        if isinstance(r, Exception):
+            log.warning(f"  fetch error: {r}")
+            continue
+        sym, tf, candles = r
+        if sym not in data:
+            data[sym] = {}
+        data[sym][tf] = candles
+
+    # لاگ خلاصه
+    total_candles = sum(len(d.get(tf, [])) for d in data.values() for tf in timeframes)
+    ok_symbols = sum(1 for d in data.values() if len(d.get("30m", [])) > 0)
+    log.info(f"✅ Data fetched: {ok_symbols}/{len(SYMBOLS)} symbols, {total_candles} total candles")
     return data
 
 
