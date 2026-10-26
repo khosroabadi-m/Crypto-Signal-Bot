@@ -167,12 +167,20 @@ async def run_penta_all(data: dict) -> dict:
 
         # Fix 5: یک‌بار detect_new صدا بزن → همه‌ی سناریوها در یک پاس
         log.info("  Calling detect_new (single pass for all F1-F5)...")
-        all_new_sigs = engine.detect_new(now_tehran, ctx)
-        log.info(f"  detect_new returned {len(all_new_sigs)} raw signals")
+        all_new_logs = engine.detect_new(now_tehran, ctx)
+        log.info(f"  detect_new returned {len(all_new_logs)} raw signals")
 
         # تقسیم بر اساس scenario_id و ساخت کلیدهای مرکب
-        for sig in all_new_sigs:
-            sid = sig.get("scenario_id", "")
+        # MsgLog objects have: .meta (dict with symbol/scenario_id/direction)
+        #                      .signal_id (str)
+        #                      .kind (str — SIGNAL/BE_ARMED/SETTLE/REPORT)
+        # We only care about kind="SIGNAL"
+        for log_entry in all_new_logs:
+            kind = getattr(log_entry, "kind", "")
+            if kind != "SIGNAL":
+                continue
+            meta = getattr(log_entry, "meta", {})
+            sid = meta.get("scenario_id", "")
             # پیدا کردن profile_id متناظر
             profile_id = None
             for pid, p in profiles.PENTA_PROFILES.items():
@@ -181,25 +189,48 @@ async def run_penta_all(data: dict) -> dict:
                     break
             if not profile_id:
                 continue
-            sym_d = sig.get("symbol", "")
+            sym_d = meta.get("symbol", "")
             sym_b = DASH_TO_BINANCE.get(sym_d, sym_d.replace("-", ""))
-            entry = float(sig.get("entry_hint", 0) or 0)
+            # داده‌ی کامل سیگنال را از store بگیر (اگر در دسترس باشد)
+            entry = 0.0
+            sl_val = 0.0
+            tp_val = 0.0
+            score_val = 0.0
+            risk_val = "MEDIUM"
+            try:
+                from pentasignal import store as penta_store
+                sig_id = getattr(log_entry, "signal_id", "")
+                if sig_id:
+                    row = penta_store.get_signal(sig_id)
+                    if row:
+                        entry = float(row.get("entry", 0) or row.get("entry_hint", 0) or 0)
+                        sl_val = float(row.get("stop_loss", 0) or 0)
+                        tp_val = float(row.get("tp", 0) or row.get("take_profit", 0) or 0)
+                        score_val = float(row.get("score", 0) or 0)
+                        risk_val = row.get("risk", "MEDIUM")
+            except Exception:
+                pass
+            # fallback: اگر store در دسترس نبود، حداقل direction را از meta بگیر
+            direction = meta.get("direction", "")
             if entry <= 0:
+                # اگر entry از store نیامد، این سیگنال را رد کن
+                # (چون بدون entry نمی‌توان در ledger ذخیره کرد)
+                log.info(f"  ⚠️ {profile_id} {sym_b}: SIGNAL but no entry price from store — skipping")
                 continue
             sc = SCENARIOS.get(sid, {})
             signals_out[f"{sym_b}__{profile_id}"] = {
                 "profile_id": profile_id,
                 "symbol": sym_b,
-                "direction": sig.get("direction", sc.get("direction", "BOTH")),
+                "direction": direction,
                 "entry": entry,
-                "stopLoss": float(sig.get("stop_loss", 0) or 0),
-                "takeProfit": float(sig.get("tp", sig.get("take_profit", 0)) or 0),
-                "tp1": float(sig.get("tp", 0) or 0),
-                "tp2": float(sig.get("tp", 0) or 0),
-                "sl": float(sig.get("stop_loss", 0) or 0),
+                "stopLoss": sl_val,
+                "takeProfit": tp_val,
+                "tp1": tp_val,
+                "tp2": tp_val,
+                "sl": sl_val,
                 "rr": float(sc.get("rr", 2.0) or 2.0),
-                "score": float(sig.get("score", 0) or 0),
-                "risk": sig.get("risk", "MEDIUM"),
+                "score": score_val,
+                "risk": risk_val,
                 "status": "OPEN",
                 "components": [],
                 "issuedAt": now_tehran.strftime("%Y-%m-%d %H:%M:%S"),
@@ -208,6 +239,7 @@ async def run_penta_all(data: dict) -> dict:
                 # Penta exit params (from UNCHANGED scenarios.py)
                 "exit_mode": sc.get("exit_mode", "FIXED"),
             }
+            log.info(f"  ✅ {profile_id} {sym_b} {direction}: entry={entry}")
 
         # تفکیک بر اساس profile_id برای لاگ
         for pid in profiles.PENTA_PROFILES:
