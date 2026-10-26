@@ -170,6 +170,16 @@ async def run_penta_all(data: dict) -> dict:
         all_new_logs = engine.detect_new(now_tehran, ctx)
         log.info(f"  detect_new returned {len(all_new_logs)} raw signals")
 
+        # داده‌ی کامل سیگنال‌ها را از store بگیر (open_signals همه را برمی‌گرداند)
+        # store CSV columns: entry_price, stop_loss, take_profit, etc.
+        open_sigs = []
+        try:
+            from pentasignal import store as penta_store
+            open_sigs = penta_store.open_signals()
+            log.info(f"  store.open_signals() returned {len(open_sigs)} open signals")
+        except Exception as e:
+            log.warning(f"  Could not read PentaSignal store: {e}")
+
         # تقسیم بر اساس scenario_id و ساخت کلیدهای مرکب
         # MsgLog objects have: .meta (dict with symbol/scenario_id/direction)
         #                      .signal_id (str)
@@ -191,31 +201,24 @@ async def run_penta_all(data: dict) -> dict:
                 continue
             sym_d = meta.get("symbol", "")
             sym_b = DASH_TO_BINANCE.get(sym_d, sym_d.replace("-", ""))
-            # داده‌ی کامل سیگنال را از store بگیر (اگر در دسترس باشد)
+            # داده‌ی کامل سیگنال را از open_sigs بگیر (با تطبیق signal_id)
+            sig_id = getattr(log_entry, "signal_id", "")
             entry = 0.0
             sl_val = 0.0
             tp_val = 0.0
             score_val = 0.0
             risk_val = "MEDIUM"
-            try:
-                from pentasignal import store as penta_store
-                sig_id = getattr(log_entry, "signal_id", "")
-                if sig_id:
-                    row = penta_store.get_signal(sig_id)
-                    if row:
-                        entry = float(row.get("entry", 0) or row.get("entry_hint", 0) or 0)
-                        sl_val = float(row.get("stop_loss", 0) or 0)
-                        tp_val = float(row.get("tp", 0) or row.get("take_profit", 0) or 0)
-                        score_val = float(row.get("score", 0) or 0)
-                        risk_val = row.get("risk", "MEDIUM")
-            except Exception:
-                pass
-            # fallback: اگر store در دسترس نبود، حداقل direction را از meta بگیر
             direction = meta.get("direction", "")
+            for row in open_sigs:
+                if row.get("signal_id") == sig_id:
+                    # PentaSignal store columns: entry_price, stop_loss, take_profit
+                    entry = float(row.get("entry_price", 0) or 0)
+                    sl_val = float(row.get("stop_loss", 0) or 0)
+                    tp_val = float(row.get("take_profit", 0) or 0)
+                    risk_val = row.get("risk_pct", "MEDIUM") or "MEDIUM"
+                    break
             if entry <= 0:
-                # اگر entry از store نیامد، این سیگنال را رد کن
-                # (چون بدون entry نمی‌توان در ledger ذخیره کرد)
-                log.info(f"  ⚠️ {profile_id} {sym_b}: SIGNAL but no entry price from store — skipping")
+                log.info(f"  ⚠️ {profile_id} {sym_b}: SIGNAL but no entry price — skipping")
                 continue
             sc = SCENARIOS.get(sid, {})
             signals_out[f"{sym_b}__{profile_id}"] = {
@@ -236,7 +239,6 @@ async def run_penta_all(data: dict) -> dict:
                 "issuedAt": now_tehran.strftime("%Y-%m-%d %H:%M:%S"),
                 "issuedAtEpoch": int(time.time()),
                 "timestamp": int(time.time()),
-                # Penta exit params (from UNCHANGED scenarios.py)
                 "exit_mode": sc.get("exit_mode", "FIXED"),
             }
             log.info(f"  ✅ {profile_id} {sym_b} {direction}: entry={entry}")
