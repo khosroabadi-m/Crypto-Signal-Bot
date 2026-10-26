@@ -11,7 +11,7 @@
     "rr": 2.0,
     "score": 66.87,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-10-26T16:20:27.525868+00:00",
     "issuedAtEpoch": 1793031627,
     "version": "13.0.0",
@@ -52,7 +52,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_BNBUSDT_1793031627"
+    "id": "sig_BNBUSDT_1793031627",
+    "hitPrice": 740.82,
+    "hitTime": "2026-10-26T16:30:58"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -311,7 +313,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-26 16:20:38",
     "issuedAtEpoch": 1793031638,
@@ -320,9 +322,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 0.5347,
-    "hitTime": "2026-10-26T16:27:27"
+    "scenario_id": "B1"
   },
   "PEPEUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
