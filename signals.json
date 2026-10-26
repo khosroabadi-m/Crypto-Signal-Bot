@@ -111,12 +111,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.3908",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-26 17:50:20",
     "issuedAtEpoch": 1793024425,
     "timestamp": 1793024425,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 9.025,
+    "hitTime": "2026-10-26T15:44:34"
   },
   "BTCUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -131,14 +133,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "0.7190",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-26 17:50:20",
     "issuedAtEpoch": 1793024425,
     "timestamp": 1793024425,
-    "exit_mode": "FIXED",
-    "hitPrice": 80736.01,
-    "hitTime": "2026-10-26T15:44:30"
+    "exit_mode": "FIXED"
   },
   "DOGEUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
