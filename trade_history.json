@@ -790,7 +790,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "NEARUSDT",
     "direction": "LONG",
     "entry": 4.598,
@@ -798,7 +798,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 4.657,
-    "hitTime": "2026-10-26T14:58:57",
+    "hitTime": "2026-10-26T14:59:01",
     "pnlUsd": 1.0325,
     "brokerFeeUsd": 0.2,
     "returnPct": 10.33,
