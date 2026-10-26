@@ -161,7 +161,7 @@
     "rr": 2.1
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "ETHUSDT",
     "direction": "LONG",
     "entry": 2324.99,
@@ -169,7 +169,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 2332.27,
-    "hitTime": "2026-10-26T09:21:49",
+    "hitTime": "2026-10-26T09:21:53",
     "pnlUsd": 0.063,
     "brokerFeeUsd": 0.2,
     "returnPct": 0.63,
