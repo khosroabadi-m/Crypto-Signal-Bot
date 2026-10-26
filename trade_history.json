@@ -824,20 +824,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "LTCUSDT",
-    "direction": "LONG",
-    "entry": 56.79,
-    "stopLoss": 54.5184,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "entry": 79695.5,
+    "stopLoss": 80268.4799160353,
+    "takeProfit": 78549.5401679294,
     "status": "SL_HIT",
-    "hitPrice": 57.13,
-    "hitTime": "2026-10-26T15:11:17",
-    "pnlUsd": 0.3484,
+    "hitPrice": 80509.25,
+    "hitTime": "2026-10-26T15:11:24",
+    "pnlUsd": -1.2716,
     "brokerFeeUsd": 0.2,
-    "returnPct": 3.48,
+    "returnPct": -12.72,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "0.7190",
     "rr": 2.0
   }
 ]
