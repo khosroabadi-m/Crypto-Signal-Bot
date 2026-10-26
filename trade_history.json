@@ -431,5 +431,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_B1",
+    "symbol": "SUIUSDT",
+    "direction": "LONG",
+    "entry": 0.9142,
+    "stopLoss": 0.877632,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.9184,
+    "hitTime": "2026-10-26T12:14:44",
+    "pnlUsd": 0.2092,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 2.09,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
