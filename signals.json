@@ -527,7 +527,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-26 14:20:40",
     "issuedAtEpoch": 1793024440,
@@ -536,7 +536,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1"
+    "scenario_id": "B1",
+    "hitPrice": 4.612,
+    "hitTime": "2026-10-26T14:22:28"
   },
   "ADAUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
@@ -623,7 +625,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-26 14:20:43",
     "issuedAtEpoch": 1793024443,
@@ -632,9 +634,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 7.867,
-    "hitTime": "2026-10-26T14:22:10"
+    "scenario_id": "B1"
   },
   "OPUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
