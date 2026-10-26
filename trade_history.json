@@ -550,5 +550,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "SEIUSDT",
+    "direction": "LONG",
+    "entry": 0.05262,
+    "stopLoss": 0.050515199999999996,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.05278,
+    "hitTime": "2026-10-26T12:54:48",
+    "pnlUsd": 0.0539,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.54,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
