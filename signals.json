@@ -139,8 +139,8 @@
     "issuedAtEpoch": 1793024425,
     "timestamp": 1793024425,
     "exit_mode": "FIXED",
-    "hitPrice": 80442.01,
-    "hitTime": "2026-10-26T16:02:34"
+    "hitPrice": 80400.01,
+    "hitTime": "2026-10-26T16:03:34"
   },
   "DOGEUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
