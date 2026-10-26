@@ -53,8 +53,8 @@
       }
     ],
     "id": "sig_SOLUSDT_1793005902",
-    "hitPrice": 101.72,
-    "hitTime": "2026-10-26T12:15:09"
+    "hitPrice": 101.66,
+    "hitTime": "2026-10-26T12:20:38"
   },
   "BNBUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -473,7 +473,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-26 09:11:54",
     "issuedAtEpoch": 1793005914,
@@ -482,9 +482,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3",
-    "hitPrice": 0.07722,
-    "hitTime": "2026-10-26T12:20:34"
+    "scenario_id": "S3"
   },
   "SUIUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
