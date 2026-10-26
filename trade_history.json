@@ -1094,5 +1094,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "POLUSDT",
+    "direction": "LONG",
+    "entry": 0.09107,
+    "stopLoss": 0.0874272,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.0914,
+    "hitTime": "2026-10-26T17:14:47",
+    "pnlUsd": 0.1122,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 1.12,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
