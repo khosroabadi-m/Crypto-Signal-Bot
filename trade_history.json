@@ -584,5 +584,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "SOLUSDT",
+    "direction": "LONG",
+    "entry": 101.05,
+    "stopLoss": 97.008,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 101.38,
+    "hitTime": "2026-10-26T13:05:39",
+    "pnlUsd": 0.0764,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.76,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
