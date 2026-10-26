@@ -825,19 +825,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "AVAXUSDT",
+    "symbol": "ATOMUSDT",
     "direction": "SHORT",
-    "entry": 8.884,
-    "stopLoss": 9.0075619829,
-    "takeProfit": 8.6368760343,
+    "entry": 1.6393,
+    "stopLoss": 1.6644411201,
+    "takeProfit": 1.5890177599,
     "status": "SL_HIT",
-    "hitPrice": 9.026,
-    "hitTime": "2026-10-26T15:11:36",
-    "pnlUsd": -1.8492,
+    "hitPrice": 1.665,
+    "hitTime": "2026-10-26T15:12:00",
+    "pnlUsd": -1.8185,
     "brokerFeeUsd": 0.2,
-    "returnPct": -18.49,
+    "returnPct": -18.19,
     "score": 0.0,
-    "risk": "1.3908",
+    "risk": "1.5336",
     "rr": 2.0
   }
 ]
