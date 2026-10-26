@@ -176,5 +176,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "DOTUSDT",
+    "direction": "LONG",
+    "entry": 1.019,
+    "stopLoss": 0.9782399999999999,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 1.023,
+    "hitTime": "2026-10-26T10:50:06",
+    "pnlUsd": 0.1423,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 1.42,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
