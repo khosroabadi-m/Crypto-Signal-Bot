@@ -53,8 +53,8 @@
       }
     ],
     "id": "sig_BNBUSDT_1793024420",
-    "hitPrice": 740.63,
-    "hitTime": "2026-10-26T14:27:58"
+    "hitPrice": 745.81,
+    "hitTime": "2026-10-26T15:40:03"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -243,7 +243,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-26 14:20:29",
     "issuedAtEpoch": 1793024429,
@@ -252,9 +252,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3",
-    "hitPrice": 57.15,
-    "hitTime": "2026-10-26T15:39:59"
+    "scenario_id": "S3"
   },
   "NEARUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
