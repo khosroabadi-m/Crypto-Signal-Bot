@@ -87,7 +87,7 @@ async def fetch_klines(symbol: str, interval: str, limit: int = 200) -> list:
                 for k in raw:
                     c = {
                         # shorthand keys (for Penta + Khosro)
-                        # t در ثانیه (مثل KuCoin) — PentaSignal با ثانیه کار می‌کند
+                        # t در ثانیه (مثل Binance) — PentaSignal با ثانیه کار می‌کند
                         "t": int(k[0]) // 1000,
                         "o": float(k[1]), "h": float(k[2]),
                         "l": float(k[3]), "c": float(k[4]), "v": float(k[5]),
