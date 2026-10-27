@@ -177,8 +177,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 72,
     "scenario_id": "S1",
-    "hitPrice": 8.074,
-    "hitTime": "2026-10-27T00:02:53"
+    "hitPrice": 8.073,
+    "hitTime": "2026-10-27T00:03:06"
   },
   "ETHUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
