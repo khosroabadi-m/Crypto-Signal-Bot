@@ -2048,20 +2048,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "AVAXUSDT",
-    "direction": "LONG",
-    "entry": 8.719,
-    "stopLoss": 8.370239999999999,
-    "takeProfit": 0.0,
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BNBUSDT",
+    "direction": "SHORT",
+    "entry": 734.72,
+    "stopLoss": 738.844071,
+    "takeProfit": 726.471858,
     "status": "SL_HIT",
-    "hitPrice": 8.755,
-    "hitTime": "2026-10-27T10:42:22",
-    "pnlUsd": 0.1627,
+    "hitPrice": 738.9,
+    "hitTime": "2026-10-27T10:44:51",
+    "pnlUsd": -0.8192,
     "brokerFeeUsd": 0.2,
-    "returnPct": 1.63,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -8.19,
+    "score": 58.65,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
