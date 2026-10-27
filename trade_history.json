@@ -2097,5 +2097,22 @@
     "score": 64.3,
     "risk": "HIGH",
     "rr": 2.0
+  },
+  {
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "XRPUSDT",
+    "direction": "SHORT",
+    "entry": 1.2922,
+    "stopLoss": 1.304167,
+    "takeProfit": 1.268265,
+    "status": "SL_HIT",
+    "hitPrice": 1.3045,
+    "hitTime": "2026-10-27T11:00:46",
+    "pnlUsd": -1.2023,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -12.02,
+    "score": 67.68,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
