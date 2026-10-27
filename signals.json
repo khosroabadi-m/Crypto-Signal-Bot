@@ -1,1 +1,363 @@
-{}
+{
+  "ETHUSDT": {
+    "profile_id": "KHOSRO_SMC",
+    "direction": "SHORT",
+    "entry": 2309.97,
+    "stopLoss": 2328.274233,
+    "takeProfit": 2273.361534,
+    "tp1": 2273.361534,
+    "tp2": 2273.361534,
+    "sl": 2328.274233,
+    "rr": 2.0,
+    "score": 67.71,
+    "risk": "HIGH",
+    "status": "OPEN",
+    "issuedAt": "2026-10-27T09:16:17.782823+00:00",
+    "issuedAtEpoch": 1793092577,
+    "version": "13.0.0",
+    "components": [
+      {
+        "name": "order_flow",
+        "score": 0.585,
+        "detail": "delta=-0.21 cp=0.45"
+      },
+      {
+        "name": "volume_profile",
+        "score": 0.95,
+        "detail": "POC=2314"
+      },
+      {
+        "name": "sweep",
+        "score": 0.817,
+        "detail": "swept high 2318"
+      },
+      {
+        "name": "rsi",
+        "score": 0.55,
+        "detail": "RSI=44.2"
+      },
+      {
+        "name": "macd",
+        "score": 0.7,
+        "detail": "hist=-0.02985"
+      },
+      {
+        "name": "moving_average",
+        "score": 1.0,
+        "detail": "EMA21=2314"
+      },
+      {
+        "name": "ai_committee",
+        "score": 0.5,
+        "detail": "no AI"
+      }
+    ],
+    "id": "sig_ETHUSDT_1793092577"
+  },
+  "SOLUSDT": {
+    "profile_id": "KHOSRO_SMC",
+    "direction": "SHORT",
+    "entry": 99.75,
+    "stopLoss": 100.549606,
+    "takeProfit": 98.150788,
+    "tp1": 98.150788,
+    "tp2": 98.150788,
+    "sl": 100.549606,
+    "rr": 2.0,
+    "score": 65.45,
+    "risk": "HIGH",
+    "status": "OPEN",
+    "issuedAt": "2026-10-27T09:16:17.784120+00:00",
+    "issuedAtEpoch": 1793092577,
+    "version": "13.0.0",
+    "components": [
+      {
+        "name": "order_flow",
+        "score": 0.529,
+        "detail": "delta=+0.01 cp=0.42"
+      },
+      {
+        "name": "volume_profile",
+        "score": 0.95,
+        "detail": "POC=100.9"
+      },
+      {
+        "name": "sweep",
+        "score": 0.732,
+        "detail": "swept high 100.4"
+      },
+      {
+        "name": "rsi",
+        "score": 0.55,
+        "detail": "RSI=38.2"
+      },
+      {
+        "name": "macd",
+        "score": 0.7,
+        "detail": "hist=-0.004685"
+      },
+      {
+        "name": "moving_average",
+        "score": 1.0,
+        "detail": "EMA21=100.2"
+      },
+      {
+        "name": "ai_committee",
+        "score": 0.5,
+        "detail": "no AI"
+      }
+    ],
+    "id": "sig_SOLUSDT_1793092577"
+  },
+  "BNBUSDT": {
+    "profile_id": "KHOSRO_SMC",
+    "direction": "SHORT",
+    "entry": 736.7,
+    "stopLoss": 740.636659,
+    "takeProfit": 728.826682,
+    "tp1": 728.826682,
+    "tp2": 728.826682,
+    "sl": 740.636659,
+    "rr": 2.0,
+    "score": 59.04,
+    "risk": "HIGH",
+    "status": "OPEN",
+    "issuedAt": "2026-10-27T09:16:17.785427+00:00",
+    "issuedAtEpoch": 1793092577,
+    "version": "13.0.0",
+    "components": [
+      {
+        "name": "order_flow",
+        "score": 0.472,
+        "detail": "delta=+0.17 cp=0.44"
+      },
+      {
+        "name": "volume_profile",
+        "score": 0.95,
+        "detail": "POC=742.9"
+      },
+      {
+        "name": "sweep",
+        "score": 0.35,
+        "detail": "none"
+      },
+      {
+        "name": "rsi",
+        "score": 0.55,
+        "detail": "RSI=40.0"
+      },
+      {
+        "name": "macd",
+        "score": 0.7,
+        "detail": "hist=-0.1834"
+      },
+      {
+        "name": "moving_average",
+        "score": 1.0,
+        "detail": "EMA21=738.6"
+      },
+      {
+        "name": "ai_committee",
+        "score": 0.5,
+        "detail": "no AI"
+      }
+    ],
+    "id": "sig_BNBUSDT_1793092577"
+  },
+  "ADAUSDT__PENTA_F1": {
+    "profile_id": "PENTA_F1",
+    "symbol": "ADAUSDT",
+    "direction": "SHORT",
+    "entry": 0.2039,
+    "stopLoss": 0.2064683409,
+    "takeProfit": 0.1987633181,
+    "tp1": 0.1987633181,
+    "tp2": 0.1987633181,
+    "sl": 0.2064683409,
+    "rr": 2.0,
+    "score": 0.0,
+    "risk": "1.2596",
+    "status": "OPEN",
+    "components": [],
+    "issuedAt": "2026-10-27 12:46:17",
+    "issuedAtEpoch": 1793092581,
+    "timestamp": 1793092581,
+    "exit_mode": "FIXED"
+  },
+  "ATOMUSDT__PENTA_F1": {
+    "profile_id": "PENTA_F1",
+    "symbol": "ATOMUSDT",
+    "direction": "SHORT",
+    "entry": 1.63,
+    "stopLoss": 1.6505087014,
+    "takeProfit": 1.5889825971,
+    "tp1": 1.5889825971,
+    "tp2": 1.5889825971,
+    "sl": 1.6505087014,
+    "rr": 2.0,
+    "score": 0.0,
+    "risk": "1.2582",
+    "status": "OPEN",
+    "components": [],
+    "issuedAt": "2026-10-27 12:46:17",
+    "issuedAtEpoch": 1793092581,
+    "timestamp": 1793092581,
+    "exit_mode": "FIXED"
+  },
+  "AVAXUSDT__PENTA_F1": {
+    "profile_id": "PENTA_F1",
+    "symbol": "AVAXUSDT",
+    "direction": "SHORT",
+    "entry": 8.806,
+    "stopLoss": 8.9236383945,
+    "takeProfit": 8.570723211,
+    "tp1": 8.570723211,
+    "tp2": 8.570723211,
+    "sl": 8.9236383945,
+    "rr": 2.0,
+    "score": 0.0,
+    "risk": "1.3359",
+    "status": "OPEN",
+    "components": [],
+    "issuedAt": "2026-10-27 12:46:17",
+    "issuedAtEpoch": 1793092581,
+    "timestamp": 1793092581,
+    "exit_mode": "FIXED"
+  },
+  "BNBUSDT__PENTA_F1": {
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
+    "direction": "SHORT",
+    "entry": 737.036,
+    "stopLoss": 742.2195293063,
+    "takeProfit": 726.6689413873,
+    "tp1": 726.6689413873,
+    "tp2": 726.6689413873,
+    "sl": 742.2195293063,
+    "rr": 2.0,
+    "score": 0.0,
+    "risk": "0.7033",
+    "status": "OPEN",
+    "components": [],
+    "issuedAt": "2026-10-27 12:46:17",
+    "issuedAtEpoch": 1793092581,
+    "timestamp": 1793092581,
+    "exit_mode": "FIXED"
+  },
+  "BTCUSDT__PENTA_F1": {
+    "profile_id": "PENTA_F1",
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "entry": 79863.8,
+    "stopLoss": 80381.5421654543,
+    "takeProfit": 78828.3156690915,
+    "tp1": 78828.3156690915,
+    "tp2": 78828.3156690915,
+    "sl": 80381.5421654543,
+    "rr": 2.0,
+    "score": 0.0,
+    "risk": "0.6483",
+    "status": "OPEN",
+    "components": [],
+    "issuedAt": "2026-10-27 12:46:17",
+    "issuedAtEpoch": 1793092581,
+    "timestamp": 1793092581,
+    "exit_mode": "FIXED"
+  },
+  "NEARUSDT__TITAN_S3": {
+    "profile_id": "TITAN_S3",
+    "symbol": "NEARUSDT",
+    "direction": "LONG",
+    "entry": 4.446,
+    "stopLoss": 4.26816,
+    "takeProfit": 0.0,
+    "tp1": 0.0,
+    "tp2": 0.0,
+    "sl": 4.26816,
+    "rr": 2.0,
+    "score": 0.0,
+    "risk": "LOW",
+    "status": "OPEN",
+    "components": [],
+    "issuedAt": "2026-10-27 09:16:22",
+    "issuedAtEpoch": 1793092582,
+    "timestamp": 1793092582,
+    "sl_pct": 0.04,
+    "trail_activate": 0.003,
+    "trail_lock": 0.9,
+    "max_hold_candles": 120,
+    "scenario_id": "S3"
+  },
+  "AVAXUSDT__TITAN_S3": {
+    "profile_id": "TITAN_S3",
+    "symbol": "AVAXUSDT",
+    "direction": "LONG",
+    "entry": 8.763,
+    "stopLoss": 8.41248,
+    "takeProfit": 0.0,
+    "tp1": 0.0,
+    "tp2": 0.0,
+    "sl": 8.41248,
+    "rr": 2.0,
+    "score": 0.0,
+    "risk": "LOW",
+    "status": "OPEN",
+    "components": [],
+    "issuedAt": "2026-10-27 09:16:23",
+    "issuedAtEpoch": 1793092583,
+    "timestamp": 1793092583,
+    "sl_pct": 0.04,
+    "trail_activate": 0.003,
+    "trail_lock": 0.9,
+    "max_hold_candles": 120,
+    "scenario_id": "S3"
+  },
+  "NEARUSDT__TITAN_B1": {
+    "profile_id": "TITAN_B1",
+    "symbol": "NEARUSDT",
+    "direction": "LONG",
+    "entry": 4.446,
+    "stopLoss": 4.26816,
+    "takeProfit": 0.0,
+    "tp1": 0.0,
+    "tp2": 0.0,
+    "sl": 4.26816,
+    "rr": 2.0,
+    "score": 0.0,
+    "risk": "LOW",
+    "status": "OPEN",
+    "components": [],
+    "issuedAt": "2026-10-27 09:16:24",
+    "issuedAtEpoch": 1793092584,
+    "timestamp": 1793092584,
+    "sl_pct": 0.04,
+    "trail_activate": 0.003,
+    "trail_lock": 0.9,
+    "max_hold_candles": 96,
+    "scenario_id": "B1"
+  },
+  "AVAXUSDT__TITAN_B1": {
+    "profile_id": "TITAN_B1",
+    "symbol": "AVAXUSDT",
+    "direction": "LONG",
+    "entry": 8.763,
+    "stopLoss": 8.41248,
+    "takeProfit": 0.0,
+    "tp1": 0.0,
+    "tp2": 0.0,
+    "sl": 8.41248,
+    "rr": 2.0,
+    "score": 0.0,
+    "risk": "LOW",
+    "status": "OPEN",
+    "components": [],
+    "issuedAt": "2026-10-27 09:16:25",
+    "issuedAtEpoch": 1793092585,
+    "timestamp": 1793092585,
+    "sl_pct": 0.04,
+    "trail_activate": 0.003,
+    "trail_lock": 0.9,
+    "max_hold_candles": 96,
+    "scenario_id": "B1"
+  }
+}
