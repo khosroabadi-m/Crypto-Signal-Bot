@@ -5,7 +5,7 @@
 هیچ تغییری کپی شده است.
 
 ۳ موتور فعال:
-  ۱. PentaSignal v3.5.5    — ۵ سناریو (F1-F5) روی KuCoin
+  ۱. PentaSignal v3.5.5    — ۵ سناریو (F1-F5) روی Binance
   ۲. Titan Signal v4.2.0   — ۳ سناریو فعال (S1, S3, B1) روی Binance
   ۳. KhosroSignalAnalyzerBot v11.3.0 — موتور SMC + AI Committee روی Binance
 
@@ -17,7 +17,7 @@
 # ============================================================================
 # ۱) PentaSignal v3.5.5 — ۵ سناریو (F1-F5)
 #    منبع: PentaSignal/pentasignal/scenarios.py (بدون تغییر)
-#    صرافی: KuCoin public API
+#    صرافی: Binance public API
 # ============================================================================
 PENTA_PROFILES = {
     "PENTA_F1": {
@@ -28,7 +28,7 @@ PENTA_PROFILES = {
         "engine_version": "3.5.5",
         "scenario_id": "F1",
         "direction": "BOTH",
-        "exchange": "KuCoin",
+        "exchange": "Binance",
         "base_tf": "1h",
         "desc_fa": (
             "پکیج کامل KhosroAiTrader: RuleSignalEngine + MarketDataHub + RiskEngine "
@@ -51,7 +51,7 @@ PENTA_PROFILES = {
         "engine_version": "3.5.5",
         "scenario_id": "F2",
         "direction": "SHORT",
-        "exchange": "KuCoin",
+        "exchange": "Binance",
         "base_tf": "30m",
         "desc_fa": (
             "فقط در کرش واقعی (افت ≥۸٪ BTC از سقف ۹۶ کندلی) شورتِ شکست ۸ کندلی "
@@ -73,7 +73,7 @@ PENTA_PROFILES = {
         "engine_version": "3.5.5",
         "scenario_id": "F3",
         "direction": "LONG",
-        "exchange": "KuCoin",
+        "exchange": "Binance",
         "base_tf": "30m",
         "desc_fa": (
             "در روند صعودی (شیب EMA50 ≥۱.۲٪ در ۲۴ کندل)، بازگشت به EMA21 با "
@@ -95,7 +95,7 @@ PENTA_PROFILES = {
         "engine_version": "3.5.5",
         "scenario_id": "F4",
         "direction": "SHORT",
-        "exchange": "KuCoin",
+        "exchange": "Binance",
         "base_tf": "30m",
         "desc_fa": (
             "در افت BTC و افت ≥۸٪ خود نماد، پاداشِ بازگشت به EMA21 با کندل "
@@ -117,7 +117,7 @@ PENTA_PROFILES = {
         "engine_version": "3.5.5",
         "scenario_id": "F5",
         "direction": "LONG",
-        "exchange": "KuCoin",
+        "exchange": "Binance",
         "base_tf": "30m",
         "desc_fa": (
             "کف‌گیری حجم‌محور در پنیک جدیدها (حجم ≥1.5×، دامنه ≥1.8×ATR، "
@@ -286,7 +286,7 @@ ACTIVE_PROFILES = list(ALL_PROFILES.keys())
 
 # گروه‌بندی برای نمایش در UI
 PROFILE_GROUPS = {
-    "PentaSignal v3.5.5 (KuCoin)": list(PENTA_PROFILES.keys()),
+    "PentaSignal v3.5.5 (Binance)": list(PENTA_PROFILES.keys()),
     "Titan Signal v4.2.0 (Binance)": list(TITAN_PROFILES.keys()),
     "Khosro v11.3.0 (SMC + AI)": list(KHOSRO_PROFILES.keys()),
 }
