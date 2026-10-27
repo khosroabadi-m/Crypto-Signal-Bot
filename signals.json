@@ -231,7 +231,7 @@
     "rr": 2.0,
     "score": 52.66,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-10-27T05:51:22.396502+00:00",
     "issuedAtEpoch": 1793080282,
     "version": "13.0.0",
@@ -272,7 +272,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_XRPUSDT_1793080282"
+    "id": "sig_XRPUSDT_1793080282",
+    "hitPrice": 1.2993,
+    "hitTime": "2026-10-27T06:16:11"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -605,7 +607,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-27 05:51:36",
     "issuedAtEpoch": 1793080296,
@@ -614,8 +616,6 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 11.357,
-    "hitTime": "2026-10-27T06:16:03"
+    "scenario_id": "B1"
   }
 }
