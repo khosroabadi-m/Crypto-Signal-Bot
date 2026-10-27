@@ -1859,5 +1859,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
+    "direction": "LONG",
+    "entry": 743.796,
+    "stopLoss": 738.1581695086,
+    "takeProfit": 755.0716609829,
+    "status": "SL_HIT",
+    "hitPrice": 738.08,
+    "hitTime": "2026-10-27T03:08:07",
+    "pnlUsd": -1.0181,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -10.18,
+    "score": 0.0,
+    "risk": "0.7580",
+    "rr": 2.0
   }
 ]
