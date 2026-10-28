@@ -108,8 +108,8 @@
       }
     ],
     "id": "sig_ETHUSDT_1793213869",
-    "hitPrice": 2374.1,
-    "hitTime": "2026-10-28T20:09:02"
+    "hitPrice": 2364.77,
+    "hitTime": "2026-10-28T21:17:38"
   },
   "SOLUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -379,14 +379,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.0353",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-28 22:27:50",
     "issuedAtEpoch": 1793213874,
     "timestamp": 1793213874,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.08044,
-    "hitTime": "2026-10-28T21:17:34"
+    "exit_mode": "FIXED"
   },
   "BTCUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
