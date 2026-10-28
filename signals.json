@@ -279,8 +279,8 @@
       }
     ],
     "id": "sig_XRPUSDT_1793213869",
-    "hitPrice": 1.3332,
-    "hitTime": "2026-10-28T21:21:56"
+    "hitPrice": 1.332,
+    "hitTime": "2026-10-28T21:04:27"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -647,7 +647,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-28 18:58:04",
     "issuedAtEpoch": 1793213884,
@@ -656,7 +656,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 72,
-    "scenario_id": "S1"
+    "scenario_id": "S1",
+    "hitPrice": 0.9276,
+    "hitTime": "2026-10-28T21:22:15"
   },
   "SEIUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
