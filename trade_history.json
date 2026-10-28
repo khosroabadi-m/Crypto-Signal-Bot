@@ -5091,7 +5091,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "BNBUSDT",
     "direction": "LONG",
     "entry": 750.66,
@@ -5099,7 +5099,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 757.64,
-    "hitTime": "2026-10-28T22:36:27",
+    "hitTime": "2026-10-28T22:36:32",
     "pnlUsd": 0.6794,
     "brokerFeeUsd": 0.2,
     "returnPct": 6.79,
