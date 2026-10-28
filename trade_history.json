@@ -4768,7 +4768,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S1",
+    "profile_id": "TITAN_B1",
     "symbol": "FILUSDT",
     "direction": "LONG",
     "entry": 0.9095,
@@ -4776,7 +4776,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 0.9154,
-    "hitTime": "2026-10-28T20:50:04",
+    "hitTime": "2026-10-28T20:50:09",
     "pnlUsd": 0.3984,
     "brokerFeeUsd": 0.2,
     "returnPct": 3.98,
