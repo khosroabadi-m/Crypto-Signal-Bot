@@ -4972,20 +4972,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "SHIBUSDT",
-    "direction": "LONG",
-    "entry": 4.95e-06,
-    "stopLoss": 4.7519999999999996e-06,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "DOGEUSDT",
+    "direction": "SHORT",
+    "entry": 0.07925,
+    "stopLoss": 0.0800705017,
+    "takeProfit": 0.0776089966,
     "status": "SL_HIT",
-    "hitPrice": 5e-06,
-    "hitTime": "2026-10-28T21:56:44",
-    "pnlUsd": 0.7596,
+    "hitPrice": 0.0803,
+    "hitTime": "2026-10-28T21:56:48",
+    "pnlUsd": -1.5756,
     "brokerFeeUsd": 0.2,
-    "returnPct": 7.6,
+    "returnPct": -15.76,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.0353",
     "rr": 2.0
   }
 ]
