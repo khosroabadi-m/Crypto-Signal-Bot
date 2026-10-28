@@ -222,8 +222,8 @@
       }
     ],
     "id": "sig_BNBUSDT_1793213869",
-    "hitPrice": 755.04,
-    "hitTime": "2026-10-28T20:14:17"
+    "hitPrice": 752.94,
+    "hitTime": "2026-10-28T20:32:35"
   },
   "XRPUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -293,14 +293,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.2957",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-28 22:27:50",
     "issuedAtEpoch": 1793213874,
     "timestamp": 1793213874,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.2056,
-    "hitTime": "2026-10-28T20:32:29"
+    "exit_mode": "FIXED"
   },
   "ATOMUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
