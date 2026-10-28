@@ -475,7 +475,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-28 00:35:35",
     "issuedAtEpoch": 1793147735,
@@ -484,7 +484,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 72,
-    "scenario_id": "S1"
+    "scenario_id": "S1",
+    "hitPrice": 4.77e-06,
+    "hitTime": "2026-10-28T05:17:02"
   },
   "BTCUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
@@ -619,7 +621,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-28 00:35:40",
     "issuedAtEpoch": 1793147740,
@@ -628,9 +630,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3",
-    "hitPrice": 0.07965,
-    "hitTime": "2026-10-28T05:16:41"
+    "scenario_id": "S3"
   },
   "SUIUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
