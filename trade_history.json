@@ -3868,19 +3868,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "BTCUSDT",
+    "symbol": "DOTUSDT",
     "direction": "LONG",
-    "entry": 81482.2,
-    "stopLoss": 81013.3503360787,
-    "takeProfit": 82419.8993278425,
+    "entry": 1.008,
+    "stopLoss": 0.9922526074,
+    "takeProfit": 1.0394947852,
     "status": "SL_HIT",
-    "hitPrice": 80556.56,
-    "hitTime": "2026-10-28T16:17:20",
-    "pnlUsd": -1.3854,
+    "hitPrice": 0.992,
+    "hitTime": "2026-10-28T16:17:26",
+    "pnlUsd": -1.8365,
     "brokerFeeUsd": 0.2,
-    "returnPct": -13.85,
+    "returnPct": -18.37,
     "score": 0.0,
-    "risk": "0.5754",
+    "risk": "1.5622",
     "rr": 2.0
   }
 ]
