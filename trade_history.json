@@ -4700,7 +4700,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "AVAXUSDT",
     "direction": "LONG",
     "entry": 8.929,
@@ -4708,7 +4708,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 8.958,
-    "hitTime": "2026-10-28T20:33:01",
+    "hitTime": "2026-10-28T20:33:05",
     "pnlUsd": 0.0746,
     "brokerFeeUsd": 0.2,
     "returnPct": 0.75,
