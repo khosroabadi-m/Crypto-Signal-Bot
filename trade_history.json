@@ -3051,20 +3051,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "BTCUSDT",
+    "profile_id": "TITAN_S3",
+    "symbol": "LTCUSDT",
     "direction": "LONG",
-    "entry": 81491.45,
-    "stopLoss": 81083.99275,
-    "takeProfit": 82306.3645,
+    "entry": 57.75,
+    "stopLoss": 55.44,
+    "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 81079.73,
-    "hitTime": "2026-10-28T12:12:04",
-    "pnlUsd": -0.755,
+    "hitPrice": 57.57,
+    "hitTime": "2026-10-28T12:12:08",
+    "pnlUsd": -0.5615,
     "brokerFeeUsd": 0.2,
-    "returnPct": -7.55,
-    "score": 60.69,
-    "risk": "HIGH",
+    "returnPct": -5.62,
+    "score": 0.0,
+    "risk": "LOW",
     "rr": 2.0
   }
 ]
