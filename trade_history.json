@@ -3119,20 +3119,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "BNBUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "SOLUSDT",
     "direction": "LONG",
-    "entry": 750.25,
-    "stopLoss": 720.24,
-    "takeProfit": 0.0,
+    "entry": 102.7,
+    "stopLoss": 101.848884,
+    "takeProfit": 104.402232,
     "status": "SL_HIT",
-    "hitPrice": 755.02,
-    "hitTime": "2026-10-28T12:34:42",
-    "pnlUsd": 0.3855,
+    "hitPrice": 101.71,
+    "hitTime": "2026-10-28T12:35:27",
+    "pnlUsd": -1.2135,
     "brokerFeeUsd": 0.2,
-    "returnPct": 3.85,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -12.13,
+    "score": 59.55,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
