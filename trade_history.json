@@ -4885,5 +4885,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "PENTA_F1",
+    "symbol": "DOGEUSDT",
+    "direction": "SHORT",
+    "entry": 0.07925,
+    "stopLoss": 0.0800705017,
+    "takeProfit": 0.0776089966,
+    "status": "SL_HIT",
+    "hitPrice": 0.08036,
+    "hitTime": "2026-10-28T21:24:39",
+    "pnlUsd": -1.6513,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -16.51,
+    "score": 0.0,
+    "risk": "1.0353",
+    "rr": 2.0
   }
 ]
