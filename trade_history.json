@@ -4548,19 +4548,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "ATOMUSDT",
+    "symbol": "ADAUSDT",
     "direction": "SHORT",
-    "entry": 1.6073,
-    "stopLoss": 1.6284767895,
-    "takeProfit": 1.564946421,
+    "entry": 0.2025,
+    "stopLoss": 0.2051237657,
+    "takeProfit": 0.1972524686,
     "status": "SL_HIT",
-    "hitPrice": 1.637,
-    "hitTime": "2026-10-28T19:47:01",
-    "pnlUsd": -2.0987,
+    "hitPrice": 0.2067,
+    "hitTime": "2026-10-28T19:47:12",
+    "pnlUsd": -2.3251,
     "brokerFeeUsd": 0.2,
-    "returnPct": -20.99,
+    "returnPct": -23.25,
     "score": 0.0,
-    "risk": "1.3175",
+    "risk": "1.2957",
     "rr": 2.0
   }
 ]
