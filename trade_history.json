@@ -5259,5 +5259,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S1",
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "entry": 81048.24,
+    "stopLoss": 77806.3104,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 81330.1,
+    "hitTime": "2026-10-28T23:31:14",
+    "pnlUsd": 0.0976,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.98,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
