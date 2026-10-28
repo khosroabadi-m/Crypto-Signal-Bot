@@ -4921,20 +4921,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "FILUSDT",
-    "direction": "LONG",
-    "entry": 0.9095,
-    "stopLoss": 0.8731199999999999,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "DOGEUSDT",
+    "direction": "SHORT",
+    "entry": 0.07925,
+    "stopLoss": 0.0800705017,
+    "takeProfit": 0.0776089966,
     "status": "SL_HIT",
-    "hitPrice": 0.9163,
-    "hitTime": "2026-10-28T21:39:06",
-    "pnlUsd": 0.4973,
+    "hitPrice": 0.08008,
+    "hitTime": "2026-10-28T21:40:01",
+    "pnlUsd": -1.2978,
     "brokerFeeUsd": 0.2,
-    "returnPct": 4.97,
+    "returnPct": -12.98,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.0353",
     "rr": 2.0
   }
 ]
