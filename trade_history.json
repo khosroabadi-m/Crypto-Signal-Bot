@@ -4207,7 +4207,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "XAUTUSDT",
     "direction": "LONG",
     "entry": 4047.75,
@@ -4215,7 +4215,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 4035.3,
-    "hitTime": "2026-10-28T18:01:37",
+    "hitTime": "2026-10-28T18:01:41",
     "pnlUsd": -0.5574,
     "brokerFeeUsd": 0.2,
     "returnPct": -5.57,
