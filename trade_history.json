@@ -4817,5 +4817,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_B1",
+    "symbol": "XRPUSDT",
+    "direction": "LONG",
+    "entry": 1.3278,
+    "stopLoss": 1.274688,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 1.332,
+    "hitTime": "2026-10-28T21:04:31",
+    "pnlUsd": 0.0662,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.66,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
