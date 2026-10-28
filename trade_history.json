@@ -2507,7 +2507,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "SEIUSDT",
     "direction": "LONG",
     "entry": 0.05301,
@@ -2515,7 +2515,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 0.05335,
-    "hitTime": "2026-10-28T08:20:50",
+    "hitTime": "2026-10-28T08:20:52",
     "pnlUsd": 0.3911,
     "brokerFeeUsd": 0.2,
     "returnPct": 3.91,
