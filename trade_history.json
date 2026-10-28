@@ -4649,20 +4649,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "AVAXUSDT",
-    "direction": "SHORT",
-    "entry": 8.86,
-    "stopLoss": 8.9647598753,
-    "takeProfit": 8.6504802494,
+    "profile_id": "TITAN_S3",
+    "symbol": "XRPUSDT",
+    "direction": "LONG",
+    "entry": 1.3278,
+    "stopLoss": 1.274688,
+    "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 9.01,
-    "hitTime": "2026-10-28T20:14:58",
-    "pnlUsd": -1.9438,
+    "hitPrice": 1.3326,
+    "hitTime": "2026-10-28T20:15:02",
+    "pnlUsd": 0.1113,
     "brokerFeeUsd": 0.2,
-    "returnPct": -19.44,
+    "returnPct": 1.11,
     "score": 0.0,
-    "risk": "1.1824",
+    "risk": "LOW",
     "rr": 2.0
   }
 ]
