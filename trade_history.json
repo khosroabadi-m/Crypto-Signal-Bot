@@ -2405,7 +2405,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S1",
+    "profile_id": "TITAN_B1",
     "symbol": "SHIBUSDT",
     "direction": "LONG",
     "entry": 4.96e-06,
@@ -2413,7 +2413,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 4.94e-06,
-    "hitTime": "2026-10-28T07:16:22",
+    "hitTime": "2026-10-28T07:16:26",
     "pnlUsd": -0.653,
     "brokerFeeUsd": 0.2,
     "returnPct": -6.53,
