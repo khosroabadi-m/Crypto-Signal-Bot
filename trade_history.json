@@ -4700,20 +4700,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "SEIUSDT",
-    "direction": "LONG",
-    "entry": 0.05311,
-    "stopLoss": 0.0509856,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "ADAUSDT",
+    "direction": "SHORT",
+    "entry": 0.2025,
+    "stopLoss": 0.2051237657,
+    "takeProfit": 0.1972524686,
     "status": "SL_HIT",
-    "hitPrice": 0.05337,
-    "hitTime": "2026-10-28T20:30:51",
-    "pnlUsd": 0.2393,
+    "hitPrice": 0.2052,
+    "hitTime": "2026-10-28T20:31:06",
+    "pnlUsd": -1.584,
     "brokerFeeUsd": 0.2,
-    "returnPct": 2.39,
+    "returnPct": -15.84,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.2957",
     "rr": 2.0
   }
 ]
