@@ -2556,5 +2556,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "entry": 80940.2,
+    "stopLoss": 80535.499,
+    "takeProfit": 81749.602,
+    "status": "TP2_HIT",
+    "hitPrice": 81770.86,
+    "hitTime": "2026-10-28T08:36:09",
+    "pnlUsd": 0.7758,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 7.76,
+    "score": 55.77,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
