@@ -108,8 +108,8 @@
       }
     ],
     "id": "sig_ETHUSDT_1793213869",
-    "hitPrice": 2367.91,
-    "hitTime": "2026-10-28T20:14:08"
+    "hitPrice": 2374.1,
+    "hitTime": "2026-10-28T20:09:02"
   },
   "SOLUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -180,7 +180,7 @@
     "rr": 2.0,
     "score": 58.19,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-10-28T18:57:49.994774+00:00",
     "issuedAtEpoch": 1793213869,
     "version": "13.0.0",
@@ -221,7 +221,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_BNBUSDT_1793213869"
+    "id": "sig_BNBUSDT_1793213869",
+    "hitPrice": 755.04,
+    "hitTime": "2026-10-28T20:14:13"
   },
   "XRPUSDT": {
     "profile_id": "KHOSRO_SMC",
