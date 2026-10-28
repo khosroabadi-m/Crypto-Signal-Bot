@@ -4615,20 +4615,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S1",
-    "symbol": "ATOMUSDT",
-    "direction": "LONG",
-    "entry": 1.63,
-    "stopLoss": 1.5647999999999997,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "AVAXUSDT",
+    "direction": "SHORT",
+    "entry": 8.86,
+    "stopLoss": 8.9647598753,
+    "takeProfit": 8.6504802494,
     "status": "SL_HIT",
-    "hitPrice": 1.656,
-    "hitTime": "2026-10-28T20:04:36",
-    "pnlUsd": 1.3443,
+    "hitPrice": 9.105,
+    "hitTime": "2026-10-28T20:04:41",
+    "pnlUsd": -3.0166,
     "brokerFeeUsd": 0.2,
-    "returnPct": 13.44,
+    "returnPct": -30.17,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.1824",
     "rr": 2.0
   }
 ]
