@@ -5091,7 +5091,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "SOLUSDT",
     "direction": "LONG",
     "entry": 102.16,
@@ -5099,7 +5099,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 102.69,
-    "hitTime": "2026-10-28T22:35:09",
+    "hitTime": "2026-10-28T22:35:14",
     "pnlUsd": 0.2685,
     "brokerFeeUsd": 0.2,
     "returnPct": 2.69,
