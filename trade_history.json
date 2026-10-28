@@ -3034,20 +3034,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "SEIUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "ETHUSDT",
     "direction": "LONG",
-    "entry": 0.0534,
-    "stopLoss": 0.051264000000000004,
-    "takeProfit": 0.0,
+    "entry": 2369.62,
+    "stopLoss": 2353.174138,
+    "takeProfit": 2402.511725,
     "status": "SL_HIT",
-    "hitPrice": 0.05323,
-    "hitTime": "2026-10-28T12:05:26",
-    "pnlUsd": -0.5682,
+    "hitPrice": 2353.01,
+    "hitTime": "2026-10-28T12:05:30",
+    "pnlUsd": -0.9506,
     "brokerFeeUsd": 0.2,
-    "returnPct": -5.68,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -9.51,
+    "score": 63.09,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
