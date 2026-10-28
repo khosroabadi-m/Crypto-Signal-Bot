@@ -4582,19 +4582,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "DOGEUSDT",
+    "symbol": "ATOMUSDT",
     "direction": "SHORT",
-    "entry": 0.07925,
-    "stopLoss": 0.0800705017,
-    "takeProfit": 0.0776089966,
+    "entry": 1.6073,
+    "stopLoss": 1.6284767895,
+    "takeProfit": 1.564946421,
     "status": "SL_HIT",
-    "hitPrice": 0.08009,
-    "hitTime": "2026-10-28T19:57:29",
-    "pnlUsd": -1.3105,
+    "hitPrice": 1.645,
+    "hitTime": "2026-10-28T19:57:34",
+    "pnlUsd": -2.5967,
     "brokerFeeUsd": 0.2,
-    "returnPct": -13.1,
+    "returnPct": -25.97,
     "score": 0.0,
-    "risk": "1.0353",
+    "risk": "1.3175",
     "rr": 2.0
   }
 ]
