@@ -4582,19 +4582,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "ADAUSDT",
+    "symbol": "AVAXUSDT",
     "direction": "SHORT",
-    "entry": 0.2025,
-    "stopLoss": 0.2051237657,
-    "takeProfit": 0.1972524686,
+    "entry": 8.86,
+    "stopLoss": 8.9647598753,
+    "takeProfit": 8.6504802494,
     "status": "SL_HIT",
-    "hitPrice": 0.2064,
-    "hitTime": "2026-10-28T19:54:13",
-    "pnlUsd": -2.1769,
+    "hitPrice": 9.006,
+    "hitTime": "2026-10-28T19:54:17",
+    "pnlUsd": -1.8987,
     "brokerFeeUsd": 0.2,
-    "returnPct": -21.77,
+    "returnPct": -18.99,
     "score": 0.0,
-    "risk": "1.2957",
+    "risk": "1.1824",
     "rr": 2.0
   }
 ]
