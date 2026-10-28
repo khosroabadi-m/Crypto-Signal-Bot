@@ -4581,20 +4581,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S1",
-    "symbol": "PEPEUSDT",
-    "direction": "LONG",
-    "entry": 4.86e-06,
-    "stopLoss": 4.6656e-06,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "ATOMUSDT",
+    "direction": "SHORT",
+    "entry": 1.6073,
+    "stopLoss": 1.6284767895,
+    "takeProfit": 1.564946421,
     "status": "SL_HIT",
-    "hitPrice": 4.95e-06,
-    "hitTime": "2026-10-28T19:54:33",
-    "pnlUsd": 1.6009,
+    "hitPrice": 1.641,
+    "hitTime": "2026-10-28T19:55:00",
+    "pnlUsd": -2.3477,
     "brokerFeeUsd": 0.2,
-    "returnPct": 16.01,
+    "returnPct": -23.48,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.3175",
     "rr": 2.0
   }
 ]
