@@ -4616,19 +4616,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "ADAUSDT",
+    "symbol": "DOGEUSDT",
     "direction": "SHORT",
-    "entry": 0.2025,
-    "stopLoss": 0.2051237657,
-    "takeProfit": 0.1972524686,
+    "entry": 0.07925,
+    "stopLoss": 0.0800705017,
+    "takeProfit": 0.0776089966,
     "status": "SL_HIT",
-    "hitPrice": 0.2083,
-    "hitTime": "2026-10-28T20:05:19",
-    "pnlUsd": -3.1156,
+    "hitPrice": 0.08052,
+    "hitTime": "2026-10-28T20:05:24",
+    "pnlUsd": -1.8533,
     "brokerFeeUsd": 0.2,
-    "returnPct": -31.16,
+    "returnPct": -18.53,
     "score": 0.0,
-    "risk": "1.2957",
+    "risk": "1.0353",
     "rr": 2.0
   }
 ]
