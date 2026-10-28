@@ -3051,20 +3051,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "ADAUSDT",
+    "profile_id": "TITAN_S3",
+    "symbol": "BNBUSDT",
     "direction": "LONG",
-    "entry": 0.2071,
-    "stopLoss": 0.2047228621,
-    "takeProfit": 0.2118542759,
+    "entry": 750.25,
+    "stopLoss": 720.24,
+    "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 0.2047,
-    "hitTime": "2026-10-28T12:14:38",
-    "pnlUsd": -1.4083,
+    "hitPrice": 756.74,
+    "hitTime": "2026-10-28T12:14:42",
+    "pnlUsd": 0.6146,
     "brokerFeeUsd": 0.2,
-    "returnPct": -14.08,
+    "returnPct": 6.15,
     "score": 0.0,
-    "risk": "1.1478",
+    "risk": "LOW",
     "rr": 2.0
   }
 ]
