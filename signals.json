@@ -66,7 +66,7 @@
     "rr": 2.0,
     "score": 56.16,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-10-28T00:35:21.161528+00:00",
     "issuedAtEpoch": 1793147721,
     "version": "13.0.0",
@@ -107,7 +107,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_SOLUSDT_1793147721"
+    "id": "sig_SOLUSDT_1793147721",
+    "hitPrice": 102.06,
+    "hitTime": "2026-10-28T04:58:06"
   },
   "XRPUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -805,7 +807,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-28 00:35:47",
     "issuedAtEpoch": 1793147747,
@@ -814,9 +816,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 2355.49,
-    "hitTime": "2026-10-28T04:58:02"
+    "scenario_id": "B1"
   },
   "XRPUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
