@@ -4786,19 +4786,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "DOGEUSDT",
+    "symbol": "AVAXUSDT",
     "direction": "SHORT",
-    "entry": 0.07925,
-    "stopLoss": 0.0800705017,
-    "takeProfit": 0.0776089966,
+    "entry": 8.86,
+    "stopLoss": 8.9647598753,
+    "takeProfit": 8.6504802494,
     "status": "SL_HIT",
-    "hitPrice": 0.08019,
-    "hitTime": "2026-10-28T20:57:30",
-    "pnlUsd": -1.4367,
+    "hitPrice": 9.014,
+    "hitTime": "2026-10-28T20:57:34",
+    "pnlUsd": -1.989,
     "brokerFeeUsd": 0.2,
-    "returnPct": -14.37,
+    "returnPct": -19.89,
     "score": 0.0,
-    "risk": "1.0353",
+    "risk": "1.1824",
     "rr": 2.0
   }
 ]
