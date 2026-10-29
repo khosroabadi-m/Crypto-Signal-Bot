@@ -53,8 +53,8 @@
       }
     ],
     "id": "sig_BTCUSDT_1793266194",
-    "hitPrice": 80893.51,
-    "hitTime": "2026-10-29T19:44:38"
+    "hitPrice": 80893.52,
+    "hitTime": "2026-10-29T19:43:37"
   },
   "BNBUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -417,7 +417,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-29 09:30:05",
     "issuedAtEpoch": 1793266205,
@@ -426,7 +426,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 11.708,
+    "hitTime": "2026-10-29T19:44:54"
   },
   "AVAXUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
