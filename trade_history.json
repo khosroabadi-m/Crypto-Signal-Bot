@@ -5567,20 +5567,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "ETHUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
     "direction": "LONG",
-    "entry": 2354.5,
-    "stopLoss": 2333.290445,
-    "takeProfit": 2396.91911,
+    "entry": 759.696,
+    "stopLoss": 753.307671153,
+    "takeProfit": 772.4726576941,
     "status": "SL_HIT",
-    "hitPrice": 2320.99,
-    "hitTime": "2026-10-29T01:51:44",
-    "pnlUsd": -1.6725,
+    "hitPrice": 748.26,
+    "hitTime": "2026-10-29T01:51:48",
+    "pnlUsd": -1.7546,
     "brokerFeeUsd": 0.2,
-    "returnPct": -16.73,
-    "score": 57.14,
-    "risk": "HIGH",
+    "returnPct": -17.55,
+    "score": 0.0,
+    "risk": "0.8409",
     "rr": 2.0
   }
 ]
