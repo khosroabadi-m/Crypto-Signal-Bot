@@ -5517,19 +5517,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "DOGEUSDT",
+    "symbol": "BTCUSDT",
     "direction": "LONG",
-    "entry": 0.0798,
-    "stopLoss": 0.0789110802,
-    "takeProfit": 0.0815778396,
+    "entry": 81340.4,
+    "stopLoss": 80791.5039853526,
+    "takeProfit": 82438.1920292947,
     "status": "SL_HIT",
-    "hitPrice": 0.07891,
-    "hitTime": "2026-10-29T01:39:00",
-    "pnlUsd": -1.3647,
+    "hitPrice": 80635.28,
+    "hitTime": "2026-10-29T01:39:33",
+    "pnlUsd": -1.1164,
     "brokerFeeUsd": 0.2,
-    "returnPct": -13.65,
+    "returnPct": -11.16,
     "score": 0.0,
-    "risk": "1.1139",
+    "risk": "0.6748",
     "rr": 2.0
   }
 ]
