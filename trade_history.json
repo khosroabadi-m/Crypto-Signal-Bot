@@ -7080,20 +7080,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "FILUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BNBUSDT",
     "direction": "LONG",
-    "entry": 0.8896,
-    "stopLoss": 0.8540159999999999,
-    "takeProfit": 0.0,
+    "entry": 751.58,
+    "stopLoss": 744.366423,
+    "takeProfit": 766.007154,
     "status": "SL_HIT",
-    "hitPrice": 0.8923,
-    "hitTime": "2026-10-29T10:15:38",
-    "pnlUsd": 0.0534,
+    "hitPrice": 742.54,
+    "hitTime": "2026-10-29T10:16:30",
+    "pnlUsd": -1.4522,
     "brokerFeeUsd": 0.2,
-    "returnPct": 0.53,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -14.52,
+    "score": 52.82,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
