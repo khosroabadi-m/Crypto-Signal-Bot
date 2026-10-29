@@ -5499,20 +5499,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "PEPEUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "BTCUSDT",
     "direction": "LONG",
-    "entry": 5.05e-06,
-    "stopLoss": 4.848e-06,
-    "takeProfit": 0.0,
+    "entry": 81340.4,
+    "stopLoss": 80791.5039853526,
+    "takeProfit": 82438.1920292947,
     "status": "SL_HIT",
-    "hitPrice": 5.11e-06,
-    "hitTime": "2026-10-29T01:30:38",
-    "pnlUsd": 0.9375,
+    "hitPrice": 80788.03,
+    "hitTime": "2026-10-29T01:31:36",
+    "pnlUsd": -0.9287,
     "brokerFeeUsd": 0.2,
-    "returnPct": 9.38,
+    "returnPct": -9.29,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "0.6748",
     "rr": 2.0
   }
 ]
