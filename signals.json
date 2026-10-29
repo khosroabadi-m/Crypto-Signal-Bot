@@ -53,8 +53,8 @@
       }
     ],
     "id": "sig_BTCUSDT_1793235565",
-    "hitPrice": 80871.25,
-    "hitTime": "2026-10-29T01:10:59"
+    "hitPrice": 80635.28,
+    "hitTime": "2026-10-29T01:39:33"
   },
   "ETHUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -331,14 +331,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.1139",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-29 04:29:25",
     "issuedAtEpoch": 1793235569,
     "timestamp": 1793235569,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.07891,
-    "hitTime": "2026-10-29T01:39:00"
+    "exit_mode": "FIXED"
   },
   "INJUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
