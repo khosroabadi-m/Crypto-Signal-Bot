@@ -5703,20 +5703,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "ADAUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "SOLUSDT",
     "direction": "LONG",
-    "entry": 0.2052,
-    "stopLoss": 0.19699199999999997,
-    "takeProfit": 0.0,
+    "entry": 101.89,
+    "stopLoss": 100.788772,
+    "takeProfit": 104.092457,
     "status": "SL_HIT",
-    "hitPrice": 0.1961,
-    "hitTime": "2026-10-29T02:31:44",
-    "pnlUsd": -4.6825,
+    "hitPrice": 99.55,
+    "hitTime": "2026-10-29T02:31:48",
+    "pnlUsd": -2.5454,
     "brokerFeeUsd": 0.2,
-    "returnPct": -46.82,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -25.45,
+    "score": 59.52,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
