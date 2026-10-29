@@ -7165,20 +7165,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "SUIUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
     "direction": "LONG",
-    "entry": 0.913,
-    "stopLoss": 0.87648,
-    "takeProfit": 0.0,
+    "entry": 752.212,
+    "stopLoss": 744.4634893615,
+    "takeProfit": 767.709021277,
     "status": "SL_HIT",
-    "hitPrice": 0.9211,
-    "hitTime": "2026-10-29T10:39:00",
-    "pnlUsd": 0.6367,
+    "hitPrice": 741.69,
+    "hitTime": "2026-10-29T10:39:35",
+    "pnlUsd": -1.6481,
     "brokerFeeUsd": 0.2,
-    "returnPct": 6.37,
+    "returnPct": -16.48,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.0301",
     "rr": 2.0
   }
 ]
