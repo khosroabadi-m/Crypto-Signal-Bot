@@ -5720,20 +5720,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "FILUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "SOLUSDT",
     "direction": "LONG",
-    "entry": 0.9116,
-    "stopLoss": 0.8751359999999999,
-    "takeProfit": 0.0,
+    "entry": 101.89,
+    "stopLoss": 100.788772,
+    "takeProfit": 104.092457,
     "status": "SL_HIT",
-    "hitPrice": 0.8732,
-    "hitTime": "2026-10-29T02:40:22",
-    "pnlUsd": -4.4603,
+    "hitPrice": 99.4,
+    "hitTime": "2026-10-29T02:40:27",
+    "pnlUsd": -2.6926,
     "brokerFeeUsd": 0.2,
-    "returnPct": -44.6,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -26.93,
+    "score": 59.52,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
