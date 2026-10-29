@@ -521,7 +521,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-29 00:59:35",
     "issuedAtEpoch": 1793235575,
@@ -530,9 +530,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 72,
-    "scenario_id": "S1",
-    "hitPrice": 0.8994,
-    "hitTime": "2026-10-29T02:39:02"
+    "scenario_id": "S1"
   },
   "NEARUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
@@ -937,7 +935,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-29 00:59:50",
     "issuedAtEpoch": 1793235590,
@@ -946,7 +944,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 0.8994,
+    "hitTime": "2026-10-29T02:39:07"
   },
   "NEARUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
