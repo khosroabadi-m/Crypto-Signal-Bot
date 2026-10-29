@@ -335,14 +335,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.1139",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-29 04:29:25",
     "issuedAtEpoch": 1793235569,
     "timestamp": 1793235569,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.07813,
-    "hitTime": "2026-10-29T02:26:00"
+    "exit_mode": "FIXED"
   },
   "INJUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -691,7 +689,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-29 00:59:41",
     "issuedAtEpoch": 1793235581,
@@ -700,7 +698,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 72,
-    "scenario_id": "S1"
+    "scenario_id": "S1",
+    "hitPrice": 7.683,
+    "hitTime": "2026-10-29T02:26:05"
   },
   "SEIUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
