@@ -333,14 +333,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.1139",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-29 04:29:25",
     "issuedAtEpoch": 1793235569,
     "timestamp": 1793235569,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.07891,
-    "hitTime": "2026-10-29T01:44:51"
+    "exit_mode": "FIXED"
   },
   "INJUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -377,12 +375,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.2375",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-29 04:29:25",
     "issuedAtEpoch": 1793235569,
     "timestamp": 1793235569,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 0.09085,
+    "hitTime": "2026-10-29T01:45:12"
   },
   "BTCUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
