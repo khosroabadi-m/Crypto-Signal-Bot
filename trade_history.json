@@ -8729,20 +8729,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "BTCUSDT",
-    "direction": "SHORT",
-    "entry": 80064.5,
-    "stopLoss": 80624.4949562922,
-    "takeProfit": 78944.5100874156,
+    "profile_id": "TITAN_B1",
+    "symbol": "OPUSDT",
+    "direction": "LONG",
+    "entry": 0.1094,
+    "stopLoss": 0.10502399999999999,
+    "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 80783.66,
-    "hitTime": "2026-10-29T18:28:26",
-    "pnlUsd": -1.1487,
+    "hitPrice": 0.1102,
+    "hitTime": "2026-10-29T18:28:30",
+    "pnlUsd": 0.4809,
     "brokerFeeUsd": 0.2,
-    "returnPct": -11.49,
+    "returnPct": 4.81,
     "score": 0.0,
-    "risk": "0.6994",
+    "risk": "LOW",
     "rr": 2.0
   }
 ]
