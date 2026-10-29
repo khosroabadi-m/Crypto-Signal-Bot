@@ -351,14 +351,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "2.1611",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-29 04:29:25",
     "issuedAtEpoch": 1793235569,
     "timestamp": 1793235569,
-    "exit_mode": "FIXED",
-    "hitPrice": 7.978,
-    "hitTime": "2026-10-29T01:27:04"
+    "exit_mode": "FIXED"
   },
   "POLUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -1187,7 +1185,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-29 01:00:00",
     "issuedAtEpoch": 1793235600,
@@ -1196,7 +1194,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 5.12e-06,
+    "hitTime": "2026-10-29T01:27:38"
   },
   "SHIBUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
