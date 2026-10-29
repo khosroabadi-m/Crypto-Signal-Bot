@@ -7216,20 +7216,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "AVAXUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
     "direction": "LONG",
-    "entry": 8.715,
-    "stopLoss": 8.366399999999999,
-    "takeProfit": 0.0,
+    "entry": 752.212,
+    "stopLoss": 744.4634893615,
+    "takeProfit": 767.709021277,
     "status": "SL_HIT",
-    "hitPrice": 8.8,
-    "hitTime": "2026-10-29T10:56:08",
-    "pnlUsd": 0.7248,
+    "hitPrice": 741.96,
+    "hitTime": "2026-10-29T10:56:38",
+    "pnlUsd": -1.6122,
     "brokerFeeUsd": 0.2,
-    "returnPct": 7.25,
+    "returnPct": -16.12,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.0301",
     "rr": 2.0
   }
 ]
