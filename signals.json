@@ -1195,8 +1195,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 120,
     "scenario_id": "S3",
-    "hitPrice": 5.12e-06,
-    "hitTime": "2026-10-29T01:27:38"
+    "hitPrice": 5.11e-06,
+    "hitTime": "2026-10-29T01:28:40"
   },
   "SHIBUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
