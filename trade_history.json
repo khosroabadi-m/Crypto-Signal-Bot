@@ -8491,7 +8491,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "POLUSDT",
     "direction": "LONG",
     "entry": 0.09117,
@@ -8499,7 +8499,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 0.09194,
-    "hitTime": "2026-10-29T17:15:12",
+    "hitTime": "2026-10-29T17:15:17",
     "pnlUsd": 0.5942,
     "brokerFeeUsd": 0.2,
     "returnPct": 5.94,
