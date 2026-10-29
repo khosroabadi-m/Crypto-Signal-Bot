@@ -53,8 +53,8 @@
       }
     ],
     "id": "sig_BTCUSDT_1793266194",
-    "hitPrice": 81796.01,
-    "hitTime": "2026-10-29T15:48:43"
+    "hitPrice": 81844.91,
+    "hitTime": "2026-10-29T15:47:43"
   },
   "BNBUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -205,12 +205,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.5968",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-29 12:59:54",
     "issuedAtEpoch": 1793266199,
     "timestamp": 1793266199,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 1.635,
+    "hitTime": "2026-10-29T15:48:51"
   },
   "AVAXUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
