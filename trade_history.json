@@ -6673,19 +6673,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "BNBUSDT",
+    "symbol": "BTCUSDT",
     "direction": "LONG",
-    "entry": 759.696,
-    "stopLoss": 753.307671153,
-    "takeProfit": 772.4726576941,
+    "entry": 81340.4,
+    "stopLoss": 80791.5039853526,
+    "takeProfit": 82438.1920292947,
     "status": "SL_HIT",
-    "hitPrice": 751.74,
-    "hitTime": "2026-10-29T07:19:46",
-    "pnlUsd": -1.2967,
+    "hitPrice": 79940.31,
+    "hitTime": "2026-10-29T07:19:50",
+    "pnlUsd": -1.9704,
     "brokerFeeUsd": 0.2,
-    "returnPct": -12.97,
+    "returnPct": -19.7,
     "score": 0.0,
-    "risk": "0.8409",
+    "risk": "0.6748",
     "rr": 2.0
   }
 ]
