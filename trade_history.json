@@ -5550,20 +5550,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "SOLUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "BTCUSDT",
     "direction": "LONG",
-    "entry": 101.89,
-    "stopLoss": 100.788772,
-    "takeProfit": 104.092457,
+    "entry": 81340.4,
+    "stopLoss": 80791.5039853526,
+    "takeProfit": 82438.1920292947,
     "status": "SL_HIT",
-    "hitPrice": 99.98,
-    "hitTime": "2026-10-29T01:49:39",
-    "pnlUsd": -2.1236,
+    "hitPrice": 80038.03,
+    "hitTime": "2026-10-29T01:49:43",
+    "pnlUsd": -1.8503,
     "brokerFeeUsd": 0.2,
-    "returnPct": -21.24,
-    "score": 59.52,
-    "risk": "HIGH",
+    "returnPct": -18.5,
+    "score": 0.0,
+    "risk": "0.6748",
     "rr": 2.0
   }
 ]
