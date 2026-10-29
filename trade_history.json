@@ -9069,20 +9069,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "LINKUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
     "direction": "LONG",
-    "entry": 11.501,
-    "stopLoss": 11.040959999999998,
-    "takeProfit": 0.0,
+    "entry": 752.212,
+    "stopLoss": 744.4634893615,
+    "takeProfit": 767.709021277,
     "status": "SL_HIT",
-    "hitPrice": 11.459,
-    "hitTime": "2026-10-29T20:06:10",
-    "pnlUsd": -0.615,
+    "hitPrice": 738.0,
+    "hitTime": "2026-10-29T20:06:43",
+    "pnlUsd": -2.1384,
     "brokerFeeUsd": 0.2,
-    "returnPct": -6.15,
+    "returnPct": -21.38,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.0301",
     "rr": 2.0
   }
 ]
