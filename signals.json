@@ -53,8 +53,8 @@
       }
     ],
     "id": "sig_BTCUSDT_1793266194",
-    "hitPrice": 78608.01,
-    "hitTime": "2026-10-30T06:38:38"
+    "hitPrice": 78526.0,
+    "hitTime": "2026-10-30T06:46:36"
   },
   "BNBUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -110,8 +110,8 @@
       }
     ],
     "id": "sig_BNBUSDT_1793266194",
-    "hitPrice": 715.33,
-    "hitTime": "2026-10-30T06:45:39"
+    "hitPrice": 715.14,
+    "hitTime": "2026-10-30T06:43:39"
   },
   "XRPUSDT": {
     "profile_id": "KHOSRO_SMC",
