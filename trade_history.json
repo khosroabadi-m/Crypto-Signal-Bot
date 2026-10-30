@@ -12673,7 +12673,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "BTCUSDT",
     "direction": "LONG",
     "entry": 80143.68,
@@ -12681,7 +12681,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 76798.0,
-    "hitTime": "2026-10-30T13:56:20",
+    "hitTime": "2026-10-30T13:56:24",
     "pnlUsd": -4.4225,
     "brokerFeeUsd": 0.2,
     "returnPct": -44.23,
