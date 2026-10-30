@@ -11957,5 +11957,22 @@
     "score": 0.0,
     "risk": "1.0301",
     "rr": 2.0
+  },
+  {
+    "profile_id": "PENTA_F1",
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "entry": 80064.5,
+    "stopLoss": 80624.4949562922,
+    "takeProfit": 78944.5100874156,
+    "status": "TP2_HIT",
+    "hitPrice": 77418.97,
+    "hitTime": "2026-10-30T10:23:23",
+    "pnlUsd": 3.0559,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 30.56,
+    "score": 0.0,
+    "risk": "0.6994",
+    "rr": 2.0
   }
 ]
