@@ -12807,5 +12807,22 @@
     "score": 70.31,
     "risk": "MEDIUM",
     "rr": 2.1
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "LINKUSDT",
+    "direction": "LONG",
+    "entry": 11.389,
+    "stopLoss": 10.93344,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 11.569,
+    "hitTime": "2026-10-31T11:10:46",
+    "pnlUsd": 1.3297,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 13.3,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
