@@ -339,7 +339,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-31 15:23:33",
     "issuedAtEpoch": 1793460213,
@@ -348,7 +348,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 8.554,
+    "hitTime": "2026-10-31T15:51:55"
   },
   "ATOMUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
@@ -537,7 +539,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-10-31 15:23:41",
     "issuedAtEpoch": 1793460221,
@@ -546,8 +548,6 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 8.55,
-    "hitTime": "2026-10-31T15:50:20"
+    "scenario_id": "B1"
   }
 }
