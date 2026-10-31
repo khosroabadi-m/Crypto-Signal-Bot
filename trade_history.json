@@ -13113,5 +13113,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "LTCUSDT",
+    "direction": "LONG",
+    "entry": 55.28,
+    "stopLoss": 53.068799999999996,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 55.45,
+    "hitTime": "2026-10-31T15:20:06",
+    "pnlUsd": 0.0574,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.57,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
