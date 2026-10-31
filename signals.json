@@ -414,7 +414,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-10-31 21:23:57",
     "issuedAtEpoch": 1793481837,
@@ -423,7 +423,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 5.02e-06,
+    "hitTime": "2026-10-31T21:40:43"
   },
   "LTCUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
