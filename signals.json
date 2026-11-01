@@ -107,12 +107,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.1458",
-    "status": "OPEN",
+    "status": "TP2_HIT",
     "components": [],
     "issuedAt": "2026-11-01 08:24:10",
     "issuedAtEpoch": 1793508856,
     "timestamp": 1793508856,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 8.888,
+    "hitTime": "2026-11-01T05:07:26"
   },
   "BNBUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
