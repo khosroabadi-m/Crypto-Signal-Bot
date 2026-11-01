@@ -571,8 +571,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 96,
     "scenario_id": "B1",
-    "hitPrice": 11.825,
-    "hitTime": "2026-11-01T08:56:03"
+    "hitPrice": 11.823,
+    "hitTime": "2026-11-01T08:57:28"
   },
   "AVAXUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
