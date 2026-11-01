@@ -14475,7 +14475,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "OPUSDT",
     "direction": "LONG",
     "entry": 0.1143,
@@ -14483,7 +14483,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 0.1148,
-    "hitTime": "2026-11-01T11:02:38",
+    "hitTime": "2026-11-01T11:02:42",
     "pnlUsd": 0.1872,
     "brokerFeeUsd": 0.2,
     "returnPct": 1.87,
