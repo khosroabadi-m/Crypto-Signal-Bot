@@ -249,8 +249,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 72,
     "scenario_id": "S1",
-    "hitPrice": 0.8805,
-    "hitTime": "2026-11-01T01:03:32"
+    "hitPrice": 0.8806,
+    "hitTime": "2026-11-01T01:04:42"
   },
   "BTCUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
