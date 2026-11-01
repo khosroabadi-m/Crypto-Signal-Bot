@@ -14696,20 +14696,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "FILUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
     "direction": "LONG",
-    "entry": 0.8807,
-    "stopLoss": 0.845472,
-    "takeProfit": 0.0,
+    "entry": 716.813,
+    "stopLoss": 711.6086983918,
+    "takeProfit": 727.2216032165,
     "status": "SL_HIT",
-    "hitPrice": 0.8773,
-    "hitTime": "2026-11-01T16:09:54",
-    "pnlUsd": -0.6359,
+    "hitPrice": 711.57,
+    "hitTime": "2026-11-01T16:13:24",
+    "pnlUsd": -0.9811,
     "brokerFeeUsd": 0.2,
-    "returnPct": -6.36,
+    "returnPct": -9.81,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "0.7260",
     "rr": 2.0
   }
 ]
