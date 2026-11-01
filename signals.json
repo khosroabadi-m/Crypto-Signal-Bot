@@ -311,7 +311,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-01 06:24:31",
     "issuedAtEpoch": 1793514271,
@@ -320,7 +320,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 8.982,
+    "hitTime": "2026-11-01T06:28:58"
   },
   "FILUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
@@ -479,7 +481,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-01 06:24:38",
     "issuedAtEpoch": 1793514278,
@@ -488,8 +490,6 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 7.339,
-    "hitTime": "2026-11-01T06:28:37"
+    "scenario_id": "B1"
   }
 }
