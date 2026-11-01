@@ -210,8 +210,8 @@
     "issuedAtEpoch": 1793575520,
     "timestamp": 1793575520,
     "exit_mode": "FIXED",
-    "hitPrice": 0.07556,
-    "hitTime": "2026-11-01T23:44:34"
+    "hitPrice": 0.07555,
+    "hitTime": "2026-11-01T23:45:34"
   },
   "BTCUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
