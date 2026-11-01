@@ -14390,7 +14390,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "ADAUSDT",
     "direction": "LONG",
     "entry": 0.1937,
@@ -14398,7 +14398,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 0.1943,
-    "hitTime": "2026-11-01T10:08:56",
+    "hitTime": "2026-11-01T10:09:00",
     "pnlUsd": 0.0596,
     "brokerFeeUsd": 0.2,
     "returnPct": 0.6,
