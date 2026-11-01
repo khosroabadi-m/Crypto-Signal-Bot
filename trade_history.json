@@ -14711,5 +14711,22 @@
     "score": 0.0,
     "risk": "0.7260",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_B1",
+    "symbol": "DOTUSDT",
+    "direction": "LONG",
+    "entry": 0.95,
+    "stopLoss": 0.9119999999999999,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.947,
+    "hitTime": "2026-11-01T16:41:31",
+    "pnlUsd": -0.5656,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -5.66,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
