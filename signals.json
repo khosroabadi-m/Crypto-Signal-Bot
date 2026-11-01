@@ -107,12 +107,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.1458",
-    "status": "OPEN",
+    "status": "TP2_HIT",
     "components": [],
     "issuedAt": "2026-11-01 08:24:10",
     "issuedAtEpoch": 1793508856,
     "timestamp": 1793508856,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 8.852,
+    "hitTime": "2026-11-01T05:04:25"
   },
   "BNBUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -311,7 +313,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-01 04:54:22",
     "issuedAtEpoch": 1793508862,
@@ -320,9 +322,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3",
-    "hitPrice": 8.849,
-    "hitTime": "2026-11-01T05:04:03"
+    "scenario_id": "S3"
   },
   "FILUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
