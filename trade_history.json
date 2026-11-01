@@ -14575,5 +14575,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_B1",
+    "symbol": "BNBUSDT",
+    "direction": "LONG",
+    "entry": 713.13,
+    "stopLoss": 684.6048,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 710.96,
+    "hitTime": "2026-11-01T12:33:02",
+    "pnlUsd": -0.5541,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -5.54,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
