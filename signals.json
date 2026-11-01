@@ -182,12 +182,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "0.6675",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-02 02:55:15",
     "issuedAtEpoch": 1793575520,
     "timestamp": 1793575520,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 711.44,
+    "hitTime": "2026-11-01T23:37:44"
   },
   "DOGEUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
