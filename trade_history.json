@@ -14832,20 +14832,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "BTCUSDT",
-    "direction": "LONG",
-    "entry": 78082.01,
-    "stopLoss": 74958.72959999999,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
+    "direction": "SHORT",
+    "entry": 706.637,
+    "stopLoss": 711.3537437225,
+    "takeProfit": 697.203512555,
     "status": "SL_HIT",
-    "hitPrice": 78378.0,
-    "hitTime": "2026-11-01T23:39:18",
-    "pnlUsd": 0.1289,
+    "hitPrice": 712.06,
+    "hitTime": "2026-11-01T23:39:34",
+    "pnlUsd": -1.0178,
     "brokerFeeUsd": 0.2,
-    "returnPct": 1.29,
+    "returnPct": -10.18,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "0.6675",
     "rr": 2.0
   }
 ]
