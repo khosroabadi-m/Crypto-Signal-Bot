@@ -529,7 +529,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-01 05:54:34",
     "issuedAtEpoch": 1793512474,
@@ -538,7 +538,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1"
+    "scenario_id": "B1",
+    "hitPrice": 8.973,
+    "hitTime": "2026-11-01T06:04:09"
   },
   "FILUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
