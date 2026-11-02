@@ -15496,19 +15496,19 @@
   },
   {
     "profile_id": "KHOSRO_SMC",
-    "symbol": "SOLUSDT",
+    "symbol": "BTCUSDT",
     "direction": "SHORT",
-    "entry": 93.86,
-    "stopLoss": 94.724179,
-    "takeProfit": 92.131643,
+    "entry": 77669.17,
+    "stopLoss": 78057.51585,
+    "takeProfit": 76853.643715,
     "status": "SL_HIT",
-    "hitPrice": 94.75,
-    "hitTime": "2026-11-02T13:39:06",
-    "pnlUsd": -1.1987,
+    "hitPrice": 78070.83,
+    "hitTime": "2026-11-02T13:39:43",
+    "pnlUsd": -0.7674,
     "brokerFeeUsd": 0.2,
-    "returnPct": -11.99,
-    "score": 66.79,
-    "risk": "HIGH",
-    "rr": 2.0
+    "returnPct": -7.67,
+    "score": 68.92,
+    "risk": "MEDIUM",
+    "rr": 2.1
   }
 ]
