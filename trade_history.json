@@ -15799,5 +15799,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S1",
+    "symbol": "PEPEUSDT",
+    "direction": "LONG",
+    "entry": 4.79e-06,
+    "stopLoss": 4.5984e-06,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 4.77e-06,
+    "hitTime": "2026-11-02T22:21:40",
+    "pnlUsd": -0.6673,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -6.67,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
