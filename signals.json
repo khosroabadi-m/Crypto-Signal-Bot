@@ -108,8 +108,8 @@
       }
     ],
     "id": "sig_ETHUSDT_1793577320",
-    "hitPrice": 2282.96,
-    "hitTime": "2026-11-02T00:00:58"
+    "hitPrice": 2269.0,
+    "hitTime": "2026-11-02T00:18:20"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -420,7 +420,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-01 23:55:33",
     "issuedAtEpoch": 1793577333,
@@ -429,9 +429,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3",
-    "hitPrice": 0.07531,
-    "hitTime": "2026-11-02T00:17:58"
+    "scenario_id": "S3"
   },
   "SUIUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
