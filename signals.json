@@ -180,7 +180,7 @@
     "rr": 2.0,
     "score": 66.25,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-02T13:26:08.081625+00:00",
     "issuedAtEpoch": 1793625968,
     "version": "13.0.0",
@@ -221,7 +221,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_XRPUSDT_1793625968"
+    "id": "sig_XRPUSDT_1793625968",
+    "hitPrice": 1.2623,
+    "hitTime": "2026-11-02T13:44:44"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
