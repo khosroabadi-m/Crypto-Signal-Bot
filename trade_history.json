@@ -15019,20 +15019,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "XAUTUSDT",
-    "direction": "LONG",
-    "entry": 3893.98,
-    "stopLoss": 3738.2208,
-    "takeProfit": 0.0,
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "XRPUSDT",
+    "direction": "SHORT",
+    "entry": 1.2456,
+    "stopLoss": 1.253727,
+    "takeProfit": 1.229347,
     "status": "SL_HIT",
-    "hitPrice": 3905.68,
-    "hitTime": "2026-11-02T01:16:02",
-    "pnlUsd": 0.0503,
+    "hitPrice": 1.2568,
+    "hitTime": "2026-11-02T01:16:06",
+    "pnlUsd": -1.1496,
     "brokerFeeUsd": 0.2,
-    "returnPct": 0.5,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -11.5,
+    "score": 67.43,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
