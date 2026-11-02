@@ -15034,5 +15034,22 @@
     "score": 58.06,
     "risk": "HIGH",
     "rr": 2.0
+  },
+  {
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "SOLUSDT",
+    "direction": "SHORT",
+    "entry": 94.01,
+    "stopLoss": 94.953069,
+    "takeProfit": 92.123863,
+    "status": "SL_HIT",
+    "hitPrice": 95.05,
+    "hitTime": "2026-11-02T01:18:58",
+    "pnlUsd": -1.3568,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -13.57,
+    "score": 58.06,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
