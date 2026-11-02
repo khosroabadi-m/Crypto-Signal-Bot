@@ -15512,20 +15512,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "BNBUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "BTCUSDT",
     "direction": "SHORT",
-    "entry": 704.03,
-    "stopLoss": 707.55015,
-    "takeProfit": 696.637685,
+    "entry": 77797.7,
+    "stopLoss": 78196.8738783256,
+    "takeProfit": 76999.3522433489,
     "status": "SL_HIT",
-    "hitPrice": 707.58,
-    "hitTime": "2026-11-02T13:43:22",
-    "pnlUsd": -0.7545,
+    "hitPrice": 78207.17,
+    "hitTime": "2026-11-02T13:43:27",
+    "pnlUsd": -0.7766,
     "brokerFeeUsd": 0.2,
-    "returnPct": -7.54,
-    "score": 68.72,
-    "risk": "MEDIUM",
-    "rr": 2.1
+    "returnPct": -7.77,
+    "score": 0.0,
+    "risk": "0.5131",
+    "rr": 2.0
   }
 ]
