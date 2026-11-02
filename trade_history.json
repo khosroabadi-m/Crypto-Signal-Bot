@@ -15374,5 +15374,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S1",
+    "symbol": "ETHUSDT",
+    "direction": "LONG",
+    "entry": 2292.38,
+    "stopLoss": 2200.6848,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 2285.49,
+    "hitTime": "2026-11-02T06:21:08",
+    "pnlUsd": -0.5504,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -5.5,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
