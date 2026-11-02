@@ -14883,20 +14883,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "DOGEUSDT",
-    "direction": "SHORT",
-    "entry": 0.075,
-    "stopLoss": 0.0755443862,
-    "takeProfit": 0.0739112275,
+    "profile_id": "TITAN_S3",
+    "symbol": "ETHUSDT",
+    "direction": "LONG",
+    "entry": 2276.11,
+    "stopLoss": 2185.0656,
+    "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 0.07563,
-    "hitTime": "2026-11-02T00:00:45",
-    "pnlUsd": -1.0904,
+    "hitPrice": 2282.96,
+    "hitTime": "2026-11-02T00:00:54",
+    "pnlUsd": 0.0508,
     "brokerFeeUsd": 0.2,
-    "returnPct": -10.9,
+    "returnPct": 0.51,
     "score": 0.0,
-    "risk": "0.7258",
+    "risk": "LOW",
     "rr": 2.0
   }
 ]
