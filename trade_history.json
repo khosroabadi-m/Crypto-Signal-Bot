@@ -14917,20 +14917,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "POLUSDT",
-    "direction": "LONG",
-    "entry": 0.09135,
-    "stopLoss": 0.087696,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
+    "direction": "SHORT",
+    "entry": 706.637,
+    "stopLoss": 711.3537437225,
+    "takeProfit": 697.203512555,
     "status": "SL_HIT",
-    "hitPrice": 0.09107,
-    "hitTime": "2026-11-02T00:07:23",
-    "pnlUsd": -0.5564,
+    "hitPrice": 712.98,
+    "hitTime": "2026-11-02T00:07:43",
+    "pnlUsd": -1.1481,
     "brokerFeeUsd": 0.2,
-    "returnPct": -5.56,
+    "returnPct": -11.48,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "0.6675",
     "rr": 2.0
   }
 ]
