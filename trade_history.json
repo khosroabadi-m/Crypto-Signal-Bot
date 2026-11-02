@@ -15496,19 +15496,19 @@
   },
   {
     "profile_id": "KHOSRO_SMC",
-    "symbol": "BNBUSDT",
+    "symbol": "XRPUSDT",
     "direction": "SHORT",
-    "entry": 704.03,
-    "stopLoss": 707.55015,
-    "takeProfit": 696.637685,
+    "entry": 1.2472,
+    "stopLoss": 1.256009,
+    "takeProfit": 1.229583,
     "status": "SL_HIT",
-    "hitPrice": 707.67,
-    "hitTime": "2026-11-02T13:39:47",
-    "pnlUsd": -0.7673,
+    "hitPrice": 1.26,
+    "hitTime": "2026-11-02T13:39:52",
+    "pnlUsd": -1.2768,
     "brokerFeeUsd": 0.2,
-    "returnPct": -7.67,
-    "score": 68.72,
-    "risk": "MEDIUM",
-    "rr": 2.1
+    "returnPct": -12.77,
+    "score": 66.25,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
