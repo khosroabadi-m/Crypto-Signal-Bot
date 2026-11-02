@@ -53,8 +53,8 @@
       }
     ],
     "id": "sig_BTCUSDT_1793588127",
-    "hitPrice": 78740.0,
-    "hitTime": "2026-11-02T03:49:01"
+    "hitPrice": 78684.36,
+    "hitTime": "2026-11-02T03:42:19"
   },
   "ETHUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -110,8 +110,8 @@
       }
     ],
     "id": "sig_ETHUSDT_1793588127",
-    "hitPrice": 2310.0,
-    "hitTime": "2026-11-02T03:34:33"
+    "hitPrice": 2309.74,
+    "hitTime": "2026-11-02T03:49:05"
   },
   "SOLUSDT": {
     "profile_id": "KHOSRO_SMC",
