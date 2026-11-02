@@ -15496,19 +15496,19 @@
   },
   {
     "profile_id": "KHOSRO_SMC",
-    "symbol": "BNBUSDT",
+    "symbol": "SOLUSDT",
     "direction": "SHORT",
-    "entry": 704.03,
-    "stopLoss": 707.55015,
-    "takeProfit": 696.637685,
+    "entry": 93.86,
+    "stopLoss": 94.724179,
+    "takeProfit": 92.131643,
     "status": "SL_HIT",
-    "hitPrice": 707.68,
-    "hitTime": "2026-11-02T13:38:14",
-    "pnlUsd": -0.7687,
+    "hitPrice": 94.75,
+    "hitTime": "2026-11-02T13:38:18",
+    "pnlUsd": -1.1987,
     "brokerFeeUsd": 0.2,
-    "returnPct": -7.69,
-    "score": 68.72,
-    "risk": "MEDIUM",
-    "rr": 2.1
+    "returnPct": -11.99,
+    "score": 66.79,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
