@@ -15510,5 +15510,22 @@
     "score": 66.25,
     "risk": "HIGH",
     "rr": 2.0
+  },
+  {
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BNBUSDT",
+    "direction": "SHORT",
+    "entry": 704.03,
+    "stopLoss": 707.55015,
+    "takeProfit": 696.637685,
+    "status": "SL_HIT",
+    "hitPrice": 707.58,
+    "hitTime": "2026-11-02T13:43:22",
+    "pnlUsd": -0.7545,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -7.54,
+    "score": 68.72,
+    "risk": "MEDIUM",
+    "rr": 2.1
   }
 ]
