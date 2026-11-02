@@ -11,7 +11,7 @@
     "rr": 2.0,
     "score": 65.28,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-02T02:55:27.132928+00:00",
     "issuedAtEpoch": 1793588127,
     "version": "13.0.0",
@@ -52,7 +52,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_BTCUSDT_1793588127"
+    "id": "sig_BTCUSDT_1793588127",
+    "hitPrice": 78674.01,
+    "hitTime": "2026-11-02T03:30:30"
   },
   "ETHUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -66,7 +68,7 @@
     "rr": 2.1,
     "score": 68.15,
     "risk": "MEDIUM",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "issuedAt": "2026-11-02T02:55:27.133766+00:00",
     "issuedAtEpoch": 1793588127,
     "version": "13.0.0",
@@ -107,9 +109,7 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_ETHUSDT_1793588127",
-    "hitPrice": 2309.72,
-    "hitTime": "2026-11-02T03:29:33"
+    "id": "sig_ETHUSDT_1793588127"
   },
   "SOLUSDT": {
     "profile_id": "KHOSRO_SMC",
