@@ -123,7 +123,7 @@
     "rr": 2.0,
     "score": 59.25,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-02T02:55:27.134725+00:00",
     "issuedAtEpoch": 1793588127,
     "version": "13.0.0",
@@ -164,7 +164,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_SOLUSDT_1793588127"
+    "id": "sig_SOLUSDT_1793588127",
+    "hitPrice": 95.93,
+    "hitTime": "2026-11-02T03:37:37"
   },
   "BNBUSDT": {
     "profile_id": "KHOSRO_SMC",
