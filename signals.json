@@ -66,7 +66,7 @@
     "rr": 2.0,
     "score": 66.7,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-01T23:55:20.459682+00:00",
     "issuedAtEpoch": 1793577320,
     "version": "13.0.0",
@@ -107,7 +107,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_ETHUSDT_1793577320"
+    "id": "sig_ETHUSDT_1793577320",
+    "hitPrice": 2282.96,
+    "hitTime": "2026-11-02T00:00:54"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -202,14 +204,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "0.7258",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-02 03:25:20",
     "issuedAtEpoch": 1793577325,
     "timestamp": 1793577325,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.07563,
-    "hitTime": "2026-11-02T00:00:45"
+    "exit_mode": "FIXED"
   },
   "BNBUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
