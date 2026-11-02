@@ -68,7 +68,7 @@
     "rr": 2.0,
     "score": 58.7,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-02T00:55:32.253128+00:00",
     "issuedAtEpoch": 1793580932,
     "version": "13.0.0",
@@ -109,7 +109,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_BNBUSDT_1793580932"
+    "id": "sig_BNBUSDT_1793580932",
+    "hitPrice": 715.3,
+    "hitTime": "2026-11-02T01:26:50"
   },
   "XRPUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -219,14 +221,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "0.7572",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-02 04:25:32",
     "issuedAtEpoch": 1793580937,
     "timestamp": 1793580937,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.07613,
-    "hitTime": "2026-11-02T01:26:04"
+    "exit_mode": "FIXED"
   },
   "DOTUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
