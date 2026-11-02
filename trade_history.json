@@ -14901,19 +14901,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "ADAUSDT",
+    "symbol": "BNBUSDT",
     "direction": "SHORT",
-    "entry": 0.1917,
-    "stopLoss": 0.1933105178,
-    "takeProfit": 0.1884789644,
+    "entry": 706.637,
+    "stopLoss": 711.3537437225,
+    "takeProfit": 697.203512555,
     "status": "SL_HIT",
-    "hitPrice": 0.1935,
-    "hitTime": "2026-11-02T00:04:50",
-    "pnlUsd": -1.1894,
+    "hitPrice": 713.25,
+    "hitTime": "2026-11-02T00:05:42",
+    "pnlUsd": -1.1863,
     "brokerFeeUsd": 0.2,
-    "returnPct": -11.89,
+    "returnPct": -11.86,
     "score": 0.0,
-    "risk": "0.8401",
+    "risk": "0.6675",
     "rr": 2.0
   }
 ]
