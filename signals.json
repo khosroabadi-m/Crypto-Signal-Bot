@@ -294,14 +294,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.2481",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-03 15:27:37",
     "issuedAtEpoch": 1793707062,
     "timestamp": 1793707062,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.949,
-    "hitTime": "2026-11-03T12:24:52"
+    "exit_mode": "FIXED"
   },
   "ETHUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -576,7 +574,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-03 11:57:52",
     "issuedAtEpoch": 1793707072,
@@ -585,7 +583,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1"
+    "scenario_id": "B1",
+    "hitPrice": 1.441,
+    "hitTime": "2026-11-03T12:25:04"
   },
   "TIAUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
