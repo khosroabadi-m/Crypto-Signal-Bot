@@ -184,12 +184,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "0.7168",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-03 16:27:43",
     "issuedAtEpoch": 1793710667,
     "timestamp": 1793710667,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 702.76,
+    "hitTime": "2026-11-03T13:31:53"
   },
   "DOGEUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -224,7 +226,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-03 12:57:48",
     "issuedAtEpoch": 1793710668,
@@ -233,9 +235,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 72,
-    "scenario_id": "S1",
-    "hitPrice": 3955.4,
-    "hitTime": "2026-11-03T13:31:16"
+    "scenario_id": "S1"
   },
   "SOLUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
