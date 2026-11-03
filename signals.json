@@ -52,12 +52,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.3006",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-03 13:27:48",
     "issuedAtEpoch": 1793699872,
     "timestamp": 1793699872,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 8.506,
+    "hitTime": "2026-11-03T10:19:42"
   },
   "BNBUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -72,14 +74,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "0.7554",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-03 13:27:48",
     "issuedAtEpoch": 1793699872,
     "timestamp": 1793699872,
-    "exit_mode": "FIXED",
-    "hitPrice": 698.73,
-    "hitTime": "2026-11-03T10:19:29"
+    "exit_mode": "FIXED"
   },
   "BTCUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
