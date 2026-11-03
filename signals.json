@@ -108,8 +108,8 @@
       }
     ],
     "id": "sig_ETHUSDT_1793722980",
-    "hitPrice": 2298.16,
-    "hitTime": "2026-11-03T17:03:12"
+    "hitPrice": 2293.41,
+    "hitTime": "2026-11-03T16:41:27"
   },
   "SOLUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -683,7 +683,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-03 16:23:17",
     "issuedAtEpoch": 1793722997,
@@ -692,7 +692,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 0.09174,
+    "hitTime": "2026-11-03T17:03:33"
   },
   "PEPEUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
