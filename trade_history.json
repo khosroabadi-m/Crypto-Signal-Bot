@@ -1,21 +1,5 @@
 [
   {
-    "symbol": "ETHUSDT",
-    "direction": "SHORT",
-    "entry": 2367.72,
-    "stopLoss": 2380.667652,
-    "takeProfit": 2341.824697,
-    "status": "TP2_HIT",
-    "hitPrice": 2341.11,
-    "hitTime": "2026-10-24T14:18:52",
-    "pnlUsd": 0.8744,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 8.74,
-    "score": 58.44,
-    "risk": "HIGH",
-    "rr": 2.0
-  },
-  {
     "symbol": "BTCUSDT",
     "direction": "SHORT",
     "entry": 80715.59,
@@ -16986,6 +16970,23 @@
     "pnlUsd": 0.5924,
     "brokerFeeUsd": 0.2,
     "returnPct": 5.92,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "POLUSDT",
+    "direction": "LONG",
+    "entry": 0.09136,
+    "stopLoss": 0.0877056,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.09207,
+    "hitTime": "2026-11-03T17:11:19",
+    "pnlUsd": 0.5268,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 5.27,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
