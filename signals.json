@@ -838,7 +838,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-03 18:28:48",
     "issuedAtEpoch": 1793730528,
@@ -847,7 +847,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1"
+    "scenario_id": "B1",
+    "hitPrice": 0.8992,
+    "hitTime": "2026-11-03T18:37:24"
   },
   "AVAXUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
