@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "LTCUSDT",
-    "direction": "LONG",
-    "entry": 56.59,
-    "stopLoss": 54.3264,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 56.82,
-    "hitTime": "2026-10-26T11:54:18",
-    "pnlUsd": 0.1562,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 1.56,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "KHOSRO_SMC",
     "symbol": "BNBUSDT",
     "direction": "SHORT",
@@ -16995,6 +16978,23 @@
     "pnlUsd": 0.1056,
     "brokerFeeUsd": 0.2,
     "returnPct": 1.06,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S1",
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "entry": 77580.01,
+    "stopLoss": 74476.8096,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 77824.0,
+    "hitTime": "2026-11-03T20:48:42",
+    "pnlUsd": 0.0643,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.64,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
