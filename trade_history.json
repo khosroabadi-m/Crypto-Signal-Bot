@@ -16343,5 +16343,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "OPUSDT",
+    "direction": "LONG",
+    "entry": 0.1107,
+    "stopLoss": 0.106272,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.1113,
+    "hitTime": "2026-11-03T11:46:09",
+    "pnlUsd": 0.2917,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 2.92,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
