@@ -176,7 +176,7 @@
     "rr": 2.1,
     "score": 68.29,
     "risk": "MEDIUM",
-    "status": "OPEN",
+    "status": "TP2_HIT",
     "issuedAt": "2026-11-03T11:57:37.526600+00:00",
     "issuedAtEpoch": 1793707057,
     "version": "13.0.0",
@@ -217,7 +217,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_XRPUSDT_1793707057"
+    "id": "sig_XRPUSDT_1793707057",
+    "hitPrice": 1.2743,
+    "hitTime": "2026-11-03T12:16:44"
   },
   "ATOMUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -596,7 +598,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-03 11:57:53",
     "issuedAtEpoch": 1793707073,
@@ -605,8 +607,6 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 0.4442,
-    "hitTime": "2026-11-03T12:16:07"
+    "scenario_id": "B1"
   }
 }
