@@ -15867,5 +15867,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "XRPUSDT",
+    "direction": "LONG",
+    "entry": 1.2547,
+    "stopLoss": 1.2045119999999998,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 1.2509,
+    "hitTime": "2026-11-03T00:38:57",
+    "pnlUsd": -0.5527,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -5.53,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
