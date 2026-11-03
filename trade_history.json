@@ -16598,5 +16598,22 @@
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "XAUTUSDT",
+    "direction": "LONG",
+    "entry": 3925.87,
+    "stopLoss": 3768.8351999999995,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 3939.14,
+    "hitTime": "2026-11-03T14:24:39",
+    "pnlUsd": 0.0878,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.88,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
