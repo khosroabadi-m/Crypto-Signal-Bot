@@ -16362,20 +16362,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "XRPUSDT",
+    "profile_id": "TITAN_B1",
+    "symbol": "TIAUSDT",
     "direction": "LONG",
-    "entry": 1.2582,
-    "stopLoss": 1.251158,
-    "takeProfit": 1.272987,
-    "status": "TP2_HIT",
-    "hitPrice": 1.2735,
-    "hitTime": "2026-11-03T12:16:02",
-    "pnlUsd": 0.9654,
+    "entry": 0.4426,
+    "stopLoss": 0.424896,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.4442,
+    "hitTime": "2026-11-03T12:16:07",
+    "pnlUsd": 0.1113,
     "brokerFeeUsd": 0.2,
-    "returnPct": 9.65,
-    "score": 68.29,
-    "risk": "MEDIUM",
-    "rr": 2.1
+    "returnPct": 1.11,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
   }
 ]
