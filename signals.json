@@ -543,7 +543,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-03 08:57:47",
     "issuedAtEpoch": 1793696267,
@@ -552,7 +552,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 4.57e-06,
+    "hitTime": "2026-11-03T09:13:57"
   },
   "BTCUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
