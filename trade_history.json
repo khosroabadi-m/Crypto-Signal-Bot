@@ -16413,20 +16413,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "BNBUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "DOTUSDT",
     "direction": "SHORT",
-    "entry": 697.65,
-    "stopLoss": 701.851944,
-    "takeProfit": 689.246111,
+    "entry": 0.9366,
+    "stopLoss": 0.9482897969,
+    "takeProfit": 0.9132204061,
     "status": "SL_HIT",
-    "hitPrice": 701.88,
-    "hitTime": "2026-11-03T12:39:17",
-    "pnlUsd": -0.8566,
+    "hitPrice": 0.949,
+    "hitTime": "2026-11-03T12:40:54",
+    "pnlUsd": -1.5746,
     "brokerFeeUsd": 0.2,
-    "returnPct": -8.57,
-    "score": 55.35,
-    "risk": "HIGH",
+    "returnPct": -15.75,
+    "score": 0.0,
+    "risk": "1.2481",
     "rr": 2.0
   }
 ]
