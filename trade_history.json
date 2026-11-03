@@ -1,21 +1,5 @@
 [
   {
-    "symbol": "XRPUSDT",
-    "direction": "SHORT",
-    "entry": 1.2758,
-    "stopLoss": 1.290053,
-    "takeProfit": 1.247294,
-    "status": "SL_HIT",
-    "hitPrice": 1.291,
-    "hitTime": "2026-10-24T19:39:29",
-    "pnlUsd": -1.442,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -14.42,
-    "score": 65.92,
-    "risk": "HIGH",
-    "rr": 2.0
-  },
-  {
     "symbol": "ETHUSDT",
     "direction": "SHORT",
     "entry": 2340.99,
@@ -16991,6 +16975,23 @@
     "pnlUsd": 0.1096,
     "brokerFeeUsd": 0.2,
     "returnPct": 1.1,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S1",
+    "symbol": "XRPUSDT",
+    "direction": "LONG",
+    "entry": 1.2738,
+    "stopLoss": 1.222848,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 1.2832,
+    "hitTime": "2026-11-03T17:40:38",
+    "pnlUsd": 0.4876,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 4.88,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
