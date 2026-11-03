@@ -1,21 +1,5 @@
 [
   {
-    "symbol": "XRPUSDT",
-    "direction": "LONG",
-    "entry": 1.314,
-    "stopLoss": 1.303501,
-    "takeProfit": 1.334997,
-    "status": "SL_HIT",
-    "hitPrice": 1.3034,
-    "hitTime": "2026-10-25T05:39:19",
-    "pnlUsd": -1.0563,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -10.56,
-    "score": 65.98,
-    "risk": "HIGH",
-    "rr": 2.0
-  },
-  {
     "profile_id": "KHOSRO_SMC",
     "symbol": "SOLUSDT",
     "direction": "SHORT",
@@ -16994,6 +16978,23 @@
     "pnlUsd": 0.2367,
     "brokerFeeUsd": 0.2,
     "returnPct": 2.37,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S1",
+    "symbol": "ETHUSDT",
+    "direction": "LONG",
+    "entry": 2285.75,
+    "stopLoss": 2194.3199999999997,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 2296.65,
+    "hitTime": "2026-11-03T17:57:19",
+    "pnlUsd": 0.2266,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 2.27,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
