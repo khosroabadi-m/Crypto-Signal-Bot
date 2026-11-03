@@ -66,7 +66,7 @@
     "rr": 2.0,
     "score": 63.43,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-03T12:57:43.379860+00:00",
     "issuedAtEpoch": 1793710663,
     "version": "13.0.0",
@@ -107,7 +107,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_XRPUSDT_1793710663"
+    "id": "sig_XRPUSDT_1793710663",
+    "hitPrice": 1.2791,
+    "hitTime": "2026-11-03T13:04:19"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -414,7 +416,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-03 12:57:55",
     "issuedAtEpoch": 1793710675,
@@ -423,9 +425,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 92.89,
-    "hitTime": "2026-11-03T13:03:55"
+    "scenario_id": "B1"
   },
   "XRPUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
