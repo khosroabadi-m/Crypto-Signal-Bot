@@ -1,21 +1,5 @@
 [
   {
-    "symbol": "ETHUSDT",
-    "direction": "SHORT",
-    "entry": 2340.99,
-    "stopLoss": 2361.868607,
-    "takeProfit": 2299.232787,
-    "status": "SL_HIT",
-    "hitPrice": 2361.93,
-    "hitTime": "2026-10-24T23:33:21",
-    "pnlUsd": -1.1449,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -11.45,
-    "score": 58.92,
-    "risk": "HIGH",
-    "rr": 2.0
-  },
-  {
     "symbol": "BNBUSDT",
     "direction": "LONG",
     "entry": 739.16,
@@ -16992,6 +16976,23 @@
     "pnlUsd": 0.4248,
     "brokerFeeUsd": 0.2,
     "returnPct": 4.25,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "BTCUSDT",
+    "direction": "LONG",
+    "entry": 77394.0,
+    "stopLoss": 74298.23999999999,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 77659.81,
+    "hitTime": "2026-11-03T17:46:04",
+    "pnlUsd": 0.0933,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.93,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
