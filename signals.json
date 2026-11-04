@@ -68,7 +68,7 @@
     "rr": 2.1,
     "score": 68.28,
     "risk": "MEDIUM",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "issuedAt": "2026-11-04T03:58:39.666579+00:00",
     "issuedAtEpoch": 1793764719,
     "version": "13.0.0",
@@ -109,9 +109,7 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_ETHUSDT_1793764719",
-    "hitPrice": 2285.33,
-    "hitTime": "2026-11-04T04:56:51"
+    "id": "sig_ETHUSDT_1793764719"
   },
   "SOLUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -222,8 +220,8 @@
       }
     ],
     "id": "sig_BNBUSDT_1793764719",
-    "hitPrice": 693.78,
-    "hitTime": "2026-11-04T04:54:13"
+    "hitPrice": 695.22,
+    "hitTime": "2026-11-04T04:56:56"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
