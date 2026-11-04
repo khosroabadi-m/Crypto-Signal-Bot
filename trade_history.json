@@ -16984,19 +16984,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "BNBUSDT",
+    "symbol": "DOTUSDT",
     "direction": "SHORT",
-    "entry": 694.531,
-    "stopLoss": 701.7514311567,
-    "takeProfit": 680.0901376867,
+    "entry": 0.9336,
+    "stopLoss": 0.9484301083,
+    "takeProfit": 0.9039397833,
     "status": "SL_HIT",
-    "hitPrice": 702.59,
-    "hitTime": "2026-11-04T07:54:53",
-    "pnlUsd": -1.4109,
+    "hitPrice": 0.951,
+    "hitTime": "2026-11-04T07:54:57",
+    "pnlUsd": -2.1147,
     "brokerFeeUsd": 0.2,
-    "returnPct": -14.11,
+    "returnPct": -21.15,
     "score": 0.0,
-    "risk": "1.0396",
+    "risk": "1.5885",
     "rr": 2.0
   }
 ]
