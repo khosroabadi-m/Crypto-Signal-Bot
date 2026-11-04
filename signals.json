@@ -121,7 +121,7 @@
     "rr": 2.0,
     "score": 65.66,
     "risk": "HIGH",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "issuedAt": "2026-11-04T16:26:58.097345+00:00",
     "issuedAtEpoch": 1793809618,
     "version": "13.0.0",
@@ -162,9 +162,7 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_SOLUSDT_1793809618",
-    "hitPrice": 96.93,
-    "hitTime": "2026-11-04T16:44:46"
+    "id": "sig_SOLUSDT_1793809618"
   },
   "BNBUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -825,7 +823,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-04 16:27:19",
     "issuedAtEpoch": 1793809639,
@@ -834,7 +832,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 11.655,
+    "hitTime": "2026-11-04T16:45:00"
   },
   "AVAXUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
