@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "BNBUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "DOGEUSDT",
     "direction": "SHORT",
-    "entry": 700.67,
-    "stopLoss": 706.590852,
-    "takeProfit": 688.828296,
+    "entry": 0.07458,
+    "stopLoss": 0.0755465845,
+    "takeProfit": 0.072646831,
     "status": "SL_HIT",
-    "hitPrice": 719.46,
-    "hitTime": "2026-11-04T15:12:46",
-    "pnlUsd": -2.9331,
+    "hitPrice": 0.07799,
+    "hitTime": "2026-11-04T15:12:51",
+    "pnlUsd": -4.8246,
     "brokerFeeUsd": 0.2,
-    "returnPct": -29.33,
-    "score": 60.03,
-    "risk": "HIGH",
+    "returnPct": -48.25,
+    "score": 0.0,
+    "risk": "1.2960",
     "rr": 2.0
   }
 ]
