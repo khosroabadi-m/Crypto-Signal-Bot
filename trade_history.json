@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "BTCUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "ETHUSDT",
     "direction": "SHORT",
-    "entry": 76173.0,
-    "stopLoss": 76806.6919899827,
-    "takeProfit": 74905.6160200345,
+    "entry": 2249.8,
+    "stopLoss": 2269.957368,
+    "takeProfit": 2207.469528,
     "status": "SL_HIT",
-    "hitPrice": 77424.01,
-    "hitTime": "2026-11-04T04:58:47",
-    "pnlUsd": -1.8931,
+    "hitPrice": 2280.63,
+    "hitTime": "2026-11-04T04:58:51",
+    "pnlUsd": -1.621,
     "brokerFeeUsd": 0.2,
-    "returnPct": -18.93,
-    "score": 0.0,
-    "risk": "0.8319",
-    "rr": 2.0
+    "returnPct": -16.21,
+    "score": 68.28,
+    "risk": "MEDIUM",
+    "rr": 2.1
   }
 ]
