@@ -16984,19 +16984,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "BNBUSDT",
+    "symbol": "DOGEUSDT",
     "direction": "LONG",
-    "entry": 700.857,
-    "stopLoss": 695.9595613834,
-    "takeProfit": 710.6518772331,
+    "entry": 0.07523,
+    "stopLoss": 0.0745362272,
+    "takeProfit": 0.0766175457,
     "status": "SL_HIT",
-    "hitPrice": 695.17,
-    "hitTime": "2026-11-04T00:27:52",
-    "pnlUsd": -1.061,
+    "hitPrice": 0.07447,
+    "hitTime": "2026-11-04T00:28:51",
+    "pnlUsd": -1.2597,
     "brokerFeeUsd": 0.2,
-    "returnPct": -10.61,
+    "returnPct": -12.6,
     "score": 0.0,
-    "risk": "0.6988",
+    "risk": "0.9222",
     "rr": 2.0
   }
 ]
