@@ -1,23 +1,6 @@
 [
   {
     "profile_id": "TITAN_B1",
-    "symbol": "INJUSDT",
-    "direction": "LONG",
-    "entry": 7.905,
-    "stopLoss": 7.5888,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 7.947,
-    "hitTime": "2026-10-26T19:07:21",
-    "pnlUsd": 0.281,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 2.81,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "TITAN_B1",
     "symbol": "POLUSDT",
     "direction": "LONG",
     "entry": 0.09091,
@@ -16995,6 +16978,23 @@
     "pnlUsd": 0.2385,
     "brokerFeeUsd": 0.2,
     "returnPct": 2.38,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "NEARUSDT",
+    "direction": "LONG",
+    "entry": 3.892,
+    "stopLoss": 3.7363199999999996,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 3.904,
+    "hitTime": "2026-11-04T06:17:10",
+    "pnlUsd": 0.0582,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.58,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
