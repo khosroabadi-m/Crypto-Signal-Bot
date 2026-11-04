@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "SUIUSDT",
-    "direction": "LONG",
-    "entry": 0.9342,
-    "stopLoss": 0.896832,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 0.9372,
-    "hitTime": "2026-10-28T06:14:12",
-    "pnlUsd": 0.071,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 0.71,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "TITAN_B1",
     "symbol": "PEPEUSDT",
     "direction": "LONG",
@@ -16995,6 +16978,23 @@
     "pnlUsd": 0.5873,
     "brokerFeeUsd": 0.2,
     "returnPct": 5.87,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "POLUSDT",
+    "direction": "LONG",
+    "entry": 0.0943,
+    "stopLoss": 0.090528,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.09505,
+    "hitTime": "2026-11-04T12:47:28",
+    "pnlUsd": 0.5449,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 5.45,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
