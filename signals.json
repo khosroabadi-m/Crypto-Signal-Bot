@@ -452,7 +452,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-04 12:29:28",
     "issuedAtEpoch": 1793795368,
@@ -461,7 +461,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 72,
-    "scenario_id": "S1"
+    "scenario_id": "S1",
+    "hitPrice": 0.09495,
+    "hitTime": "2026-11-04T12:42:00"
   },
   "PEPEUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
@@ -1004,7 +1006,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-04 12:29:49",
     "issuedAtEpoch": 1793795389,
@@ -1013,9 +1015,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 4.029,
-    "hitTime": "2026-11-04T12:41:49"
+    "scenario_id": "B1"
   },
   "AVAXUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
