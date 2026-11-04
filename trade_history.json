@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "AVAXUSDT",
-    "direction": "LONG",
-    "entry": 8.779,
-    "stopLoss": 8.42784,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 8.751,
-    "hitTime": "2026-10-27T09:36:31",
-    "pnlUsd": -0.5688,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -5.69,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "KHOSRO_SMC",
     "symbol": "BNBUSDT",
     "direction": "SHORT",
@@ -16995,6 +16978,23 @@
     "pnlUsd": 1.0102,
     "brokerFeeUsd": 0.2,
     "returnPct": 10.1,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S1",
+    "symbol": "XRPUSDT",
+    "direction": "LONG",
+    "entry": 1.2769,
+    "stopLoss": 1.2258239999999998,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 1.2924,
+    "hitTime": "2026-11-04T10:49:49",
+    "pnlUsd": 0.9633,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 9.63,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
