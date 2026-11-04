@@ -259,12 +259,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.5885",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-04 09:28:55",
     "issuedAtEpoch": 1793771939,
     "timestamp": 1793771939,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 0.95,
+    "hitTime": "2026-11-04T07:54:16"
   },
   "BTCUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
@@ -375,7 +377,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-04 05:59:04",
     "issuedAtEpoch": 1793771944,
@@ -384,9 +386,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 72,
-    "scenario_id": "S1",
-    "hitPrice": 54.58,
-    "hitTime": "2026-11-04T07:54:11"
+    "scenario_id": "S1"
   },
   "DOGEUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
