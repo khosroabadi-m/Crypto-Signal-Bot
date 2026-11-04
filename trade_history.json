@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "XRPUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "DOTUSDT",
     "direction": "LONG",
-    "entry": 1.2767,
-    "stopLoss": 1.265486,
-    "takeProfit": 1.299128,
+    "entry": 0.9445,
+    "stopLoss": 0.9331771551,
+    "takeProfit": 0.9671456899,
     "status": "SL_HIT",
-    "hitPrice": 1.2641,
-    "hitTime": "2026-11-04T00:20:27",
-    "pnlUsd": -1.2364,
+    "hitPrice": 0.933,
+    "hitTime": "2026-11-04T00:20:36",
+    "pnlUsd": -1.467,
     "brokerFeeUsd": 0.2,
-    "returnPct": -12.36,
-    "score": 52.65,
-    "risk": "HIGH",
+    "returnPct": -14.67,
+    "score": 0.0,
+    "risk": "1.1988",
     "rr": 2.0
   }
 ]
