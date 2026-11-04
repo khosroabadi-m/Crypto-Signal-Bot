@@ -258,12 +258,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.4625",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-04 16:59:16",
     "issuedAtEpoch": 1793798961,
     "timestamp": 1793798961,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 1.46,
+    "hitTime": "2026-11-04T15:04:04"
   },
   "AVAXUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -298,14 +300,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.2960",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-04 16:59:16",
     "issuedAtEpoch": 1793798961,
     "timestamp": 1793798961,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.07715,
-    "hitTime": "2026-11-04T15:03:57"
+    "exit_mode": "FIXED"
   },
   "ETHUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
