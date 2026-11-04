@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_S1",
-    "symbol": "AVAXUSDT",
-    "direction": "LONG",
-    "entry": 8.977,
-    "stopLoss": 8.61792,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 9.023,
-    "hitTime": "2026-10-28T08:04:16",
-    "pnlUsd": 0.2622,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 2.62,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "TITAN_B1",
     "symbol": "LTCUSDT",
     "direction": "LONG",
@@ -16995,6 +16978,23 @@
     "pnlUsd": -0.572,
     "brokerFeeUsd": 0.2,
     "returnPct": -5.72,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_B1",
+    "symbol": "DOTUSDT",
+    "direction": "LONG",
+    "entry": 0.956,
+    "stopLoss": 0.9177599999999999,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.953,
+    "hitTime": "2026-11-04T13:40:10",
+    "pnlUsd": -0.5637,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -5.64,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
