@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "BTCUSDT",
-    "direction": "SHORT",
-    "entry": 79695.5,
-    "stopLoss": 80268.4799160353,
-    "takeProfit": 78549.5401679294,
-    "status": "SL_HIT",
-    "hitPrice": 80275.01,
-    "hitTime": "2026-10-26T16:05:47",
-    "pnlUsd": -0.9775,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -9.78,
-    "score": 0.0,
-    "risk": "0.7190",
-    "rr": 2.0
-  },
-  {
     "profile_id": "TITAN_S3",
     "symbol": "FILUSDT",
     "direction": "LONG",
@@ -16997,6 +16980,23 @@
     "returnPct": -14.86,
     "score": 0.0,
     "risk": "0.9710",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "PENTA_F1",
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "entry": 76502.2,
+    "stopLoss": 77179.8139906675,
+    "takeProfit": 75146.972018665,
+    "status": "SL_HIT",
+    "hitPrice": 77295.3,
+    "hitTime": "2026-11-04T05:01:04",
+    "pnlUsd": -1.2872,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -12.87,
+    "score": 0.0,
+    "risk": "0.8857",
     "rr": 2.0
   }
 ]
