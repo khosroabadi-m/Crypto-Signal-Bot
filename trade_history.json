@@ -16984,19 +16984,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "ETHUSDT",
+    "symbol": "AVAXUSDT",
     "direction": "LONG",
-    "entry": 2314.01,
-    "stopLoss": 2287.8356921353,
-    "takeProfit": 2366.3586157294,
+    "entry": 8.659,
+    "stopLoss": 8.5278822798,
+    "takeProfit": 8.9212354405,
     "status": "TP2_HIT",
-    "hitPrice": 2430.58,
-    "hitTime": "2026-11-04T15:09:52",
-    "pnlUsd": 4.7851,
+    "hitPrice": 9.07,
+    "hitTime": "2026-11-04T15:09:57",
+    "pnlUsd": 4.4941,
     "brokerFeeUsd": 0.2,
-    "returnPct": 47.85,
+    "returnPct": 44.94,
     "score": 0.0,
-    "risk": "1.1311",
+    "risk": "1.5142",
     "rr": 2.0
   }
 ]
