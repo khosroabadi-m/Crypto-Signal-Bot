@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "PEPEUSDT",
-    "direction": "LONG",
-    "entry": 4.9e-06,
-    "stopLoss": 4.703999999999999e-06,
-    "takeProfit": 0.0,
+    "profile_id": "PENTA_F1",
+    "symbol": "ADAUSDT",
+    "direction": "SHORT",
+    "entry": 0.1857,
+    "stopLoss": 0.1884599619,
+    "takeProfit": 0.1801800761,
     "status": "SL_HIT",
-    "hitPrice": 4.92e-06,
-    "hitTime": "2026-11-04T05:24:26",
-    "pnlUsd": 0.158,
+    "hitPrice": 0.1888,
+    "hitTime": "2026-11-04T05:25:09",
+    "pnlUsd": -1.9202,
     "brokerFeeUsd": 0.2,
-    "returnPct": 1.58,
+    "returnPct": -19.2,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.4862",
     "rr": 2.0
   }
 ]
