@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "INJUSDT",
-    "direction": "LONG",
-    "entry": 7.961,
-    "stopLoss": 7.64256,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 8.034,
-    "hitTime": "2026-10-26T21:45:18",
-    "pnlUsd": 0.6665,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 6.67,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "TITAN_B1",
     "symbol": "INJUSDT",
     "direction": "LONG",
@@ -16995,6 +16978,23 @@
     "pnlUsd": -0.5553,
     "brokerFeeUsd": 0.2,
     "returnPct": -5.55,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "BNBUSDT",
+    "direction": "LONG",
+    "entry": 698.44,
+    "stopLoss": 670.5024000000001,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 700.66,
+    "hitTime": "2026-11-04T07:03:55",
+    "pnlUsd": 0.0677,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.68,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
