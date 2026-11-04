@@ -11,7 +11,7 @@
     "rr": 2.0,
     "score": 61.07,
     "risk": "HIGH",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "issuedAt": "2026-11-04T23:30:01.942051+00:00",
     "issuedAtEpoch": 1793835001,
     "version": "13.0.0",
@@ -52,9 +52,7 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_BTCUSDT_1793835001",
-    "hitPrice": 80724.0,
-    "hitTime": "2026-11-04T23:41:50"
+    "id": "sig_BTCUSDT_1793835001"
   },
   "ETHUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -526,7 +524,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-04 23:30:15",
     "issuedAtEpoch": 1793835015,
@@ -535,7 +533,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 72,
-    "scenario_id": "S1"
+    "scenario_id": "S1",
+    "hitPrice": 7.97,
+    "hitTime": "2026-11-04T23:43:02"
   },
   "SHIBUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
