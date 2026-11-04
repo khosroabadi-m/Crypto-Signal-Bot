@@ -16984,19 +16984,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "BNBUSDT",
+    "symbol": "ATOMUSDT",
     "direction": "SHORT",
-    "entry": 686.162,
-    "stopLoss": 692.8248489379,
-    "takeProfit": 672.8363021242,
+    "entry": 1.3956,
+    "stopLoss": 1.4170803652,
+    "takeProfit": 1.3526392697,
     "status": "SL_HIT",
-    "hitPrice": 699.61,
-    "hitTime": "2026-11-04T05:43:18",
-    "pnlUsd": -2.2109,
+    "hitPrice": 1.419,
+    "hitTime": "2026-11-04T05:43:23",
+    "pnlUsd": -1.9275,
     "brokerFeeUsd": 0.2,
-    "returnPct": -22.11,
+    "returnPct": -19.28,
     "score": 0.0,
-    "risk": "0.9710",
+    "risk": "1.5391",
     "rr": 2.0
   }
 ]
