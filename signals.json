@@ -486,8 +486,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 120,
     "scenario_id": "S3",
-    "hitPrice": 4.11,
-    "hitTime": "2026-11-04T11:24:29"
+    "hitPrice": 4.112,
+    "hitTime": "2026-11-04T11:25:23"
   },
   "DOTUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
