@@ -7,23 +7,6 @@
     "stopLoss": 1.248192,
     "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 1.3099,
-    "hitTime": "2026-10-27T00:10:27",
-    "pnlUsd": 0.4957,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 4.96,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "TITAN_B1",
-    "symbol": "XRPUSDT",
-    "direction": "LONG",
-    "entry": 1.3002,
-    "stopLoss": 1.248192,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
     "hitPrice": 1.3117,
     "hitTime": "2026-10-27T00:17:05",
     "pnlUsd": 0.634,
@@ -16997,6 +16980,23 @@
     "returnPct": 6.69,
     "score": 0.0,
     "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "PENTA_F1",
+    "symbol": "BNBUSDT",
+    "direction": "SHORT",
+    "entry": 694.531,
+    "stopLoss": 701.7514311567,
+    "takeProfit": 680.0901376867,
+    "status": "SL_HIT",
+    "hitPrice": 704.8,
+    "hitTime": "2026-11-04T08:16:58",
+    "pnlUsd": -1.7293,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -17.29,
+    "score": 0.0,
+    "risk": "1.0396",
     "rr": 2.0
   }
 ]
