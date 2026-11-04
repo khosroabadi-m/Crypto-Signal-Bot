@@ -108,8 +108,8 @@
       }
     ],
     "id": "sig_ETHUSDT_1793798956",
-    "hitPrice": 2313.73,
-    "hitTime": "2026-11-04T14:02:29"
+    "hitPrice": 2329.93,
+    "hitTime": "2026-11-04T14:40:39"
   },
   "BNBUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -296,14 +296,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.2960",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-04 16:59:16",
     "issuedAtEpoch": 1793798961,
     "timestamp": 1793798961,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.07558,
-    "hitTime": "2026-11-04T14:40:34"
+    "exit_mode": "FIXED"
   },
   "ETHUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
