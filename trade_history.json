@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "BTCUSDT",
-    "direction": "LONG",
-    "entry": 80940.2,
-    "stopLoss": 77702.59199999999,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 81431.77,
-    "hitTime": "2026-10-28T08:28:10",
-    "pnlUsd": 0.357,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 3.57,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "PENTA_F1",
     "symbol": "DOTUSDT",
     "direction": "SHORT",
@@ -16995,6 +16978,23 @@
     "pnlUsd": 0.0625,
     "brokerFeeUsd": 0.2,
     "returnPct": 0.62,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "XRPUSDT",
+    "direction": "LONG",
+    "entry": 1.2824,
+    "stopLoss": 1.231104,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 1.289,
+    "hitTime": "2026-11-04T14:32:22",
+    "pnlUsd": 0.2644,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 2.64,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
