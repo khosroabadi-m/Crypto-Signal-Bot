@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "ETHUSDT",
+    "profile_id": "TITAN_S3",
+    "symbol": "PEPEUSDT",
     "direction": "LONG",
-    "entry": 2314.01,
-    "stopLoss": 2287.8356921353,
-    "takeProfit": 2366.3586157294,
-    "status": "TP2_HIT",
-    "hitPrice": 2441.69,
-    "hitTime": "2026-11-04T16:18:00",
-    "pnlUsd": 5.2649,
+    "entry": 5e-06,
+    "stopLoss": 4.800000000000001e-06,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 5.18e-06,
+    "hitTime": "2026-11-04T16:18:55",
+    "pnlUsd": 3.3482,
     "brokerFeeUsd": 0.2,
-    "returnPct": 52.65,
+    "returnPct": 33.48,
     "score": 0.0,
-    "risk": "1.1311",
+    "risk": "LOW",
     "rr": 2.0
   }
 ]
