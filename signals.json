@@ -181,12 +181,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.5545",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-04 09:28:55",
     "issuedAtEpoch": 1793771939,
     "timestamp": 1793771939,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 0.192,
+    "hitTime": "2026-11-04T08:37:08"
   },
   "ATOMUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -221,14 +223,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.0396",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-04 09:28:55",
     "issuedAtEpoch": 1793771939,
     "timestamp": 1793771939,
-    "exit_mode": "FIXED",
-    "hitPrice": 703.17,
-    "hitTime": "2026-11-04T08:37:03"
+    "exit_mode": "FIXED"
   },
   "DOGEUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
