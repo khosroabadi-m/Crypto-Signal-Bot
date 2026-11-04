@@ -238,12 +238,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.4427",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-04 16:59:16",
     "issuedAtEpoch": 1793798961,
     "timestamp": 1793798961,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 0.1951,
+    "hitTime": "2026-11-04T14:56:59"
   },
   "ATOMUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -1094,7 +1096,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-04 13:29:50",
     "issuedAtEpoch": 1793798990,
@@ -1103,9 +1105,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 4.135,
-    "hitTime": "2026-11-04T14:56:54"
+    "scenario_id": "B1"
   },
   "DOTUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
