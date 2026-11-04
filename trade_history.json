@@ -16984,19 +16984,19 @@
   },
   {
     "profile_id": "KHOSRO_SMC",
-    "symbol": "ETHUSDT",
+    "symbol": "SOLUSDT",
     "direction": "SHORT",
-    "entry": 2249.8,
-    "stopLoss": 2269.957368,
-    "takeProfit": 2207.469528,
+    "entry": 91.12,
+    "stopLoss": 92.353482,
+    "takeProfit": 88.653036,
     "status": "SL_HIT",
-    "hitPrice": 2279.61,
-    "hitTime": "2026-11-04T04:55:55",
-    "pnlUsd": -1.5757,
+    "hitPrice": 92.38,
+    "hitTime": "2026-11-04T04:56:05",
+    "pnlUsd": -1.6335,
     "brokerFeeUsd": 0.2,
-    "returnPct": -15.76,
-    "score": 68.28,
-    "risk": "MEDIUM",
-    "rr": 2.1
+    "returnPct": -16.33,
+    "score": 66.39,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
