@@ -347,12 +347,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "0.9222",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-04 03:58:27",
     "issuedAtEpoch": 1793752112,
     "timestamp": 1793752112,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 0.07447,
+    "hitTime": "2026-11-04T00:28:51"
   },
   "DOTUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
