@@ -1,23 +1,6 @@
 [
   {
     "profile_id": "TITAN_B1",
-    "symbol": "ADAUSDT",
-    "direction": "LONG",
-    "entry": 0.2073,
-    "stopLoss": 0.199008,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 0.2066,
-    "hitTime": "2026-10-28T11:15:34",
-    "pnlUsd": -0.5875,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -5.88,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "TITAN_B1",
     "symbol": "BNBUSDT",
     "direction": "LONG",
     "entry": 750.25,
@@ -16997,6 +16980,23 @@
     "returnPct": 31.48,
     "score": 0.0,
     "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "PENTA_F1",
+    "symbol": "ETHUSDT",
+    "direction": "LONG",
+    "entry": 2314.01,
+    "stopLoss": 2287.8356921353,
+    "takeProfit": 2366.3586157294,
+    "status": "TP2_HIT",
+    "hitPrice": 2441.11,
+    "hitTime": "2026-11-04T16:09:58",
+    "pnlUsd": 5.2399,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 52.4,
+    "score": 0.0,
+    "risk": "1.1311",
     "rr": 2.0
   }
 ]
