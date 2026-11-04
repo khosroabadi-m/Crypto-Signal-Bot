@@ -16984,19 +16984,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "BNBUSDT",
+    "symbol": "AVAXUSDT",
     "direction": "SHORT",
-    "entry": 685.65,
-    "stopLoss": 691.9237603949,
-    "takeProfit": 673.1024792102,
+    "entry": 8.36,
+    "stopLoss": 8.4840283783,
+    "takeProfit": 8.1119432435,
     "status": "SL_HIT",
-    "hitPrice": 693.1,
-    "hitTime": "2026-11-04T04:53:50",
-    "pnlUsd": -1.3371,
+    "hitPrice": 8.487,
+    "hitTime": "2026-11-04T04:53:54",
+    "pnlUsd": -1.7699,
     "brokerFeeUsd": 0.2,
-    "returnPct": -13.37,
+    "returnPct": -17.7,
     "score": 0.0,
-    "risk": "0.9150",
+    "risk": "1.4836",
     "rr": 2.0
   }
 ]
