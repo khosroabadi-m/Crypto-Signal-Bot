@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "SHIBUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "ETHUSDT",
     "direction": "LONG",
-    "entry": 4.67e-06,
-    "stopLoss": 4.4832e-06,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 4.8e-06,
-    "hitTime": "2026-11-04T15:40:17",
-    "pnlUsd": 2.5323,
+    "entry": 2314.01,
+    "stopLoss": 2287.8356921353,
+    "takeProfit": 2366.3586157294,
+    "status": "TP2_HIT",
+    "hitPrice": 2436.3,
+    "hitTime": "2026-11-04T15:40:52",
+    "pnlUsd": 5.0321,
     "brokerFeeUsd": 0.2,
-    "returnPct": 25.32,
+    "returnPct": 50.32,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.1311",
     "rr": 2.0
   }
 ]
