@@ -68,7 +68,7 @@
     "rr": 2.0,
     "score": 59.67,
     "risk": "HIGH",
-    "status": "SL_HIT",
+    "status": "TP2_HIT",
     "issuedAt": "2026-11-04T13:29:16.599300+00:00",
     "issuedAtEpoch": 1793798956,
     "version": "13.0.0",
@@ -110,8 +110,8 @@
       }
     ],
     "id": "sig_ETHUSDT_1793798956",
-    "hitPrice": 2313.73,
-    "hitTime": "2026-11-04T14:02:29"
+    "hitPrice": 2433.09,
+    "hitTime": "2026-11-04T15:11:41"
   },
   "BNBUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -462,7 +462,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-04 13:29:27",
     "issuedAtEpoch": 1793798967,
@@ -471,9 +471,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 72,
-    "scenario_id": "S1",
-    "hitPrice": 5.2e-06,
-    "hitTime": "2026-11-04T15:11:23"
+    "scenario_id": "S1"
   },
   "SHIBUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
