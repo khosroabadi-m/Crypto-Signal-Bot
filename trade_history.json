@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "BNBUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "ADAUSDT",
     "direction": "SHORT",
-    "entry": 700.67,
-    "stopLoss": 706.590852,
-    "takeProfit": 688.828296,
+    "entry": 0.1896,
+    "stopLoss": 0.1923353498,
+    "takeProfit": 0.1841293005,
     "status": "SL_HIT",
-    "hitPrice": 709.98,
-    "hitTime": "2026-11-04T14:53:46",
-    "pnlUsd": -1.5794,
+    "hitPrice": 0.1962,
+    "hitTime": "2026-11-04T14:53:51",
+    "pnlUsd": -3.7328,
     "brokerFeeUsd": 0.2,
-    "returnPct": -15.79,
-    "score": 60.03,
-    "risk": "HIGH",
+    "returnPct": -37.33,
+    "score": 0.0,
+    "risk": "1.4427",
     "rr": 2.0
   }
 ]
