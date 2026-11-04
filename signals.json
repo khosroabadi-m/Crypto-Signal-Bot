@@ -758,8 +758,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 120,
     "scenario_id": "S3",
-    "hitPrice": 11.197,
-    "hitTime": "2026-11-04T14:35:48"
+    "hitPrice": 11.196,
+    "hitTime": "2026-11-04T14:36:42"
   },
   "AVAXUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
