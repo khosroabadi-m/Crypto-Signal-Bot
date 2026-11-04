@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "ETHUSDT",
+    "profile_id": "TITAN_B1",
+    "symbol": "DOTUSDT",
     "direction": "LONG",
-    "entry": 2314.01,
-    "stopLoss": 2287.8356921353,
-    "takeProfit": 2366.3586157294,
-    "status": "TP2_HIT",
-    "hitPrice": 2436.0,
-    "hitTime": "2026-11-04T16:07:57",
-    "pnlUsd": 5.0192,
+    "entry": 0.956,
+    "stopLoss": 0.9177599999999999,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.968,
+    "hitTime": "2026-11-04T16:08:45",
+    "pnlUsd": 1.0046,
     "brokerFeeUsd": 0.2,
-    "returnPct": 50.19,
+    "returnPct": 10.05,
     "score": 0.0,
-    "risk": "1.1311",
+    "risk": "LOW",
     "rr": 2.0
   }
 ]
