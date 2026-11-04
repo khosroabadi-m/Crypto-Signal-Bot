@@ -108,8 +108,8 @@
       }
     ],
     "id": "sig_ETHUSDT_1793771935",
-    "hitPrice": 2301.27,
-    "hitTime": "2026-11-04T07:15:41"
+    "hitPrice": 2302.39,
+    "hitTime": "2026-11-04T07:34:23"
   },
   "XRPUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -219,14 +219,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.0396",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-04 09:28:55",
     "issuedAtEpoch": 1793771939,
     "timestamp": 1793771939,
-    "exit_mode": "FIXED",
-    "hitPrice": 703.2,
-    "hitTime": "2026-11-04T07:33:48"
+    "exit_mode": "FIXED"
   },
   "DOGEUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
