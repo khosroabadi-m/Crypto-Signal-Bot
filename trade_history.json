@@ -16983,18 +16983,18 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
+    "profile_id": "TITAN_S1",
     "symbol": "XRPUSDT",
     "direction": "LONG",
     "entry": 1.31,
     "stopLoss": 1.2576,
     "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 1.3159,
-    "hitTime": "2026-11-04T18:21:02",
-    "pnlUsd": 0.2002,
+    "hitPrice": 1.3161,
+    "hitTime": "2026-11-04T18:22:06",
+    "pnlUsd": 0.2154,
     "brokerFeeUsd": 0.2,
-    "returnPct": 2.0,
+    "returnPct": 2.15,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
