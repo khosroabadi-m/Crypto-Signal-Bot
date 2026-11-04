@@ -1,23 +1,6 @@
 [
   {
     "profile_id": "TITAN_S3",
-    "symbol": "NEARUSDT",
-    "direction": "LONG",
-    "entry": 4.676,
-    "stopLoss": 4.48896,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 4.692,
-    "hitTime": "2026-10-28T05:26:38",
-    "pnlUsd": 0.092,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 0.92,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "TITAN_S3",
     "symbol": "PEPEUSDT",
     "direction": "LONG",
     "entry": 4.77e-06,
@@ -16995,6 +16978,23 @@
     "pnlUsd": -0.5558,
     "brokerFeeUsd": 0.2,
     "returnPct": -5.56,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "ETHUSDT",
+    "direction": "LONG",
+    "entry": 2328.0,
+    "stopLoss": 2234.88,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 2320.93,
+    "hitTime": "2026-11-04T12:09:29",
+    "pnlUsd": -0.5535,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -5.54,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
