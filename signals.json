@@ -201,14 +201,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.5391",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-04 08:28:47",
     "issuedAtEpoch": 1793768332,
     "timestamp": 1793768332,
-    "exit_mode": "FIXED",
-    "hitPrice": 1.423,
-    "hitTime": "2026-11-04T05:47:26"
+    "exit_mode": "FIXED"
   },
   "AVAXUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -453,7 +451,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-04 04:58:59",
     "issuedAtEpoch": 1793768339,
@@ -462,7 +460,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 3980.59,
+    "hitTime": "2026-11-04T05:47:31"
   },
   "LTCUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
