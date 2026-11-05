@@ -220,8 +220,8 @@
       }
     ],
     "id": "sig_XRPUSDT_1793862035",
-    "hitPrice": 1.3143,
-    "hitTime": "2026-11-05T07:08:06"
+    "hitPrice": 1.3131,
+    "hitTime": "2026-11-05T07:47:42"
   },
   "ADAUSDT__PENTA_F3": {
     "profile_id": "PENTA_F3",
@@ -948,7 +948,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-05 07:01:03",
     "issuedAtEpoch": 1793862063,
@@ -957,8 +957,6 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 0.4583,
-    "hitTime": "2026-11-05T07:46:41"
+    "scenario_id": "B1"
   }
 }
