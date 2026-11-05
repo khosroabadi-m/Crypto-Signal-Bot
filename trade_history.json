@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "AVAXUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BTCUSDT",
     "direction": "SHORT",
-    "entry": 8.702,
-    "stopLoss": 8.8268420547,
-    "takeProfit": 8.4523158906,
+    "entry": 79538.0,
+    "stopLoss": 80053.076079,
+    "takeProfit": 78507.847843,
     "status": "TP2_HIT",
-    "hitPrice": 8.451,
-    "hitTime": "2026-11-05T15:07:36",
-    "pnlUsd": 2.6358,
+    "hitPrice": 77468.51,
+    "hitTime": "2026-11-05T15:08:17",
+    "pnlUsd": 2.3532,
     "brokerFeeUsd": 0.2,
-    "returnPct": 26.36,
-    "score": 0.0,
-    "risk": "1.4346",
+    "returnPct": 23.53,
+    "score": 64.58,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
