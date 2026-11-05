@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S1",
-    "symbol": "INJUSDT",
-    "direction": "LONG",
-    "entry": 8.25,
-    "stopLoss": 7.92,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 7.918,
-    "hitTime": "2026-11-05T15:50:42",
-    "pnlUsd": -4.2722,
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "entry": 79538.0,
+    "stopLoss": 80053.076079,
+    "takeProfit": 78507.847843,
+    "status": "TP2_HIT",
+    "hitPrice": 75903.45,
+    "hitTime": "2026-11-05T15:51:28",
+    "pnlUsd": 4.3219,
     "brokerFeeUsd": 0.2,
-    "returnPct": -42.72,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": 43.22,
+    "score": 64.58,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
