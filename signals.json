@@ -53,8 +53,8 @@
       }
     ],
     "id": "sig_BTCUSDT_1793889062",
-    "hitPrice": 76911.06,
-    "hitTime": "2026-11-05T16:25:37"
+    "hitPrice": 76608.0,
+    "hitTime": "2026-11-05T16:19:40"
   },
   "SOLUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -167,8 +167,8 @@
       }
     ],
     "id": "sig_BNBUSDT_1793889062",
-    "hitPrice": 696.8,
-    "hitTime": "2026-11-05T16:24:43"
+    "hitPrice": 696.19,
+    "hitTime": "2026-11-05T16:25:41"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
