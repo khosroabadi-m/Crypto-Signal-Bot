@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "ADAUSDT",
-    "direction": "LONG",
-    "entry": 0.2042,
-    "stopLoss": 0.19603199999999998,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 0.2051,
-    "hitTime": "2026-10-28T19:37:25",
-    "pnlUsd": 0.1905,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 1.91,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "PENTA_F1",
     "symbol": "ATOMUSDT",
     "direction": "SHORT",
@@ -16995,6 +16978,23 @@
     "pnlUsd": 0.0609,
     "brokerFeeUsd": 0.2,
     "returnPct": 0.61,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S1",
+    "symbol": "SOLUSDT",
+    "direction": "LONG",
+    "entry": 96.24,
+    "stopLoss": 92.39039999999999,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 96.87,
+    "hitTime": "2026-11-05T03:44:44",
+    "pnlUsd": 0.4043,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 4.04,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
