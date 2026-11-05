@@ -66,7 +66,7 @@
     "rr": 2.0,
     "score": 57.1,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-04T23:59:59.436976+00:00",
     "issuedAtEpoch": 1793836799,
     "version": "13.0.0",
@@ -107,7 +107,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_ETHUSDT_1793836799"
+    "id": "sig_ETHUSDT_1793836799",
+    "hitPrice": 2432.07,
+    "hitTime": "2026-11-05T00:34:31"
   },
   "BNBUSDT": {
     "profile_id": "KHOSRO_SMC",
