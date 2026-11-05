@@ -901,7 +901,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-05 05:30:56",
     "issuedAtEpoch": 1793856656,
@@ -910,9 +910,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 0.4579,
-    "hitTime": "2026-11-05T05:33:37"
+    "scenario_id": "B1"
   },
   "POLUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
@@ -927,7 +925,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-05 05:30:57",
     "issuedAtEpoch": 1793856657,
@@ -936,6 +934,8 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1"
+    "scenario_id": "B1",
+    "hitPrice": 0.09692,
+    "hitTime": "2026-11-05T05:34:10"
   }
 }
