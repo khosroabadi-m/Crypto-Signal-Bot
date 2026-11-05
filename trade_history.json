@@ -16983,18 +16983,18 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
+    "profile_id": "TITAN_S3",
     "symbol": "ATOMUSDT",
     "direction": "LONG",
     "entry": 1.487,
     "stopLoss": 1.4275200000000001,
     "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 1.494,
-    "hitTime": "2026-11-05T02:39:40",
-    "pnlUsd": 0.2205,
+    "hitPrice": 1.492,
+    "hitTime": "2026-11-05T02:40:16",
+    "pnlUsd": 0.0861,
     "brokerFeeUsd": 0.2,
-    "returnPct": 2.21,
+    "returnPct": 0.86,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
