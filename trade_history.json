@@ -1,23 +1,6 @@
 [
   {
     "profile_id": "TITAN_S1",
-    "symbol": "BTCUSDT",
-    "direction": "LONG",
-    "entry": 81048.24,
-    "stopLoss": 77806.3104,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 81306.87,
-    "hitTime": "2026-10-28T23:47:39",
-    "pnlUsd": 0.0689,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 0.69,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "TITAN_S1",
     "symbol": "ATOMUSDT",
     "direction": "LONG",
     "entry": 1.63,
@@ -16995,6 +16978,23 @@
     "pnlUsd": 0.2393,
     "brokerFeeUsd": 0.2,
     "returnPct": 2.39,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "POLUSDT",
+    "direction": "LONG",
+    "entry": 0.09806,
+    "stopLoss": 0.09413759999999999,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.09848,
+    "hitTime": "2026-11-05T08:45:12",
+    "pnlUsd": 0.1781,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 1.78,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
