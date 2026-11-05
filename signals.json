@@ -218,8 +218,8 @@
       }
     ],
     "id": "sig_XRPUSDT_1793853024",
-    "hitPrice": 1.3121,
-    "hitTime": "2026-11-05T04:37:26"
+    "hitPrice": 1.3118,
+    "hitTime": "2026-11-05T04:42:11"
   },
   "ATOMUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -694,7 +694,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-05 04:30:44",
     "issuedAtEpoch": 1793853044,
@@ -703,9 +703,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3",
-    "hitPrice": 11.583,
-    "hitTime": "2026-11-05T04:40:09"
+    "scenario_id": "S3"
   },
   "AVAXUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
