@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "SOLUSDT",
-    "direction": "LONG",
-    "entry": 102.16,
-    "stopLoss": 98.0736,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 102.47,
-    "hitTime": "2026-10-29T00:12:43",
-    "pnlUsd": 0.0533,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 0.53,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "TITAN_B1",
     "symbol": "BNBUSDT",
     "direction": "LONG",
@@ -16995,6 +16978,23 @@
     "pnlUsd": 0.4635,
     "brokerFeeUsd": 0.2,
     "returnPct": 4.63,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "TIAUSDT",
+    "direction": "LONG",
+    "entry": 0.4617,
+    "stopLoss": 0.44323199999999996,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.4634,
+    "hitTime": "2026-11-05T08:56:03",
+    "pnlUsd": 0.118,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 1.18,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
