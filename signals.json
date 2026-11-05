@@ -1287,8 +1287,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 96,
     "scenario_id": "B1",
-    "hitPrice": 0.1984,
-    "hitTime": "2026-11-05T02:45:46"
+    "hitPrice": 0.1985,
+    "hitTime": "2026-11-05T02:46:18"
   },
   "LINKUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
