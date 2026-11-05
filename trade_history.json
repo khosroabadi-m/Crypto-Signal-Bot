@@ -7,23 +7,6 @@
     "stopLoss": 80791.5039853526,
     "takeProfit": 82438.1920292947,
     "status": "SL_HIT",
-    "hitPrice": 79820.13,
-    "hitTime": "2026-10-29T04:11:10",
-    "pnlUsd": -2.1181,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -21.18,
-    "score": 0.0,
-    "risk": "0.6748",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "PENTA_F1",
-    "symbol": "BTCUSDT",
-    "direction": "LONG",
-    "entry": 81340.4,
-    "stopLoss": 80791.5039853526,
-    "takeProfit": 82438.1920292947,
-    "status": "SL_HIT",
     "hitPrice": 79850.0,
     "hitTime": "2026-10-29T04:16:11",
     "pnlUsd": -2.0814,
@@ -16997,6 +16980,23 @@
     "returnPct": -49.02,
     "score": 0.0,
     "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "entry": 79538.0,
+    "stopLoss": 80053.076079,
+    "takeProfit": 78507.847843,
+    "status": "TP2_HIT",
+    "hitPrice": 75741.8,
+    "hitTime": "2026-11-05T15:52:28",
+    "pnlUsd": 4.5252,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 45.25,
+    "score": 64.58,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
