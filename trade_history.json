@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "INJUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "ADAUSDT",
     "direction": "LONG",
-    "entry": 7.937,
-    "stopLoss": 7.61952,
-    "takeProfit": 0.0,
+    "entry": 0.2001,
+    "stopLoss": 0.1964964563,
+    "takeProfit": 0.2073070875,
     "status": "SL_HIT",
-    "hitPrice": 7.969,
-    "hitTime": "2026-11-05T01:11:50",
-    "pnlUsd": 0.153,
+    "hitPrice": 0.1964,
+    "hitTime": "2026-11-05T01:15:19",
+    "pnlUsd": -2.0982,
     "brokerFeeUsd": 0.2,
-    "returnPct": 1.53,
+    "returnPct": -20.98,
     "score": 0.0,
-    "risk": "LOW",
+    "risk": "1.8009",
     "rr": 2.0
   }
 ]
