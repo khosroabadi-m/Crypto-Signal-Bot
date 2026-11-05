@@ -692,7 +692,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-05 04:30:44",
     "issuedAtEpoch": 1793853044,
@@ -701,7 +701,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 11.609,
+    "hitTime": "2026-11-05T04:36:11"
   },
   "AVAXUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
@@ -1028,7 +1030,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-05 04:30:56",
     "issuedAtEpoch": 1793853056,
@@ -1037,9 +1039,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 0.07708,
-    "hitTime": "2026-11-05T04:36:05"
+    "scenario_id": "B1"
   },
   "ADAUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
