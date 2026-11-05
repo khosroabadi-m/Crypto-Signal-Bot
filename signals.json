@@ -123,7 +123,7 @@
     "rr": 2.0,
     "score": 51.29,
     "risk": "HIGH",
-    "status": "SL_HIT",
+    "status": "TP2_HIT",
     "issuedAt": "2026-11-05T14:31:02.806945+00:00",
     "issuedAtEpoch": 1793889062,
     "version": "13.0.0",
@@ -165,8 +165,8 @@
       }
     ],
     "id": "sig_BNBUSDT_1793889062",
-    "hitPrice": 706.13,
-    "hitTime": "2026-11-05T14:39:57"
+    "hitPrice": 700.01,
+    "hitTime": "2026-11-05T15:01:55"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -181,14 +181,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.5580",
-    "status": "TP2_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-05 18:01:02",
     "issuedAtEpoch": 1793889067,
     "timestamp": 1793889067,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.1888,
-    "hitTime": "2026-11-05T15:01:49"
+    "exit_mode": "FIXED"
   },
   "AVAXUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
