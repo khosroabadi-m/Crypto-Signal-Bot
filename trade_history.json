@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "SUIUSDT",
-    "direction": "LONG",
-    "entry": 0.9389,
-    "stopLoss": 0.9013439999999999,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 0.9459,
-    "hitTime": "2026-10-28T22:19:32",
-    "pnlUsd": 0.4952,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 4.95,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "TITAN_S1",
     "symbol": "SHIBUSDT",
     "direction": "LONG",
@@ -16995,6 +16978,23 @@
     "pnlUsd": 0.4426,
     "brokerFeeUsd": 0.2,
     "returnPct": 4.43,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "ATOMUSDT",
+    "direction": "LONG",
+    "entry": 1.519,
+    "stopLoss": 1.4582399999999998,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 1.525,
+    "hitTime": "2026-11-05T07:13:36",
+    "pnlUsd": 0.1448,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 1.45,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
