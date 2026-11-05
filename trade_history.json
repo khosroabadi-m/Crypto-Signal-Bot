@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "LTCUSDT",
-    "direction": "LONG",
-    "entry": 58.54,
-    "stopLoss": 56.1984,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 58.94,
-    "hitTime": "2026-10-28T19:16:57",
-    "pnlUsd": 0.433,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 4.33,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "PENTA_F1",
     "symbol": "ATOMUSDT",
     "direction": "SHORT",
@@ -16995,6 +16978,23 @@
     "pnlUsd": 0.635,
     "brokerFeeUsd": 0.2,
     "returnPct": 6.35,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "ADAUSDT",
+    "direction": "LONG",
+    "entry": 0.1978,
+    "stopLoss": 0.189888,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.1989,
+    "hitTime": "2026-11-05T03:24:18",
+    "pnlUsd": 0.3058,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 3.06,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
