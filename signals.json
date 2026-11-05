@@ -640,8 +640,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 120,
     "scenario_id": "S3",
-    "hitPrice": 11.63,
-    "hitTime": "2026-11-05T08:29:23"
+    "hitPrice": 11.621,
+    "hitTime": "2026-11-05T08:30:01"
   },
   "ATOMUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
