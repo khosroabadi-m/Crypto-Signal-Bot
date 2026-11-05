@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "BNBUSDT",
-    "direction": "LONG",
-    "entry": 759.696,
-    "stopLoss": 753.307671153,
-    "takeProfit": 772.4726576941,
-    "status": "SL_HIT",
-    "hitPrice": 748.3,
-    "hitTime": "2026-10-29T03:10:58",
-    "pnlUsd": -1.7493,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -17.49,
-    "score": 0.0,
-    "risk": "0.8409",
-    "rr": 2.0
-  },
-  {
     "profile_id": "TITAN_S3",
     "symbol": "FILUSDT",
     "direction": "LONG",
@@ -16996,6 +16979,23 @@
     "brokerFeeUsd": 0.2,
     "returnPct": -8.63,
     "score": 51.29,
+    "risk": "HIGH",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "SOLUSDT",
+    "direction": "SHORT",
+    "entry": 95.38,
+    "stopLoss": 96.371694,
+    "takeProfit": 93.396612,
+    "status": "TP2_HIT",
+    "hitPrice": 93.37,
+    "hitTime": "2026-11-05T14:51:19",
+    "pnlUsd": 1.8584,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 18.58,
+    "score": 66.58,
     "risk": "HIGH",
     "rr": 2.0
   }
