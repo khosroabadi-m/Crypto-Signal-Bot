@@ -575,8 +575,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 120,
     "scenario_id": "S3",
-    "hitPrice": 55.98,
-    "hitTime": "2026-11-05T06:29:31"
+    "hitPrice": 55.94,
+    "hitTime": "2026-11-05T06:30:14"
   },
   "DOGEUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
