@@ -16983,7 +16983,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
+    "profile_id": "TITAN_B1",
     "symbol": "LTCUSDT",
     "direction": "LONG",
     "entry": 55.74,
@@ -16991,7 +16991,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 55.99,
-    "hitTime": "2026-11-05T06:23:51",
+    "hitTime": "2026-11-05T06:23:55",
     "pnlUsd": 0.1983,
     "brokerFeeUsd": 0.2,
     "returnPct": 1.98,
