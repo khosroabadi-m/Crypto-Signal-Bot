@@ -1,23 +1,6 @@
 [
   {
     "profile_id": "TITAN_B1",
-    "symbol": "ETHUSDT",
-    "direction": "LONG",
-    "entry": 2354.5,
-    "stopLoss": 2260.3199999999997,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 2346.58,
-    "hitTime": "2026-10-29T01:05:58",
-    "pnlUsd": -0.5862,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -5.86,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "TITAN_B1",
     "symbol": "BTCUSDT",
     "direction": "LONG",
     "entry": 81116.93,
@@ -16995,6 +16978,23 @@
     "pnlUsd": 0.1506,
     "brokerFeeUsd": 0.2,
     "returnPct": 1.51,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_S3",
+    "symbol": "INJUSDT",
+    "direction": "LONG",
+    "entry": 8.438,
+    "stopLoss": 8.100480000000001,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 8.471,
+    "hitTime": "2026-11-05T09:41:03",
+    "pnlUsd": 0.1409,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 1.41,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
