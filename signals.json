@@ -613,7 +613,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-05 05:30:45",
     "issuedAtEpoch": 1793856645,
@@ -622,9 +622,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3",
-    "hitPrice": 8.024,
-    "hitTime": "2026-11-05T05:35:02"
+    "scenario_id": "S3"
   },
   "TIAUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
@@ -639,7 +637,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-05 05:30:46",
     "issuedAtEpoch": 1793856646,
@@ -648,7 +646,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3"
+    "scenario_id": "S3",
+    "hitPrice": 0.4582,
+    "hitTime": "2026-11-05T05:35:07"
   },
   "POLUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
