@@ -1355,7 +1355,7 @@
     "max_hold_candles": 96,
     "scenario_id": "B1",
     "hitPrice": 5e-06,
-    "hitTime": "2026-11-05T02:04:45"
+    "hitTime": "2026-11-05T02:05:03"
   },
   "SHIBUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
