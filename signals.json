@@ -1333,8 +1333,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 96,
     "scenario_id": "B1",
-    "hitPrice": 0.09977,
-    "hitTime": "2026-11-05T10:02:24"
+    "hitPrice": 0.09945,
+    "hitTime": "2026-11-05T10:03:13"
   },
   "PEPEUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
