@@ -486,8 +486,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 72,
     "scenario_id": "S1",
-    "hitPrice": 7.963,
-    "hitTime": "2026-11-05T00:20:12"
+    "hitPrice": 7.965,
+    "hitTime": "2026-11-05T00:21:01"
   },
   "SHIBUSDT__TITAN_S1": {
     "profile_id": "TITAN_S1",
