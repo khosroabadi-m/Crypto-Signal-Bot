@@ -788,7 +788,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-05 07:00:58",
     "issuedAtEpoch": 1793862058,
@@ -797,9 +797,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 96.23,
-    "hitTime": "2026-11-05T07:03:10"
+    "scenario_id": "B1"
   },
   "XRPUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
@@ -910,7 +908,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-05 07:01:02",
     "issuedAtEpoch": 1793862062,
@@ -919,7 +917,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1"
+    "scenario_id": "B1",
+    "hitPrice": 8.113,
+    "hitTime": "2026-11-05T07:03:15"
   },
   "TIAUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
