@@ -391,7 +391,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-06 14:32:49",
     "issuedAtEpoch": 1793975569,
@@ -400,7 +400,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 72,
-    "scenario_id": "S1"
+    "scenario_id": "S1",
+    "hitPrice": 5.12e-06,
+    "hitTime": "2026-11-06T15:00:28"
   },
   "ETHUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
@@ -779,7 +781,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-06 14:33:03",
     "issuedAtEpoch": 1793975583,
@@ -788,8 +790,6 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1",
-    "hitPrice": 5.11e-06,
-    "hitTime": "2026-11-06T14:59:12"
+    "scenario_id": "B1"
   }
 }
