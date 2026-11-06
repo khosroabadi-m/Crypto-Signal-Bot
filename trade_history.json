@@ -16984,19 +16984,19 @@
   },
   {
     "profile_id": "KHOSRO_SMC",
-    "symbol": "BNBUSDT",
+    "symbol": "ETHUSDT",
     "direction": "SHORT",
-    "entry": 692.65,
-    "stopLoss": 696.439449,
-    "takeProfit": 684.692157,
+    "entry": 2227.57,
+    "stopLoss": 2248.402946,
+    "takeProfit": 2185.904109,
     "status": "SL_HIT",
-    "hitPrice": 696.47,
-    "hitTime": "2026-11-06T22:02:55",
-    "pnlUsd": -0.8018,
+    "hitPrice": 2251.17,
+    "hitTime": "2026-11-06T22:03:03",
+    "pnlUsd": -1.31,
     "brokerFeeUsd": 0.2,
-    "returnPct": -8.02,
-    "score": 68.45,
-    "risk": "MEDIUM",
-    "rr": 2.1
+    "returnPct": -13.1,
+    "score": 58.38,
+    "risk": "HIGH",
+    "rr": 2.0
   }
 ]
