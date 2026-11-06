@@ -1,22 +1,5 @@
 [
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "LINKUSDT",
-    "direction": "LONG",
-    "entry": 11.501,
-    "stopLoss": 11.040959999999998,
-    "takeProfit": 0.0,
-    "status": "SL_HIT",
-    "hitPrice": 11.68,
-    "hitTime": "2026-10-29T20:00:29",
-    "pnlUsd": 1.3056,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 13.06,
-    "score": 0.0,
-    "risk": "LOW",
-    "rr": 2.0
-  },
-  {
     "profile_id": "TITAN_B1",
     "symbol": "BTCUSDT",
     "direction": "LONG",
@@ -16995,6 +16978,23 @@
     "pnlUsd": -0.5602,
     "brokerFeeUsd": 0.2,
     "returnPct": -5.6,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_B1",
+    "symbol": "INJUSDT",
+    "direction": "LONG",
+    "entry": 8.353,
+    "stopLoss": 8.01888,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 8.324,
+    "hitTime": "2026-11-06T22:35:50",
+    "pnlUsd": -0.597,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -5.97,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
