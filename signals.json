@@ -1004,7 +1004,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-06 04:02:29",
     "issuedAtEpoch": 1793937749,
@@ -1013,7 +1013,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1"
+    "scenario_id": "B1",
+    "hitPrice": 0.8088,
+    "hitTime": "2026-11-06T04:13:40"
   },
   "TIAUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
