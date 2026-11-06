@@ -16983,7 +16983,7 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
+    "profile_id": "TITAN_S3",
     "symbol": "INJUSDT",
     "direction": "LONG",
     "entry": 8.301,
@@ -16991,7 +16991,7 @@
     "takeProfit": 0.0,
     "status": "SL_HIT",
     "hitPrice": 8.328,
-    "hitTime": "2026-11-06T17:05:45",
+    "hitTime": "2026-11-06T17:05:52",
     "pnlUsd": 0.0751,
     "brokerFeeUsd": 0.2,
     "returnPct": 0.75,
