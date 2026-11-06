@@ -1,23 +1,6 @@
 [
   {
     "profile_id": "PENTA_F1",
-    "symbol": "AVAXUSDT",
-    "direction": "SHORT",
-    "entry": 8.688,
-    "stopLoss": 8.8363536145,
-    "takeProfit": 8.3912927709,
-    "status": "SL_HIT",
-    "hitPrice": 8.85,
-    "hitTime": "2026-10-29T13:59:18",
-    "pnlUsd": -2.1156,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -21.16,
-    "score": 0.0,
-    "risk": "1.7076",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "PENTA_F1",
     "symbol": "BNBUSDT",
     "direction": "LONG",
     "entry": 752.212,
@@ -16995,6 +16978,23 @@
     "pnlUsd": -0.6457,
     "brokerFeeUsd": 0.2,
     "returnPct": -6.46,
+    "score": 0.0,
+    "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_B1",
+    "symbol": "INJUSDT",
+    "direction": "LONG",
+    "entry": 8.289,
+    "stopLoss": 7.957439999999999,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 8.26,
+    "hitTime": "2026-11-06T05:07:03",
+    "pnlUsd": -0.5997,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -6.0,
     "score": 0.0,
     "risk": "LOW",
     "rr": 2.0
