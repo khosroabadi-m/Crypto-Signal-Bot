@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "SOLUSDT",
-    "direction": "SHORT",
-    "entry": 90.06,
-    "stopLoss": 91.165167,
-    "takeProfit": 87.849665,
+    "profile_id": "TITAN_S3",
+    "symbol": "INJUSDT",
+    "direction": "LONG",
+    "entry": 8.305,
+    "stopLoss": 7.972799999999999,
+    "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 91.36,
-    "hitTime": "2026-11-06T14:41:53",
-    "pnlUsd": -1.6942,
+    "hitPrice": 8.456,
+    "hitTime": "2026-11-06T14:42:03",
+    "pnlUsd": 1.5673,
     "brokerFeeUsd": 0.2,
-    "returnPct": -16.94,
-    "score": 63.02,
-    "risk": "HIGH",
+    "returnPct": 15.67,
+    "score": 0.0,
+    "risk": "LOW",
     "rr": 2.0
   }
 ]
