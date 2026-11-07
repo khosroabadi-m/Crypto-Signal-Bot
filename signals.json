@@ -287,8 +287,8 @@
     "trail_lock": 0.9,
     "max_hold_candles": 72,
     "scenario_id": "S1",
-    "hitPrice": 0.4464,
-    "hitTime": "2026-11-07T13:40:49"
+    "hitPrice": 0.4466,
+    "hitTime": "2026-11-07T13:41:46"
   },
   "XRPUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
