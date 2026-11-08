@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "AVAXUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BNBUSDT",
     "direction": "SHORT",
-    "entry": 7.866,
-    "stopLoss": 7.9809059026,
-    "takeProfit": 7.6361881949,
+    "entry": 682.44,
+    "stopLoss": 687.995654,
+    "takeProfit": 671.328693,
     "status": "SL_HIT",
-    "hitPrice": 8.027,
-    "hitTime": "2026-11-08T23:31:28",
-    "pnlUsd": -2.2978,
+    "hitPrice": 688.88,
+    "hitTime": "2026-11-08T23:31:33",
+    "pnlUsd": -1.1941,
     "brokerFeeUsd": 0.2,
-    "returnPct": -22.98,
-    "score": 0.0,
-    "risk": "1.4608",
+    "returnPct": -11.94,
+    "score": 66.24,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
