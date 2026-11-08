@@ -121,7 +121,7 @@
     "rr": 2.1,
     "score": 68.4,
     "risk": "MEDIUM",
-    "status": "OPEN",
+    "status": "TP2_HIT",
     "issuedAt": "2026-11-08T21:38:21.387725+00:00",
     "issuedAtEpoch": 1794173901,
     "version": "13.0.0",
@@ -162,7 +162,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_SOLUSDT_1794173901"
+    "id": "sig_SOLUSDT_1794173901",
+    "hitPrice": 87.78,
+    "hitTime": "2026-11-08T21:51:33"
   },
   "XRPUSDT": {
     "profile_id": "KHOSRO_SMC",
