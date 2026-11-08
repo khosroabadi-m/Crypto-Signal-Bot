@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "ATOMUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BTCUSDT",
     "direction": "SHORT",
-    "entry": 1.3385,
-    "stopLoss": 1.3535613742,
-    "takeProfit": 1.3083772516,
+    "entry": 75721.98,
+    "stopLoss": 76100.5899,
+    "takeProfit": 74964.7602,
     "status": "TP2_HIT",
-    "hitPrice": 1.296,
-    "hitTime": "2026-11-08T22:01:18",
-    "pnlUsd": 2.9268,
+    "hitPrice": 74419.99,
+    "hitTime": "2026-11-08T22:01:36",
+    "pnlUsd": 1.4703,
     "brokerFeeUsd": 0.2,
-    "returnPct": 29.27,
-    "score": 0.0,
-    "risk": "1.1252",
+    "returnPct": 14.7,
+    "score": 67.64,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
