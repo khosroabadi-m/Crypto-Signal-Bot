@@ -11,7 +11,7 @@
     "rr": 2.0,
     "score": 65.67,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-08T22:38:34.804698+00:00",
     "issuedAtEpoch": 1794177514,
     "version": "13.0.0",
@@ -52,7 +52,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_BTCUSDT_1794177514"
+    "id": "sig_BTCUSDT_1794177514",
+    "hitPrice": 74757.4,
+    "hitTime": "2026-11-08T23:54:19"
   },
   "ETHUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -443,7 +445,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-08 22:38:42",
     "issuedAtEpoch": 1794177522,
@@ -452,9 +454,7 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 120,
-    "scenario_id": "S3",
-    "hitPrice": 50.08,
-    "hitTime": "2026-11-08T23:53:33"
+    "scenario_id": "S3"
   },
   "DOGEUSDT__TITAN_S3": {
     "profile_id": "TITAN_S3",
