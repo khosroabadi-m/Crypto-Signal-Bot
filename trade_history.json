@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "XRPUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "ATOMUSDT",
     "direction": "SHORT",
-    "entry": 1.1449,
-    "stopLoss": 1.155338,
-    "takeProfit": 1.124024,
+    "entry": 1.3385,
+    "stopLoss": 1.3535613742,
+    "takeProfit": 1.3083772516,
     "status": "TP2_HIT",
-    "hitPrice": 1.1163,
-    "hitTime": "2026-11-08T22:01:05",
-    "pnlUsd": 2.2493,
+    "hitPrice": 1.296,
+    "hitTime": "2026-11-08T22:01:18",
+    "pnlUsd": 2.9268,
     "brokerFeeUsd": 0.2,
-    "returnPct": 22.49,
-    "score": 64.5,
-    "risk": "HIGH",
+    "returnPct": 29.27,
+    "score": 0.0,
+    "risk": "1.1252",
     "rr": 2.0
   }
 ]
