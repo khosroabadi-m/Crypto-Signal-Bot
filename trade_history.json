@@ -7,23 +7,6 @@
     "stopLoss": 744.4634893615,
     "takeProfit": 767.709021277,
     "status": "SL_HIT",
-    "hitPrice": 700.15,
-    "hitTime": "2026-10-30T01:43:31",
-    "pnlUsd": -7.1677,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -71.68,
-    "score": 0.0,
-    "risk": "1.0301",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "PENTA_F1",
-    "symbol": "BNBUSDT",
-    "direction": "LONG",
-    "entry": 752.212,
-    "stopLoss": 744.4634893615,
-    "takeProfit": 767.709021277,
-    "status": "SL_HIT",
     "hitPrice": 698.18,
     "hitTime": "2026-10-30T01:49:07",
     "pnlUsd": -7.4295,
@@ -16997,6 +16980,23 @@
     "returnPct": 24.37,
     "score": 0.0,
     "risk": "0.7733",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "ETHUSDT",
+    "direction": "SHORT",
+    "entry": 2225.87,
+    "stopLoss": 2236.99935,
+    "takeProfit": 2203.6113,
+    "status": "TP2_HIT",
+    "hitPrice": 2125.05,
+    "hitTime": "2026-11-08T22:18:02",
+    "pnlUsd": 4.2817,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 42.82,
+    "score": 62.95,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
