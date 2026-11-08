@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_S3",
-    "symbol": "DOTUSDT",
-    "direction": "LONG",
-    "entry": 0.898,
-    "stopLoss": 0.86208,
-    "takeProfit": 0.0,
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "SOLUSDT",
+    "direction": "SHORT",
+    "entry": 89.24,
+    "stopLoss": 89.694136,
+    "takeProfit": 88.331727,
     "status": "SL_HIT",
-    "hitPrice": 0.903,
-    "hitTime": "2026-11-08T11:21:52",
-    "pnlUsd": 0.3065,
+    "hitPrice": 89.74,
+    "hitTime": "2026-11-08T11:22:39",
+    "pnlUsd": -0.8106,
     "brokerFeeUsd": 0.2,
-    "returnPct": 3.07,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -8.11,
+    "score": 61.27,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
