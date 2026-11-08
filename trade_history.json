@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "KHOSRO_SMC",
-    "symbol": "ETHUSDT",
+    "profile_id": "PENTA_F1",
+    "symbol": "AVAXUSDT",
     "direction": "SHORT",
-    "entry": 2123.77,
-    "stopLoss": 2157.510444,
-    "takeProfit": 2056.289113,
+    "entry": 7.866,
+    "stopLoss": 7.9809059026,
+    "takeProfit": 7.6361881949,
     "status": "SL_HIT",
-    "hitPrice": 2157.93,
-    "hitTime": "2026-11-08T23:13:56",
-    "pnlUsd": -1.8593,
+    "hitPrice": 8.02,
+    "hitTime": "2026-11-08T23:14:04",
+    "pnlUsd": -2.2088,
     "brokerFeeUsd": 0.2,
-    "returnPct": -18.59,
-    "score": 63.66,
-    "risk": "HIGH",
+    "returnPct": -22.09,
+    "score": 0.0,
+    "risk": "1.4608",
     "rr": 2.0
   }
 ]
