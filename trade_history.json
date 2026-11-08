@@ -16984,19 +16984,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "BTCUSDT",
+    "symbol": "ADAUSDT",
     "direction": "SHORT",
-    "entry": 74123.0,
-    "stopLoss": 74589.1912703515,
-    "takeProfit": 73190.617459297,
+    "entry": 0.1727,
+    "stopLoss": 0.1751870968,
+    "takeProfit": 0.1677258065,
     "status": "SL_HIT",
-    "hitPrice": 74756.01,
-    "hitTime": "2026-11-08T23:04:10",
-    "pnlUsd": -1.1044,
+    "hitPrice": 0.1756,
+    "hitTime": "2026-11-08T23:04:15",
+    "pnlUsd": -1.9301,
     "brokerFeeUsd": 0.2,
-    "returnPct": -11.04,
+    "returnPct": -19.3,
     "score": 0.0,
-    "risk": "0.6289",
+    "risk": "1.4401",
     "rr": 2.0
   }
 ]
