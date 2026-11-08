@@ -16984,19 +16984,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "ADAUSDT",
+    "symbol": "DOTUSDT",
     "direction": "SHORT",
-    "entry": 0.18,
-    "stopLoss": 0.1816399504,
-    "takeProfit": 0.1767200993,
+    "entry": 0.8909,
+    "stopLoss": 0.9001088127,
+    "takeProfit": 0.8724823746,
     "status": "TP2_HIT",
-    "hitPrice": 0.1767,
-    "hitTime": "2026-11-08T21:51:21",
-    "pnlUsd": 1.5843,
+    "hitPrice": 0.872,
+    "hitTime": "2026-11-08T21:51:25",
+    "pnlUsd": 1.8725,
     "brokerFeeUsd": 0.2,
-    "returnPct": 15.84,
+    "returnPct": 18.73,
     "score": 0.0,
-    "risk": "0.9111",
+    "risk": "1.0337",
     "rr": 2.0
   }
 ]
