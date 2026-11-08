@@ -11,7 +11,7 @@
     "rr": 2.0,
     "score": 61.27,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-08T11:07:49.399079+00:00",
     "issuedAtEpoch": 1794136069,
     "version": "13.0.0",
@@ -52,7 +52,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_SOLUSDT_1794136069"
+    "id": "sig_SOLUSDT_1794136069",
+    "hitPrice": 89.7,
+    "hitTime": "2026-11-08T11:21:30"
   },
   "XRPUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -66,7 +68,7 @@
     "rr": 2.0,
     "score": 66.24,
     "risk": "HIGH",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "issuedAt": "2026-11-08T11:07:49.401253+00:00",
     "issuedAtEpoch": 1794136069,
     "version": "13.0.0",
@@ -107,9 +109,7 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_XRPUSDT_1794136069",
-    "hitPrice": 1.167,
-    "hitTime": "2026-11-08T11:21:25"
+    "id": "sig_XRPUSDT_1794136069"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
