@@ -232,12 +232,14 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "0.9111",
-    "status": "OPEN",
+    "status": "TP2_HIT",
     "components": [],
     "issuedAt": "2026-11-09 01:08:21",
     "issuedAtEpoch": 1794173904,
     "timestamp": 1794173904,
-    "exit_mode": "FIXED"
+    "exit_mode": "FIXED",
+    "hitPrice": 0.1721,
+    "hitTime": "2026-11-08T21:59:35"
   },
   "ATOMUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -252,14 +254,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.1252",
-    "status": "TP2_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-09 01:08:21",
     "issuedAtEpoch": 1794173904,
     "timestamp": 1794173904,
-    "exit_mode": "FIXED",
-    "hitPrice": 1.285,
-    "hitTime": "2026-11-08T21:59:10"
+    "exit_mode": "FIXED"
   },
   "AVAXUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
