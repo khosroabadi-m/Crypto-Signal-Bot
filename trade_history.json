@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "ADAUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BTCUSDT",
     "direction": "SHORT",
-    "entry": 0.1727,
-    "stopLoss": 0.1751870968,
-    "takeProfit": 0.1677258065,
+    "entry": 74312.01,
+    "stopLoss": 74880.332378,
+    "takeProfit": 73175.365245,
     "status": "SL_HIT",
-    "hitPrice": 0.1773,
-    "hitTime": "2026-11-08T23:14:21",
-    "pnlUsd": -2.9149,
+    "hitPrice": 75282.39,
+    "hitTime": "2026-11-08T23:14:25",
+    "pnlUsd": -1.5565,
     "brokerFeeUsd": 0.2,
-    "returnPct": -29.15,
-    "score": 0.0,
-    "risk": "1.4401",
+    "returnPct": -15.56,
+    "score": 65.67,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
