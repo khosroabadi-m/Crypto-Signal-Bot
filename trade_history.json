@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "ADAUSDT",
-    "direction": "LONG",
-    "entry": 0.1741,
-    "stopLoss": 0.167136,
-    "takeProfit": 0.0,
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BTCUSDT",
+    "direction": "SHORT",
+    "entry": 74312.01,
+    "stopLoss": 74880.332378,
+    "takeProfit": 73175.365245,
     "status": "SL_HIT",
-    "hitPrice": 0.1759,
-    "hitTime": "2026-11-08T23:42:01",
-    "pnlUsd": 0.7834,
+    "hitPrice": 75121.02,
+    "hitTime": "2026-11-08T23:42:15",
+    "pnlUsd": -1.3392,
     "brokerFeeUsd": 0.2,
-    "returnPct": 7.83,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -13.39,
+    "score": 65.67,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
