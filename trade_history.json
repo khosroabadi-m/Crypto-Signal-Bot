@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "DOGEUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "SOLUSDT",
     "direction": "SHORT",
-    "entry": 0.07112,
-    "stopLoss": 0.0716699355,
-    "takeProfit": 0.0700201291,
+    "entry": 89.06,
+    "stopLoss": 89.591329,
+    "takeProfit": 87.944208,
     "status": "TP2_HIT",
-    "hitPrice": 0.06908,
-    "hitTime": "2026-11-08T22:05:37",
-    "pnlUsd": 2.6198,
+    "hitPrice": 86.56,
+    "hitTime": "2026-11-08T22:05:42",
+    "pnlUsd": 2.5585,
     "brokerFeeUsd": 0.2,
-    "returnPct": 26.2,
-    "score": 0.0,
-    "risk": "0.7733",
-    "rr": 2.0
+    "returnPct": 25.58,
+    "score": 68.4,
+    "risk": "MEDIUM",
+    "rr": 2.1
   }
 ]
