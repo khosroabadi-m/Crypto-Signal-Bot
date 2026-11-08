@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "PEPEUSDT",
-    "direction": "LONG",
-    "entry": 4.97e-06,
-    "stopLoss": 4.771199999999999e-06,
-    "takeProfit": 0.0,
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "SOLUSDT",
+    "direction": "SHORT",
+    "entry": 85.89,
+    "stopLoss": 87.155503,
+    "takeProfit": 83.358993,
     "status": "SL_HIT",
-    "hitPrice": 5.04e-06,
-    "hitTime": "2026-11-08T23:31:58",
-    "pnlUsd": 1.1577,
+    "hitPrice": 87.41,
+    "hitTime": "2026-11-08T23:32:12",
+    "pnlUsd": -2.0206,
     "brokerFeeUsd": 0.2,
-    "returnPct": 11.58,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -20.21,
+    "score": 66.86,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
