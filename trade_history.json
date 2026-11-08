@@ -7,23 +7,6 @@
     "stopLoss": 80624.4949562922,
     "takeProfit": 78944.5100874156,
     "status": "TP2_HIT",
-    "hitPrice": 77012.18,
-    "hitTime": "2026-10-30T01:23:49",
-    "pnlUsd": 3.5642,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 35.64,
-    "score": 0.0,
-    "risk": "0.6994",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "PENTA_F1",
-    "symbol": "BTCUSDT",
-    "direction": "SHORT",
-    "entry": 80064.5,
-    "stopLoss": 80624.4949562922,
-    "takeProfit": 78944.5100874156,
-    "status": "TP2_HIT",
     "hitPrice": 77042.24,
     "hitTime": "2026-10-30T01:28:52",
     "pnlUsd": 3.5267,
@@ -16997,6 +16980,23 @@
     "returnPct": 41.62,
     "score": 62.95,
     "risk": "HIGH",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "PENTA_F1",
+    "symbol": "AVAXUSDT",
+    "direction": "SHORT",
+    "entry": 8.177,
+    "stopLoss": 8.253090972,
+    "takeProfit": 8.024818056,
+    "status": "TP2_HIT",
+    "hitPrice": 7.831,
+    "hitTime": "2026-11-08T21:57:48",
+    "pnlUsd": 3.9835,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 39.83,
+    "score": 0.0,
+    "risk": "0.9305",
     "rr": 2.0
   }
 ]
