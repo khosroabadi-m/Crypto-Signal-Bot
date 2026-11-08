@@ -121,7 +121,7 @@
     "rr": 2.0,
     "score": 57.51,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-08T11:37:50.670752+00:00",
     "issuedAtEpoch": 1794137870,
     "version": "13.0.0",
@@ -162,7 +162,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_XRPUSDT_1794137870"
+    "id": "sig_XRPUSDT_1794137870",
+    "hitPrice": 1.1684,
+    "hitTime": "2026-11-08T12:08:45"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -237,14 +239,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "0.7170",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-08 15:07:50",
     "issuedAtEpoch": 1794137874,
     "timestamp": 1794137874,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.07147,
-    "hitTime": "2026-11-08T12:08:25"
+    "exit_mode": "FIXED"
   },
   "DOTUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
