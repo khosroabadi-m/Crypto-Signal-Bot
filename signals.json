@@ -275,8 +275,8 @@
       }
     ],
     "id": "sig_XRPUSDT_1794177514",
-    "hitPrice": 1.1225,
-    "hitTime": "2026-11-08T23:11:54"
+    "hitPrice": 1.1301,
+    "hitTime": "2026-11-08T23:18:57"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -311,14 +311,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.6322",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-09 02:08:34",
     "issuedAtEpoch": 1794177519,
     "timestamp": 1794177519,
-    "exit_mode": "FIXED",
-    "hitPrice": 1.314,
-    "hitTime": "2026-11-08T23:18:51"
+    "exit_mode": "FIXED"
   },
   "AVAXUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
