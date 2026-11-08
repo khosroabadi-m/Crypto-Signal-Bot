@@ -16984,19 +16984,19 @@
   },
   {
     "profile_id": "PENTA_F1",
-    "symbol": "BTCUSDT",
+    "symbol": "AVAXUSDT",
     "direction": "SHORT",
-    "entry": 74123.0,
-    "stopLoss": 74589.1912703515,
-    "takeProfit": 73190.617459297,
+    "entry": 7.866,
+    "stopLoss": 7.9809059026,
+    "takeProfit": 7.6361881949,
     "status": "SL_HIT",
-    "hitPrice": 75402.6,
-    "hitTime": "2026-11-08T23:30:19",
-    "pnlUsd": -1.9772,
+    "hitPrice": 8.028,
+    "hitTime": "2026-11-08T23:30:24",
+    "pnlUsd": -2.3105,
     "brokerFeeUsd": 0.2,
-    "returnPct": -19.77,
+    "returnPct": -23.11,
     "score": 0.0,
-    "risk": "0.6289",
+    "risk": "1.4608",
     "rr": 2.0
   }
 ]
