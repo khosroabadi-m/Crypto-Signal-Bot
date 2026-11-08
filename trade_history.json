@@ -7,23 +7,6 @@
     "stopLoss": 744.4634893615,
     "takeProfit": 767.709021277,
     "status": "SL_HIT",
-    "hitPrice": 701.65,
-    "hitTime": "2026-10-30T02:04:58",
-    "pnlUsd": -6.9684,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -69.68,
-    "score": 0.0,
-    "risk": "1.0301",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "PENTA_F1",
-    "symbol": "BNBUSDT",
-    "direction": "LONG",
-    "entry": 752.212,
-    "stopLoss": 744.4634893615,
-    "takeProfit": 767.709021277,
-    "status": "SL_HIT",
     "hitPrice": 705.73,
     "hitTime": "2026-10-30T02:10:16",
     "pnlUsd": -6.4263,
@@ -16997,6 +16980,23 @@
     "returnPct": 17.59,
     "score": 67.64,
     "risk": "HIGH",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "TITAN_B1",
+    "symbol": "DOTUSDT",
+    "direction": "LONG",
+    "entry": 0.861,
+    "stopLoss": 0.82656,
+    "takeProfit": 0.0,
+    "status": "SL_HIT",
+    "hitPrice": 0.864,
+    "hitTime": "2026-11-08T22:43:54",
+    "pnlUsd": 0.0983,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 0.98,
+    "score": 0.0,
+    "risk": "LOW",
     "rr": 2.0
   }
 ]
