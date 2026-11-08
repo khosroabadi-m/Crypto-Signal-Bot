@@ -7,23 +7,6 @@
     "stopLoss": 80624.4949562922,
     "takeProfit": 78944.5100874156,
     "status": "TP2_HIT",
-    "hitPrice": 77093.0,
-    "hitTime": "2026-10-30T01:18:47",
-    "pnlUsd": 3.4632,
-    "brokerFeeUsd": 0.2,
-    "returnPct": 34.63,
-    "score": 0.0,
-    "risk": "0.6994",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "PENTA_F1",
-    "symbol": "BTCUSDT",
-    "direction": "SHORT",
-    "entry": 80064.5,
-    "stopLoss": 80624.4949562922,
-    "takeProfit": 78944.5100874156,
-    "status": "TP2_HIT",
     "hitPrice": 77012.18,
     "hitTime": "2026-10-30T01:23:49",
     "pnlUsd": 3.5642,
@@ -16997,6 +16980,23 @@
     "returnPct": 13.12,
     "score": 0.0,
     "risk": "0.7733",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "PENTA_F1",
+    "symbol": "ADAUSDT",
+    "direction": "SHORT",
+    "entry": 0.18,
+    "stopLoss": 0.1816399504,
+    "takeProfit": 0.1767200993,
+    "status": "TP2_HIT",
+    "hitPrice": 0.1767,
+    "hitTime": "2026-11-08T21:52:47",
+    "pnlUsd": 1.5843,
+    "brokerFeeUsd": 0.2,
+    "returnPct": 15.84,
+    "score": 0.0,
+    "risk": "0.9111",
     "rr": 2.0
   }
 ]
