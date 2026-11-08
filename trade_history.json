@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "TITAN_B1",
-    "symbol": "ETHUSDT",
-    "direction": "LONG",
-    "entry": 2123.77,
-    "stopLoss": 2038.8192,
-    "takeProfit": 0.0,
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "BNBUSDT",
+    "direction": "SHORT",
+    "entry": 682.44,
+    "stopLoss": 687.995654,
+    "takeProfit": 671.328693,
     "status": "SL_HIT",
-    "hitPrice": 2160.76,
-    "hitTime": "2026-11-08T23:19:23",
-    "pnlUsd": 1.4908,
+    "hitPrice": 691.16,
+    "hitTime": "2026-11-08T23:19:29",
+    "pnlUsd": -1.5284,
     "brokerFeeUsd": 0.2,
-    "returnPct": 14.91,
-    "score": 0.0,
-    "risk": "LOW",
+    "returnPct": -15.28,
+    "score": 66.24,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
