@@ -121,7 +121,7 @@
     "rr": 2.0,
     "score": 66.86,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-08T22:38:34.808587+00:00",
     "issuedAtEpoch": 1794177514,
     "version": "13.0.0",
@@ -162,7 +162,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_SOLUSDT_1794177514"
+    "id": "sig_SOLUSDT_1794177514",
+    "hitPrice": 87.16,
+    "hitTime": "2026-11-08T23:11:28"
   },
   "BNBUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -289,14 +291,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.4401",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-09 02:08:34",
     "issuedAtEpoch": 1794177519,
     "timestamp": 1794177519,
-    "exit_mode": "FIXED",
-    "hitPrice": 0.1762,
-    "hitTime": "2026-11-08T23:11:23"
+    "exit_mode": "FIXED"
   },
   "ATOMUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
