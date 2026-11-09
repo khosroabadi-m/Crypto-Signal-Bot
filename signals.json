@@ -11,7 +11,7 @@
     "rr": 2.0,
     "score": 61.04,
     "risk": "HIGH",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "issuedAt": "2026-11-09T08:39:24.807740+00:00",
     "issuedAtEpoch": 1794213564,
     "version": "13.0.0",
@@ -52,7 +52,9 @@
         "detail": "no AI"
       }
     ],
-    "id": "sig_BTCUSDT_1794213564"
+    "id": "sig_BTCUSDT_1794213564",
+    "hitPrice": 74637.15,
+    "hitTime": "2026-11-09T09:07:44"
   },
   "ETHUSDT": {
     "profile_id": "KHOSRO_SMC",
@@ -309,14 +311,12 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.7343",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-09 12:09:24",
     "issuedAtEpoch": 1794213569,
     "timestamp": 1794213569,
-    "exit_mode": "FIXED",
-    "hitPrice": 1.325,
-    "hitTime": "2026-11-09T09:06:52"
+    "exit_mode": "FIXED"
   },
   "AVAXUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
