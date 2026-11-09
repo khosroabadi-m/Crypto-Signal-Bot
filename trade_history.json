@@ -7,23 +7,6 @@
     "stopLoss": 744.4634893615,
     "takeProfit": 767.709021277,
     "status": "SL_HIT",
-    "hitPrice": 718.59,
-    "hitTime": "2026-10-30T04:01:05",
-    "pnlUsd": -4.7175,
-    "brokerFeeUsd": 0.2,
-    "returnPct": -47.18,
-    "score": 0.0,
-    "risk": "1.0301",
-    "rr": 2.0
-  },
-  {
-    "profile_id": "PENTA_F1",
-    "symbol": "BNBUSDT",
-    "direction": "LONG",
-    "entry": 752.212,
-    "stopLoss": 744.4634893615,
-    "takeProfit": 767.709021277,
-    "status": "SL_HIT",
     "hitPrice": 716.57,
     "hitTime": "2026-10-30T04:06:06",
     "pnlUsd": -4.9859,
@@ -16997,6 +16980,23 @@
     "returnPct": 4.78,
     "score": 0.0,
     "risk": "LOW",
+    "rr": 2.0
+  },
+  {
+    "profile_id": "PENTA_F1",
+    "symbol": "AVAXUSDT",
+    "direction": "SHORT",
+    "entry": 7.866,
+    "stopLoss": 7.9809059026,
+    "takeProfit": 7.6361881949,
+    "status": "SL_HIT",
+    "hitPrice": 7.981,
+    "hitTime": "2026-11-09T00:42:36",
+    "pnlUsd": -1.7127,
+    "brokerFeeUsd": 0.2,
+    "returnPct": -17.13,
+    "score": 0.0,
+    "risk": "1.4608",
     "rr": 2.0
   }
 ]
