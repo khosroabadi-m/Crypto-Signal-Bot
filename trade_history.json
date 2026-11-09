@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "BNBUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "SOLUSDT",
     "direction": "SHORT",
-    "entry": 680.207,
-    "stopLoss": 684.815135909,
-    "takeProfit": 670.990728182,
+    "entry": 85.89,
+    "stopLoss": 87.155503,
+    "takeProfit": 83.358993,
     "status": "SL_HIT",
-    "hitPrice": 689.69,
-    "hitTime": "2026-11-09T01:03:03",
-    "pnlUsd": -1.6448,
+    "hitPrice": 87.73,
+    "hitTime": "2026-11-09T01:03:44",
+    "pnlUsd": -2.3933,
     "brokerFeeUsd": 0.2,
-    "returnPct": -16.45,
-    "score": 0.0,
-    "risk": "0.6775",
+    "returnPct": -23.93,
+    "score": 66.86,
+    "risk": "HIGH",
     "rr": 2.0
   }
 ]
