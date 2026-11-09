@@ -1037,7 +1037,7 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "LOW",
-    "status": "OPEN",
+    "status": "SL_HIT",
     "components": [],
     "issuedAt": "2026-11-09 09:40:04",
     "issuedAtEpoch": 1794217204,
@@ -1046,7 +1046,9 @@
     "trail_activate": 0.003,
     "trail_lock": 0.9,
     "max_hold_candles": 96,
-    "scenario_id": "B1"
+    "scenario_id": "B1",
+    "hitPrice": 0.4212,
+    "hitTime": "2026-11-09T09:55:50"
   },
   "POLUSDT__TITAN_B1": {
     "profile_id": "TITAN_B1",
