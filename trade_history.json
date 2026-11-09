@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "AVAXUSDT",
-    "direction": "SHORT",
-    "entry": 7.866,
-    "stopLoss": 7.9809059026,
-    "takeProfit": 7.6361881949,
+    "profile_id": "TITAN_S3",
+    "symbol": "ETHUSDT",
+    "direction": "LONG",
+    "entry": 2123.77,
+    "stopLoss": 2038.8192,
+    "takeProfit": 0.0,
     "status": "SL_HIT",
-    "hitPrice": 8.009,
-    "hitTime": "2026-11-09T00:50:58",
-    "pnlUsd": -2.0689,
+    "hitPrice": 2143.5,
+    "hitTime": "2026-11-09T00:51:02",
+    "pnlUsd": 0.6785,
     "brokerFeeUsd": 0.2,
-    "returnPct": -20.69,
+    "returnPct": 6.79,
     "score": 0.0,
-    "risk": "1.4608",
+    "risk": "LOW",
     "rr": 2.0
   }
 ]
