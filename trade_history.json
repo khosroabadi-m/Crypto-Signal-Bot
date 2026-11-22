@@ -16983,20 +16983,20 @@
     "rr": 2.0
   },
   {
-    "profile_id": "PENTA_F1",
-    "symbol": "ATOMUSDT",
+    "profile_id": "KHOSRO_SMC",
+    "symbol": "SOLUSDT",
     "direction": "SHORT",
-    "entry": 1.1569,
-    "stopLoss": 1.1772974659,
-    "takeProfit": 1.1161050683,
+    "entry": 69.57,
+    "stopLoss": 70.22779,
+    "takeProfit": 68.188642,
     "status": "SL_HIT",
-    "hitPrice": 1.18,
-    "hitTime": "2026-11-22T09:57:59",
-    "pnlUsd": -2.2477,
+    "hitPrice": 70.87,
+    "hitTime": "2026-11-22T09:58:38",
+    "pnlUsd": -2.1196,
     "brokerFeeUsd": 0.2,
-    "returnPct": -22.48,
-    "score": 0.0,
-    "risk": "1.7631",
-    "rr": 2.0
+    "returnPct": -21.2,
+    "score": 69.57,
+    "risk": "MEDIUM",
+    "rr": 2.1
   }
 ]
