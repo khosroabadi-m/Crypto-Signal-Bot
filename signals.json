@@ -108,8 +108,8 @@
       }
     ],
     "id": "sig_BNBUSDT_1795317701",
-    "hitPrice": 550.86,
-    "hitTime": "2026-11-22T09:50:17"
+    "hitPrice": 553.7,
+    "hitTime": "2026-11-22T10:00:49"
   },
   "ADAUSDT__PENTA_F1": {
     "profile_id": "PENTA_F1",
@@ -208,13 +208,11 @@
     "rr": 2.0,
     "score": 0.0,
     "risk": "1.5351",
-    "status": "SL_HIT",
+    "status": "OPEN",
     "components": [],
     "issuedAt": "2026-11-22 06:51:42",
     "issuedAtEpoch": 1795317707,
     "timestamp": 1795317707,
-    "exit_mode": "FIXED",
-    "hitPrice": 60941.59,
-    "hitTime": "2026-11-22T10:00:44"
+    "exit_mode": "FIXED"
   }
 }
